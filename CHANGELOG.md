@@ -1,5 +1,17 @@
 # Histórico de versões
 
+## 1.3.0 — proposta para revisão (2026-10-26)
+
+- Identidade Devotional Days, subtítulo em português e assinatura preservada.
+- Dez temas com superfícies neutras, acentos próprios, sombras sutis e tokens de contraste revisados.
+- Botão móvel de 44 × 44 px; roteiro sem barra horizontal, com foco contido, fundo inerte, Escape, clique fora e rolagem interna.
+- Gerenciamento compartilhado de sobreposições elimina a disputa de camadas com Aparência.
+- Orientações em três passos, consulta em Como usar e retomada opcional da primeira pendência.
+- Leitura escolhida preservada, mesmas chaves de progresso e aviso em falhas de armazenamento.
+- Celebrações semanais e integral sobre a tela atual, com cristais brancos, apresentação estática para movimento reduzido e nenhuma repetição automática no recarregamento.
+- Estado e sobreposições separados em módulos pequenos; testes unitários e de navegador, rastreabilidade e documentação da interface.
+- Conteúdo bíblico, licença, repositório e URL preservados. Sem dependências de runtime, backend ou publicação automática.
+
 ## 1.2.0 — 2026-10-26
 
 - Botão Roteiro horizontal e sempre identificável no celular, com progresso ao lado.

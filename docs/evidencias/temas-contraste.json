@@ -1,0 +1,142 @@
+[
+  {
+    "palette": "lavanda",
+    "mode": "light",
+    "minimumTextContrast": 4.87,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "lavanda",
+    "mode": "dark",
+    "minimumTextContrast": 6.16,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "salvia",
+    "mode": "light",
+    "minimumTextContrast": 5.03,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "salvia",
+    "mode": "dark",
+    "minimumTextContrast": 5.76,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "areia",
+    "mode": "light",
+    "minimumTextContrast": 4.55,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "areia",
+    "mode": "dark",
+    "minimumTextContrast": 5.73,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "azul",
+    "mode": "light",
+    "minimumTextContrast": 4.85,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "azul",
+    "mode": "dark",
+    "minimumTextContrast": 5.72,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "rose",
+    "mode": "light",
+    "minimumTextContrast": 4.71,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  {
+    "palette": "rose",
+    "mode": "dark",
+    "minimumTextContrast": 6.09,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1440
+    ]
+  }
+]

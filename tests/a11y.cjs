@@ -8,7 +8,7 @@ const fs=require('fs');
  await p.goto(process.env.BASE_URL || 'http://127.0.0.1:8000/');
  const axe=require('axe-core').source;
  const results=[];
- async function audit(name){await p.evaluate(axe);const r=await p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}}));results.push({name,passes:r.passes.length,incomplete:r.incomplete.map(i=>i.id),violations:r.violations.map(v=>({id:v.id,impact:v.impact,description:v.description,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))});}
+ async function audit(name){await p.evaluate(axe);const r=await p.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}}));results.push({name,passes:r.passes.length,incomplete:r.incomplete.map(i=>({id:i.id,description:i.description,nodes:i.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})),violations:r.violations.map(v=>({id:v.id,impact:v.impact,description:v.description,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))});}
  await audit('primeiro acesso');
  await p.locator('#dismiss-guide').click();
  for(const palette of ['lavanda','salvia','areia','azul','rose'])for(const mode of ['light','dark']){
