@@ -59,3 +59,15 @@ test('10 temas, responsividade, foco e movimento reduzido',()=>{
  assert.match(css, /:focus-visible/);
  assert.match(app, /prefers-color-scheme: dark/);
 });
+
+test('roteiro móvel abre em aba lateral e fecha ao tocar fora ou apertar Escape',()=>{
+ for(const id of ['route-tab','route-panel','route-backdrop','close-route'])assert.ok(html.includes(`id="${id}"`),id);
+ assert.match(html,/aria-controls="route-panel" aria-expanded="false"/);
+ assert.match(css,/\.route-tab\{display:flex;position:fixed/);
+ assert.match(css,/\.navigation\{position:fixed;z-index:30/);
+ assert.match(css,/\.route-backdrop:not\(\[hidden\]\)/);
+ assert.match(app,/routeBackdrop\.addEventListener\('click',\(\)=>setRouteOpen\(false, true\)\)/);
+ assert.match(app,/event\.key === 'Escape'/);
+ assert.match(app,/setRouteOpen\(false\);\s*state\.current=i/);
+ assert.match(app,/routePanel\.inert/);
+});
