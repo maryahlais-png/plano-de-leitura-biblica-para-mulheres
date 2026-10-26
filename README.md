@@ -1,4 +1,6 @@
-# Plano de Leitura Bíblica para Mulheres
+# Devotional Days
+
+**35 dias de leitura e reflexão bíblica · feito para mulheres**
 
 Um guia gratuito de estudo bíblico para mulheres adultas que já têm contato com a igreja e desejam aprofundar a leitura das Escrituras, inclusive quando estão começando a ler a Bíblia por conta própria.
 
@@ -13,10 +15,12 @@ Um guia gratuito de estudo bíblico para mulheres adultas que já têm contato c
 - Referências bíblicas para consulta na Bíblia física ou, opcionalmente, na YouVersion (NVI, NAA, ARA, ARC, NVT, NTLH).
 - Perguntas para reflexão individual e seção opcional de contexto e interpretação.
 - Marcação de leitura, sem cadastro, comentários, formulários ou anotações digitais.
-- Cinco paletas: Lavanda, Sálvia, Areia, Azul Névoa e Rosé; modos claro, escuro ou automático.
-- Orientações de uso que aparecem apenas no primeiro acesso daquele navegador.
-- Celebração discreta com pequenos brilhos cristalinos ao terminar cada semana, respeitando a preferência de redução de movimento.
-- Layout responsivo, navegação por teclado e código sem dependências externas.
+- Cinco paletas: Lavanda, Sálvia, Areia, Azul Névoa e Rosé; modos claro, escuro ou automático, com bases neutras, superfícies em camadas e controles arredondados.
+- Orientações no primeiro acesso, disponíveis novamente em **Como usar**. Os encontros não precisam ser feitos em dias consecutivos.
+- Último encontro preservado e atalho opcional para a primeira atividade pendente.
+- Roteiro lateral no computador e botão compacto **Abrir roteiro** no celular.
+- Celebrações centralizadas ao concluir uma semana ou o plano completo, com microbrilhos brancos e apresentação estática quando há preferência por reduzir movimento.
+- Layout responsivo, navegação por teclado e código sem dependências externas. A leitura permanece opaca; a translucidez discreta de alguns controles e painéis possui alternativa opaca.
 
 ## Executar localmente
 
@@ -36,7 +40,7 @@ Acesse `http://localhost:8000`. Nenhum `npm install` é necessário para executa
 npm test
 ```
 
-Testes automatizados cobrem estrutura e integridade das 35 leituras, decisões de privacidade e integridade de componentes estáticos. O workflow do GitHub Actions executa os testes em pushes e pull requests. Testes visuais e de navegação humana ainda são recomendados antes da divulgação ampla: confira o roteiro em `docs/TESTES.md`.
+Os 14 testes sem dependências cobrem as 35 leituras, estrutura, segurança, compatibilidade das chaves de armazenamento, validação de estado, persistência e transições de conclusão. A suíte opcional `tests/browser.cjs` exercita o site no Chromium com Playwright, instalado fora do projeto; instruções e limites em `docs/TESTES.md`. O workflow do GitHub Actions executa os testes em pushes e pull requests. Testes visuais e de navegação humana ainda são recomendados antes da divulgação ampla: confira o roteiro em `docs/TESTES.md`.
 
 ## Organização
 
@@ -45,13 +49,19 @@ Testes automatizados cobrem estrutura e integridade das 35 leituras, decisões d
 ├── index.html           # Estrutura semântica da aplicação
 ├── src/
 │   ├── data.js          # Leituras, semanas, contexto e perguntas
-│   ├── app.js           # Navegação, estado local, aparência, celebração
+│   ├── state.js         # Validação, persistência e transições de progresso
+│   ├── overlays.js      # Foco, fundo inerte e rolagem dos painéis
+│   ├── app.js           # Navegação, aparência e composição da interface
+│   ├── favicon.svg      # Ícone local, sem requisição a terceiros
 │   └── styles.css       # Interface responsiva e 10 temas
 ├── docs/
 │   ├── REQUISITOS.md
 │   ├── ARQUITETURA.md
 │   ├── SEGURANCA.md
 │   ├── PRIVACIDADE.md
+│   ├── INTERFACE.md
+│   ├── VALIDACAO.md
+│   ├── VALIDACAO-POLIMENTO.md
 │   └── TESTES.md
 ├── tests/               # Verificações automatizadas sem dependências
 ├── .github/             # CI para testes e Dependabot para Actions
@@ -60,15 +70,16 @@ Testes automatizados cobrem estrutura e integridade das 35 leituras, decisões d
 └── .nojekyll            # Publicação estática no GitHub Pages
 ```
 
-## Publicar pelo GitHub Pages
+## Site e revisão de mudanças
 
-1. Crie um repositório **público** chamado `plano-de-leitura-biblica-para-mulheres` em https://github.com/new.
-2. Envie **o conteúdo desta pasta**, com `index.html` na raiz do repositório (não uma pasta extra ao redor).
-3. No repositório, abra **Settings → Pages**.
-4. Em **Build and deployment**, selecione **Deploy from a branch**, branch **main**, pasta **/(root)** e salve.
-5. O GitHub mostrará um endereço semelhante a `https://SEU-USUARIO.github.io/plano-de-leitura-biblica-para-mulheres/` após a publicação.
+O repositório e a URL permanecem os mesmos:
+https://maryahlais-png.github.io/plano-de-leitura-biblica-para-mulheres/
 
-Não publique credenciais, documentos pessoais nem informações de usuários. O código é público; os dados guardados pelo navegador de cada pessoa não são incluídos no repositório.
+Desenvolva em uma branch a partir da `main` atualizada, execute os testes, envie commits ao remoto e abra um Pull Request para revisão. Não faça merge nem publique uma atualização sem autorização explícita da autora. Consulte `CONTRIBUTING.md`.
+
+Nesta segunda rodada, `feature/devotional-days-apple-polish` parte de `feature/devotional-days` e tem essa branch como destino do [PR #5](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/5). O PR #4 e a versão anterior permanecem disponíveis para revisão. A [validação do polimento](docs/VALIDACAO-POLIMENTO.md) reúne os resultados desta rodada sem substituir o [relatório anterior](docs/VALIDACAO.md).
+
+A hospedagem continua estática no GitHub Pages, com `index.html` na raiz e `.nojekyll`. Não publique credenciais ou dados pessoais. Os dados do navegador de cada pessoa não fazem parte do repositório.
 
 Documentação oficial: https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site
 

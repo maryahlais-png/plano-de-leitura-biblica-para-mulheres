@@ -10,10 +10,19 @@
 - Dados de `localStorage` são validados: identificadores de leitura são inteiros dentro da faixa; tradução, paleta e modo usam enumerações fechadas.
 - Nenhuma senha, token, chave de API ou configuração sensível deve entrar no repositório ou no frontend.
 - Links externos usam HTTPS, `rel="noopener noreferrer"` e `referrerpolicy="no-referrer"`.
-- Zero dependências externas de runtime; isso reduz riscos de cadeia de suprimentos.
+- Zero dependências externas de runtime; Playwright/axe-core são ferramentas opcionais de teste, instaladas fora do projeto e não carregadas pela página; isso reduz riscos de cadeia de suprimentos.
 - Não há scripts de analytics, pixels de marketing ou rastreamento próprio.
 - O botão para reduzir movimento está nas preferências do sistema operacional; o CSS respeita `prefers-reduced-motion`.
 - `.gitignore` impede envio acidental de `.env` e arquivos locais comuns, mas **não substitui a revisão do commit**.
+
+## Revisão 1.3
+
+- Chaves antigas mantidas; dados inválidos não criam HTML nem URLs arbitrárias.
+- Traduções e identificadores de livros vêm de catálogos locais; URLs digitais são HTTPS em `www.bible.com`.
+- CSP preservada sem `unsafe-inline` ou `unsafe-eval`. Nenhuma requisição de fonte, analytics ou biblioteca no runtime. O ícone é um SVG local.
+- Foco contido e fundo inerte nos painéis reduzem ativação acidental de controles encobertos.
+- Falhas do armazenamento são comunicadas sem pedir valores sensíveis nem interromper navegação.
+- Nenhuma alteração nas configurações da conta GitHub, proteção de branch, licença ou hospedagem foi feita nesta atualização.
 
 ## Limitações e cuidados operacionais
 

@@ -1,0 +1,14 @@
+✔ primeiro acesso, consulta posterior, navegação, contexto, progresso e links (1969.635966ms)
+✔ todos os encontros mantêm referência, questões e navegação de revisão (2266.191857ms)
+✔ roteiro e aparência: foco, teclado, clique fora, rolagem e troca de viewport (2138.351114ms)
+✔ dados anteriores, leitura atual preservada, retorno explícito e armazenamento recusado (2057.226007ms)
+✔ celebração semanal, final, foco, Escape, movimento reduzido e nenhuma repetição ao recarregar (1906.708878ms)
+✔ dez temas, contraste dos tokens, sete larguras, recursos, painel e modo automático (30794.515917ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41578.126562

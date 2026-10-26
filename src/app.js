@@ -6,44 +6,15 @@
   'use strict';
   const plan = window.READING_PLAN.encounters;
   const weeks = window.READING_PLAN.weeks;
-  const STORE_KEY = 'leitura-biblica-mulheres-v1';
-  const LEGACY_KEY = 'plano-biblia-estudo-reflexao-v2';
-  const versions = Object.freeze({ NVI:129, NAA:1840, ARA:1608, ARC:212, NVT:1930, NTLH:211 });
-  const palettes = Object.freeze([
-    ['lavanda','Lavanda','#bfa2db'], ['salvia','Sálvia','#a7c7c5'],
-    ['areia','Areia','#d4bfae'], ['azul','Azul névoa','#a8bed3'],
-    ['rose','Rosé','#d5a0b5']
-  ]);
-  const $ = (id) => document.getElementById(id);
-  const isValidIndex = value => Number.isInteger(value) && value >= 0 && value < plan.length;
-  const defaults = () => ({ read: [], version:'NVI', palette:'lavanda', mode:'light', acknowledged:false, current:0 });
-  const safeMode = value => ['light','dark','system'].includes(value) ? value : 'light';
-  const safePalette = value => palettes.some(item => item[0] === value) ? value : 'lavanda';
-  function sanitize(saved) {
-    const d = defaults();
-    if (!saved || typeof saved !== 'object') return d;
-    return {
-      read: Array.isArray(saved.read) ? Array.from(new Set(saved.read.filter(isValidIndex))).sort((a,b)=>a-b) : [],
-      version: Object.hasOwn(versions,saved.version) ? saved.version : d.version,
-      palette: safePalette(saved.palette), mode: safeMode(saved.mode),
-      acknowledged: saved.acknowledged === true,
-      current: isValidIndex(saved.current) ? saved.current : 0
-    };
-  }
-  function readState(){
-    try {
-      const v = localStorage.getItem(STORE_KEY);
-      if (v) return sanitize(JSON.parse(v));
-      const old = localStorage.getItem(LEGACY_KEY);
-      if (old) return sanitize(JSON.parse(old));
-    } catch (_e) { /* modo privado e bloqueios do navegador */ }
-    return defaults();
-  }
-  let state = readState();
-  if (state.read.length && !state.read.includes(state.current)) {
-    state.current = Math.min(plan.findIndex((_,i)=>!state.read.includes(i)) < 0 ? plan.length - 1 : plan.findIndex((_,i)=>!state.read.includes(i)),plan.length - 1);
-  }
-  const save = () => { try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (_e) { /* app continua sem persistência */ } };
+  const { versions, palettes, isValidIndex, readState, writeState, nextPending, toggleRead } = window.READING_STATE;
+  const overlays = window.READING_OVERLAYS;
+  const $ = id => document.getElementById(id);
+  const storageError = () => { $('storage-notice').hidden = false; };
+  // O próprio acesso ao localStorage pode ser recusado pelo navegador.
+  let storage;
+  try { storage = window.localStorage; } catch (_error) { storageError(); }
+  let state = readState(storage,plan.length,storageError);
+  const save = () => writeState(storage,state,storageError);
   const text = (id,value) => { $(id).textContent = value; };
   const total = plan.length;
   const reference = d => d.review ? 'Revisão — sem passagem nova' : `${d.book} ${d.ch}:${d.a}–${d.b}`;
@@ -61,12 +32,12 @@
   }
   function buildPalettes(){
     const container=$('palette-options');
-    palettes.forEach(([name,label,color]) => {
+    palettes.forEach(([name,label]) => {
       const button=document.createElement('button');
       button.type='button';button.className='swatch';button.dataset.paletteChoice=name;
       button.setAttribute('aria-label', `Tema ${label}`);
       button.setAttribute('title',label);
-      const dot=document.createElement('span');dot.className='swatch-dot';dot.style.setProperty('--swatch-color',color);
+      const dot=document.createElement('span');dot.className='swatch-dot';dot.dataset.color=name;dot.setAttribute('aria-hidden','true');
       const labelText=document.createElement('span');labelText.className='swatch-caption';labelText.textContent=label;
       button.append(dot,labelText);
       button.addEventListener('click',()=>{state.palette=name;save();applyAppearance();});
@@ -101,6 +72,7 @@
   function updateProgress(){
     text('progress-label',`${state.read.length} de ${total}`);
     text('mobile-progress',`${state.read.length} de ${total} concluídos`);
+    $('progress').setAttribute('aria-valuenow',String(state.read.length));
     $('progress-fill').style.width=`${Math.round(100*state.read.length/total)}%`;
     document.querySelectorAll('.week').forEach((details,wi)=>{
       const n=state.read.filter(i=>plan[i].week===wi).length;
@@ -128,96 +100,105 @@
     text('mark-read',read?(d.review?'Revisão concluída':'Leitura concluída'):(d.review?'Concluir revisão':'Marcar como lida'));
     $('mark-read').setAttribute('aria-pressed',String(read));
     $('previous').disabled=state.current===0;$('next').disabled=state.current===total-1;
+    const pending = nextPending(state,total);
+    $('resume-reading').hidden = pending === null || pending === state.current;
+    if (pending !== null) text('resume-reading',`Continuar no encontro ${String(pending+1).padStart(2,'0')}`);
     updateProgress();
   }
   const routeViewport = window.matchMedia('(max-width:690px)');
   const routePanel = $('route-panel');
   const routeTab = $('route-tab');
-  const routeBackdrop = $('route-backdrop');
-  function setRouteOpen(open, restoreFocus = false){
-    const active = Boolean(open && routeViewport.matches);
-    document.body.classList.toggle('route-open', active);
-    routeBackdrop.hidden = !active;
-    routeTab.setAttribute('aria-expanded', String(active));
-    // Ao fechar, remova o foco do painel antes de ocultá-lo aos leitores de tela.
-    if (!active && routeViewport.matches && routePanel.contains(document.activeElement)) {
-      (restoreFocus ? routeTab : $('leitura')).focus({preventScroll:true});
-    }
-    routePanel.inert = routeViewport.matches && !active;
+  function syncRoute() {
+    if (overlays.isOpen(routePanel)) overlays.close(false);
+    routeTab.setAttribute('aria-expanded','false');
+    routePanel.inert = routeViewport.matches;
     if (routeViewport.matches) {
-      routePanel.setAttribute('role', 'dialog');
-      routePanel.setAttribute('aria-modal', String(active));
-      routePanel.setAttribute('aria-hidden', String(!active));
+      routePanel.setAttribute('role','dialog');
+      routePanel.setAttribute('aria-hidden','true');
     } else {
       routePanel.removeAttribute('role');
-      routePanel.removeAttribute('aria-modal');
       routePanel.removeAttribute('aria-hidden');
     }
-    if(active) $('close-route').focus({preventScroll:true});
-    else if(restoreFocus && routeViewport.matches) routeTab.focus({preventScroll:true});
+    // Ao mudar para celular, não deixe o foco em conteúdo que acabou de ser ocultado.
+    if (routeViewport.matches && routePanel.contains(document.activeElement)) routeTab.focus({preventScroll:true});
   }
-  function navigate(i){
-    if(!isValidIndex(i))return;
-    if (routeViewport.matches && document.body.classList.contains('route-open')) setRouteOpen(false);
+  function openRoute() {
+    if (!routeViewport.matches) return;
+    overlays.close(false);
+    routeTab.setAttribute('aria-expanded','true');
+    routePanel.removeAttribute('aria-hidden');
+    document.body.classList.add('route-open');
+    overlays.open(routePanel, {trigger:routeTab,initialFocus:$('close-route'),onClose:()=>{
+      document.body.classList.remove('route-open');
+      routeTab.setAttribute('aria-expanded','false');
+      routePanel.inert = routeViewport.matches;
+      if (routeViewport.matches) routePanel.setAttribute('aria-hidden','true');
+    }});
+  }
+  function navigate(i) {
+    if (!isValidIndex(i,total)) return;
+    overlays.close(false);
     state.current=i;save();render();
     document.querySelectorAll('.week').forEach(week=>{if(Number(week.dataset.week)===plan[i].week)week.open=true;});
-    if(routeViewport.matches) $('leitura').scrollIntoView({block:'start',behavior:'auto'});
+    $('leitura').scrollIntoView({block:'start',behavior:'instant'});
     $('leitura').focus({preventScroll:true});
   }
-  function showCelebration(week){
+  function showCelebration(kind) {
     const field=document.querySelector('.crystal-field');field.replaceChildren();
     const xs=[9,18,25,36,44,54,65,72,81,91,13,31,60,85,50,77];
     const ys=[22,63,30,79,17,67,28,74,37,63,84,48,12,87,45,18];
-    for(let i=0;i<xs.length;i++){
+    for(let i=0;i<xs.length;i++) {
       const particle=document.createElement('span');particle.className='crystal';
       particle.style.setProperty('--x',`${xs[i]}%`);particle.style.setProperty('--y',`${ys[i]}%`);
-      particle.style.setProperty('--size',`${(i%3)+3}px`);
-      particle.style.setProperty('--delay',`${(i%6)*.12}s`);field.append(particle);
+      particle.style.setProperty('--size',`${(i%3)+2}px`);
+      particle.style.setProperty('--delay',`${(i%6)*.16}s`);field.append(particle);
     }
-    text('celebration-title',`Semana ${week+1} concluída`);
-    $('celebration').hidden=false;
-    $('celebration').scrollIntoView({block:'nearest',behavior:'auto'});
+    text('celebration-title',kind==='plan'?'Seu plano foi concluído':'Semana concluída');
+    text('celebration-message',kind==='plan'
+      ?'Que o que você aprendeu ao longo destes encontros continue acompanhando sua caminhada com Deus.'
+      :'Você concluiu mais uma etapa da sua caminhada pela Palavra.');
+    overlays.open($('celebration'), {trigger:$('mark-read'),initialFocus:$('dismiss-celebration'),onClose:()=>{
+      $('celebration').hidden=true;field.replaceChildren();
+    }});
   }
   $('mark-read').addEventListener('click',()=>{
-    const index=state.current,wasRead=state.read.includes(index),week=plan[index].week;
-    if(wasRead) state.read=state.read.filter(i=>i!==index);
-    else state.read.push(index);
-    state.read.sort((a,b)=>a-b);save();render();
-    if(!wasRead && plan.filter(d=>d.week===week).every(d=>state.read.includes(plan.indexOf(d)))) showCelebration(week);
+    const result = toggleRead(state,state.current,plan);
+    state = result.state;save();render();
+    if (result.celebration) showCelebration(result.celebration);
   });
   $('previous').addEventListener('click',()=>navigate(state.current-1));
   $('next').addEventListener('click',()=>navigate(state.current+1));
-  $('dismiss-celebration').addEventListener('click',()=>{$('celebration').hidden=true;});
+  $('dismiss-celebration').addEventListener('click',()=>overlays.close());
   $('translation').addEventListener('change',event=>{if(Object.hasOwn(versions,event.target.value)){state.version=event.target.value;save();render();}});
-  $('dismiss-guide').addEventListener('click',()=>{state.acknowledged=true;save();$('guide-notice').hidden=true;});
-  routeTab.addEventListener('click',()=>setRouteOpen(true));
-  $('close-route').addEventListener('click',()=>setRouteOpen(false, true));
-  routeBackdrop.addEventListener('click',()=>setRouteOpen(false, true));
-  if (routeViewport.addEventListener) routeViewport.addEventListener('change',()=>setRouteOpen(false));
-  document.addEventListener('keydown',event=>{
-    if (!routeViewport.matches || !document.body.classList.contains('route-open')) return;
-    if (event.key === 'Escape') {event.preventDefault();setRouteOpen(false,true);return;}
-    if (event.key !== 'Tab') return;
-    const nodes = Array.from(routePanel.querySelectorAll('button:not(:disabled),summary,a[href]'))
-      .filter(element=>element.getClientRects().length>0);
-    if (!nodes.length) return;
-    const first=nodes[0],last=nodes[nodes.length-1];
-    if (event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
-    else if (!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
+  function setGuideVisible(visible) {
+    $('guide-notice').hidden=!visible;
+    $('show-guide').setAttribute('aria-expanded',String(visible));
+  }
+  $('dismiss-guide').addEventListener('click',()=>{
+    state.acknowledged=true;save();setGuideVisible(false);$('show-guide').focus({preventScroll:true});
   });
+  $('show-guide').addEventListener('click',()=>{
+    const visible=$('guide-notice').hidden;setGuideVisible(visible);
+    if (visible) { $('guide-notice').scrollIntoView({block:'start',behavior:'instant'});$('dismiss-guide').focus({preventScroll:true}); }
+  });
+  $('resume-reading').addEventListener('click',()=>navigate(nextPending(state,total)));
+  routeTab.addEventListener('click',openRoute);
+  $('close-route').addEventListener('click',()=>overlays.close());
+  routeViewport.addEventListener('change',syncRoute);
   $('theme-toggle').addEventListener('click',()=>{
-    const panel=$('theme-panel');panel.hidden=!panel.hidden;
-    $('theme-toggle').setAttribute('aria-expanded',String(!panel.hidden));
+    $('theme-toggle').setAttribute('aria-expanded','true');
+    overlays.open($('theme-panel'),{trigger:$('theme-toggle'),initialFocus:$('close-theme'),onClose:()=>{
+      $('theme-panel').hidden=true;$('theme-toggle').setAttribute('aria-expanded','false');
+    }});
   });
+  $('close-theme').addEventListener('click',()=>overlays.close());
   document.querySelectorAll('[data-mode-choice]').forEach(button=>button.addEventListener('click',()=>{state.mode=button.dataset.modeChoice;save();applyAppearance();}));
-  document.addEventListener('keydown',event=>{if(event.key==='Escape'){$('theme-panel').hidden=true;$('theme-toggle').setAttribute('aria-expanded','false');}});
-  document.addEventListener('click',event=>{if(!event.target.closest('.appearance-area')){$('theme-panel').hidden=true;$('theme-toggle').setAttribute('aria-expanded','false');}});
   const darkPreference=window.matchMedia('(prefers-color-scheme: dark)');
   if(darkPreference.addEventListener)darkPreference.addEventListener('change',()=>{if(state.mode==='system')applyAppearance();});
   buildPalettes();createWeeks();
-  setRouteOpen(false);
+  syncRoute();
   $('translation').value=state.version;
-  $('guide-notice').hidden=state.acknowledged;
+  setGuideVisible(!state.acknowledged);
   applyAppearance();
   document.querySelectorAll('.week').forEach(week=>{if(Number(week.dataset.week)===plan[state.current].week)week.open=true;});
   render();
