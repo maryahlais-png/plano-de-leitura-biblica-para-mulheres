@@ -103,7 +103,9 @@ test('roteiro e aparência: foco, teclado, clique fora, rolagem e troca de viewp
  await p.keyboard.press('Tab');assert.equal(await p.locator('#close-theme').evaluate(n=>n===document.activeElement),true);
  await p.keyboard.press('Escape');assert.equal(await p.locator('#theme-toggle').evaluate(n=>n===document.activeElement),true);
  await p.locator('#theme-toggle').click();await p.locator('#overlay-backdrop').click({position:{x:10,y:500}});await closed(p);
- await p.locator('#route-tab').click();await p.setViewportSize({width:1024,height:900});await closed(p);
+ await p.locator('#route-tab').click();await p.setViewportSize({width:1024,height:900});
+ await p.waitForFunction(()=>document.getElementById('route-panel').getAttribute('role')===null && !document.body.classList.contains('modal-open'));
+ await closed(p);
  assert.equal(await p.locator('#route-panel').getAttribute('role'),null);assert.equal(await p.locator('#route-panel').evaluate(n=>n.inert),false);
  await p.setViewportSize({width:390,height:844});await p.waitForFunction(()=>document.getElementById('route-panel').inert);
  // Abrir e fechar no fim da página não deve mudar a posição de leitura.
@@ -159,24 +161,160 @@ test('celebração semanal, final, foco, Escape, movimento reduzido e nenhuma re
  }
 });
 
-// Cálculo sRGB da WCAG para os pares efetivamente usados pelos componentes.
-function contrast(a,b) {
- const lum=hex=>{const v=hex.match(/[a-f\d]{2}/gi).map(c=>parseInt(c,16)/255).map(c=>c<=.04045?c/12.92:((c+.055)/1.055)**2.4);return .2126*v[0]+.7152*v[1]+.0722*v[2];};
+// Resposta tátil observável, sem depender de nomes de classes de estado ou tokens de sombra.
+async function controlStyle(control) {
+ return control.evaluate(node=>{
+  const style=getComputedStyle(node);
+  return ['backgroundColor','backgroundImage','boxShadow','filter','transform'].map(name=>style[name]);
+ });
+}
+test('controles respondem ao toque e ao teclado, com foco visível e áreas acessíveis',async()=>{
+ const p=await pageFor({saved:{acknowledged:true}});
+ const primary=p.locator('#mark-read');
+ await primary.scrollIntoViewIfNeeded();await p.mouse.move(0,0);await p.waitForTimeout(230);
+ const resting=await controlStyle(primary);
+ await primary.hover();await p.waitForTimeout(230);
+ const hovering=await controlStyle(primary);
+ assert.notDeepEqual(hovering,resting,'hover precisa fornecer retorno visual');
+ await p.mouse.down();await p.waitForTimeout(230);
+ const pressing=await controlStyle(primary);
+ assert.notDeepEqual(pressing,hovering,'pressionar precisa fornecer retorno visual adicional');
+ await p.mouse.up();assert.equal(await primary.getAttribute('aria-pressed'),'true');
+ await p.mouse.move(0,0);await p.waitForTimeout(230);
+ for(const id of ['mark-read','previous','next','route-tab','theme-toggle','show-guide']) {
+  const box=await p.locator(`#${id}`).boundingBox();
+  assert.ok(box.width>=44 && box.height>=44,`${id}: alvo ${box.width} × ${box.height}`);
+ }
+ const previous=p.locator('#previous');assert.equal(await previous.isDisabled(),true);
+ const box=await previous.boundingBox();await p.mouse.click(box.x+box.width/2,box.y+box.height/2);
+ assert.match(await p.locator('#encounter-number').innerText(),/01/,'anterior desativado não navega');
+ await p.locator('#context-details summary').focus();await p.keyboard.press('Tab');
+ assert.equal(await primary.evaluate(node=>node===document.activeElement),true);
+ const focus=await primary.evaluate(node=>{const s=getComputedStyle(node);return {style:s.outlineStyle,width:parseFloat(s.outlineWidth),color:s.outlineColor};});
+ assert.notEqual(focus.style,'none');assert.ok(focus.width>=2);assert.notEqual(focus.color,'rgba(0, 0, 0, 0)');
+ await p.keyboard.press('Space');assert.equal(await primary.getAttribute('aria-pressed'),'false');
+ await p.locator('#next').focus();await p.keyboard.press('Enter');
+ assert.match(await p.locator('#encounter-number').innerText(),/02/);
+ await p.locator('#previous').focus();await p.keyboard.press('Enter');
+ assert.match(await p.locator('#encounter-number').innerText(),/01/);
+ await p.locator('#theme-toggle').click();
+ for(const control of await p.locator('#theme-panel button').all()) {
+  const box=await control.boundingBox();assert.ok(box.width>=44 && box.height>=44,'controle do painel mantém alvo mínimo de 44 px');
+ }
+ await p.locator('[data-mode-choice="dark"]').focus();await p.keyboard.press('Space');
+ assert.equal(await p.locator('[data-mode-choice="dark"]').getAttribute('aria-pressed'),'true');
+ await p.locator('[data-mode-choice="light"]').focus();await p.keyboard.press('Enter');
+ assert.equal(await p.locator('[data-mode-choice="light"]').getAttribute('aria-pressed'),'true');
+ assert.equal(await p.locator('[data-mode-choice="dark"]').getAttribute('aria-pressed'),'false');
+ const stateIndicator=await p.locator('[data-mode-choice="light"]').evaluate(node=>{
+  const selected=getComputedStyle(node),unselected=getComputedStyle(document.querySelector('[data-mode-choice="dark"]'));
+  return {width:parseFloat(selected.borderTopWidth),style:selected.borderTopStyle,border:selected.borderTopColor,background:selected.backgroundColor,otherBorder:unselected.borderTopColor};
+ });
+ assert.ok(stateIndicator.width>=1 && stateIndicator.style!=='none','seleção segmentada precisa de indicador visual');
+ assert.notEqual(stateIndicator.border,stateIndicator.otherBorder);
+ const color=css=>css.match(/[\d.]+/g).slice(0,3).map(value=>Number(value)/255);
+ assert.ok(contrastChannels(color(stateIndicator.border),color(stateIndicator.background))>=3,'indicador selecionado precisa contrastar com o próprio controle');
+ await p.keyboard.press('Escape');await p.reload();
+ assert.equal(await p.locator('html').getAttribute('data-mode'),'light');
+ assert.equal(await p.locator('#progress').getAttribute('aria-valuenow'),'0');
+ await p.context().close();
+ const reduced=await pageFor({saved:{acknowledged:true},reducedMotion:'reduce'});
+ for(const id of ['mark-read','next','route-tab','theme-toggle']) {
+  const motion=await reduced.locator(`#${id}`).evaluate(node=>{
+   const s=getComputedStyle(node);return {durations:s.transitionDuration.split(',').map(Number.parseFloat),animation:s.animationName};
+  });
+  assert.ok(motion.durations.every(duration=>duration===0),`${id}: transições removidas com movimento reduzido`);
+  assert.equal(motion.animation,'none');
+ }
+ await reduced.context().close();
+});
+
+// Composição alfa em sRGB antes do cálculo WCAG; materiais incluem o fundo encoberto.
+function channels(hex) {
+ assert.match(hex,/^#[a-f\d]{6}(?:[a-f\d]{2})?$/i);
+ return hex.slice(1).match(/../g).map(value=>parseInt(value,16)/255);
+}
+function composite(foreground,background) {
+ const alpha=foreground[3]??1;
+ return foreground.slice(0,3).map((value,i)=>value*alpha+background[i]*(1-alpha));
+}
+function contrastChannels(a,b) {
+ const lum=rgb=>{const v=rgb.slice(0,3).map(c=>c<=.04045?c/12.92:((c+.055)/1.055)**2.4);return .2126*v[0]+.7152*v[1]+.0722*v[2];};
  const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);
 }
+const contrast=(a,b)=>contrastChannels(channels(a),channels(b));
+
+test('materiais mantêm fundo opaco com transparência reduzida e sem a camada de blur',async()=>{
+ const p=await pageFor({saved:{acknowledged:true}});
+ const client=await p.context().newCDPSession(p);
+ await client.send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-transparency',value:'reduce'}]});
+ await p.waitForFunction(()=>matchMedia('(prefers-reduced-transparency: reduce)').matches);
+ async function assertOpaque(locator) {
+  await p.waitForFunction(node=>{const style=getComputedStyle(node);return /^rgb\(/.test(style.backgroundColor) && (style.backdropFilter||style.webkitBackdropFilter)==='none';},await locator.elementHandle());
+  const actual=await locator.evaluate(node=>{
+   const style=getComputedStyle(node);return {background:style.backgroundColor,filter:style.backdropFilter||style.webkitBackdropFilter};
+  });
+  assert.match(actual.background,/^rgb\(/,'superfície alternativa deve ser opaca');
+  assert.equal(actual.filter,'none');
+ }
+ await assertOpaque(p.locator('#theme-toggle'));await assertOpaque(p.locator('#route-tab'));
+ await p.locator('#theme-toggle').click();await assertOpaque(p.locator('#theme-panel'));
+ assert.equal(await p.locator('#overlay-backdrop').evaluate(node=>getComputedStyle(node).backdropFilter),'none');await p.keyboard.press('Escape');
+ await p.evaluate(()=>{localStorage.setItem('leitura-biblica-mulheres-v1',JSON.stringify({current:6,read:[0,1,2,3,4,5],acknowledged:true}));});
+ await p.reload();await p.locator('#mark-read').click();await assertOpaque(p.locator('.celebration-content'));
+ await p.keyboard.press('Escape');await client.send('Emulation.setEmulatedMedia',{features:[]});
+ await p.waitForFunction(()=>!matchMedia('(prefers-reduced-transparency: reduce)').matches);
+ // Simula a ausência da melhoria progressiva: remove apenas o bloco @supports de blur da folha local.
+ // A base continua intacta. Isso valida o fallback, sem alegar execução em um navegador antigo.
+ const removed=await p.evaluate(()=>{
+  let removed=0;
+  for(const sheet of document.styleSheets) for(let index=sheet.cssRules.length-1;index>=0;index--) {
+   const rule=sheet.cssRules[index];
+   if(rule instanceof CSSSupportsRule && rule.conditionText.includes('backdrop-filter')) {sheet.deleteRule(index);removed++;}
+  }
+  return removed;
+ });
+ assert.ok(removed>0,'é necessário haver uma camada progressiva para simular sua ausência');
+ await assertOpaque(p.locator('#theme-toggle'));await assertOpaque(p.locator('#route-tab'));
+ await p.locator('#theme-toggle').click();await assertOpaque(p.locator('#theme-panel'));await p.keyboard.press('Escape');
+ await p.locator('#mark-read').click();await p.locator('#mark-read').click();await assertOpaque(p.locator('.celebration-content'));
+ await p.keyboard.press('Escape');
+ await p.context().close();
+});
+
 test('dez temas, contraste dos tokens, sete larguras, recursos, painel e modo automático',async()=>{
  const p=await pageFor({saved:{acknowledged:true}});
  const report=[];
  for(const palette of ['lavanda','salvia','areia','azul','rose'])for(const mode of ['light','dark']) {
   await p.locator('#theme-toggle').click();await p.locator(`[data-palette-choice="${palette}"]`).click();await p.locator(`[data-mode-choice="${mode}"]`).click();await p.locator('#close-theme').click();
   const tokens=await p.locator('html').evaluate(el=>{
-   const cs=getComputedStyle(el);return Object.fromEntries(['bg','surface','surface-soft','surface-elevated','text','muted','accent','accent-fg','control-border','tint','hero-a','hero-b','hero-ink'].map(k=>[k,cs.getPropertyValue(`--${k}`).trim()]));
+   const cs=getComputedStyle(el);return Object.fromEntries(['bg','surface','surface-bottom','surface-soft','surface-elevated','control','text','muted','accent','accent-fg','control-border','tint','hero-a','hero-b','hero-ink','material-glass','control-glass','overlay'].map(k=>[k,cs.getPropertyValue(`--${k}`).trim()]));
   });
   const pairs=[];
-  for(const fg of ['text','muted','accent'])for(const bg of ['bg','surface','surface-soft','surface-elevated','tint'])pairs.push([fg,bg,4.5]);
-  pairs.push(['accent-fg','accent',4.5],['hero-ink','hero-a',4.5],['hero-ink','hero-b',4.5],['control-border','surface',3],['control-border','surface-soft',3],['accent','surface',3]);
+  for(const fg of ['text','muted','accent'])for(const bg of ['bg','surface','surface-bottom','surface-soft','surface-elevated','control','tint'])pairs.push([fg,bg,4.5]);
+  pairs.push(['accent-fg','accent',4.5],['hero-ink','hero-a',4.5],['hero-ink','hero-b',4.5],['control-border','surface',3],['control-border','surface-soft',3],['control-border','control',3],['accent','surface',3]);
   let minimum=Infinity;
   for(const [fg,bg,required] of pairs){const ratio=contrast(tokens[fg],tokens[bg]);assert.ok(ratio>=required,`${palette} ${mode}: ${fg}/${bg} = ${ratio.toFixed(2)} < ${required}`);if(required===4.5)minimum=Math.min(minimum,ratio);}
+  let minimumMaterial=Infinity;
+  const materialPairs=[];
+  // Controles de vidro sobre os extremos do cabeçalho e do fundo ambiente.
+  for(const bg of ['hero-a','hero-b'])materialPairs.push(['text',composite(channels(tokens['control-glass']),channels(tokens[bg]))]);
+  for(const bg of ['bg','surface-soft'])materialPairs.push(['accent',composite(channels(tokens['control-glass']),channels(tokens[bg]))]);
+  // O painel pode cobrir qualquer ponto do conteúdo. Preto/branco limitam a luminância possível.
+  for(const behind of ['#000000','#ffffff']) {
+   const covered=composite(channels(tokens.overlay),channels(behind));
+   const material=composite(channels(tokens['material-glass']),covered);
+   for(const fg of ['text','muted','accent'])materialPairs.push([fg,material]);
+  }
+  for(const [fg,bg] of materialPairs) {
+   const ratio=contrastChannels(channels(tokens[fg]),bg);
+   assert.ok(ratio>=4.5,`${palette} ${mode}: texto ${fg} sobre material composto = ${ratio.toFixed(2)}`);
+   minimumMaterial=Math.min(minimumMaterial,ratio);
+  }
+  // O botão primário interpola entre accent e 92% de accent + 8% de preto.
+  const primaryBase=channels(tokens.accent),primaryBottom=primaryBase.slice(0,3).map(value=>value*.92);
+  const minimumPrimary=Math.min(contrastChannels(channels(tokens['accent-fg']),primaryBase),contrastChannels(channels(tokens['accent-fg']),primaryBottom));
+  assert.ok(minimumPrimary>=4.5,`${palette} ${mode}: texto no gradiente primário = ${minimumPrimary.toFixed(2)}`);
   for(const width of [320,360,375,390,430,768,1440]) {
    await p.setViewportSize({width,height:900});
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`${palette}/${mode}/${width}: overflow`);
@@ -188,7 +326,7 @@ test('dez temas, contraste dos tokens, sete larguras, recursos, painel e modo au
   await p.setViewportSize({width:1440,height:1000});await p.locator('#theme-toggle').focus();await p.locator('#theme-toggle').evaluate(n=>n.blur());
   await screenshot(p,`desktop-${palette}-${mode}.png`);
   await p.setViewportSize({width:390,height:844});await screenshot(p,`mobile-${palette}-${mode}.png`);
-  report.push({palette,mode,minimumTextContrast:Number(minimum.toFixed(2)),widths:[320,360,375,390,430,768,1440]});
+  report.push({palette,mode,minimumTextContrast:Number(minimum.toFixed(2)),minimumMaterialTextContrast:Number(minimumMaterial.toFixed(2)),minimumPrimaryTextContrast:Number(minimumPrimary.toFixed(2)),widths:[320,360,375,390,430,768,1440]});
  }
  await p.locator('#theme-toggle').click();await p.locator('[data-mode-choice="system"]').click();await p.locator('#close-theme').click();
  await p.emulateMedia({colorScheme:'dark'});await p.waitForFunction(()=>document.documentElement.dataset.mode==='dark');
