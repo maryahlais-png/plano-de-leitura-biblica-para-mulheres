@@ -10,7 +10,7 @@ Execute `npm test`: checagens da integridade editorial (35 encontros, sete por s
 2. Abra todos os temas: Lavanda, Sálvia, Areia, Azul Névoa e Rosé, em **Claro** e **Escuro**. Verifique contraste de títulos, textos, controles e links.
 3. Teste a opção **Automático** alternando a preferência claro/escuro do sistema.
 4. Marque uma leitura, atualize a página e confirme que a marcação permanece. Desmarque e confira a atualização.
-5. Navegue pelo índice de semanas, anterior e próxima. Na última leitura, **Próxima** deve estar desativado.
+5. No celular, abra a aba lateral **Roteiro**. Feche tocando fora, no botão de fechar e pressionando Escape. Escolha uma leitura e confirme que o painel fecha e a leitura aparece. No computador, confirme que o índice permanece na coluna lateral. Na última leitura, **Próxima** deve estar desativado.
 6. Abra contexto, mude de leitura e verifique que a próxima seção começa fechada.
 7. Teste as seis traduções e confirme no destino externo o livro, capítulo, versículos e tradução. Links podem mudar no serviço externo.
 8. Conclua os sete encontros de uma semana. Confirme **Semana concluída** com partículas discretas e botão **Continuar**.
