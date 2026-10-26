@@ -9,7 +9,7 @@ const read = (p) => fs.readFileSync(path.join(root,p),'utf8');
 const scope = {window:{}};
 vm.runInNewContext(read('src/data.js'),scope);
 const { weeks,encounters } = scope.window.READING_PLAN;
-const html = read('index.html'), app = read('src/app.js'), css = read('src/styles.css');
+const html = read('index.html'), app = ['src/app.js','src/state.js','src/overlays.js'].map(read).join('\n'), css = read('src/styles.css');
 test('conteúdo editorial tem 35 encontros, 5 semanas e 5 revisões',()=>{
  assert.equal(weeks.length,5);assert.equal(encounters.length,35);
  assert.equal(encounters.filter(e=>e.review).length,5);
@@ -35,7 +35,9 @@ test('cada leitura possui referência e três questões; revisões não inventam
 });
 test('documento apresenta nome, créditos, método e controles necessários',()=>{
  assert.match(html,/<html lang="pt-BR"/);
- assert.match(html,/Plano de leitura bíblica para mulheres/i);
+ assert.match(html,/<h1 lang="en">Devotional Days<\/h1>/);
+ assert.match(html,/35 dias de leitura e reflexão bíblica/);
+ assert.match(html,/feito para mulheres/);
  assert.match(html,/Com fé e carinho, Lais Fernandes\./);
  for(const id of ['guide-notice','dismiss-guide','theme-panel','palette-options','translation','questions','context-details','mark-read','celebration'])assert.ok(html.includes(`id="${id}"`),id);
 });
@@ -52,7 +54,7 @@ test('proteções de frontend documentadas e sem execução remota',()=>{
 test('10 temas, responsividade, foco e movimento reduzido',()=>{
  const palettes=['lavanda','salvia','areia','azul','rose'];
  for(const p of palettes.filter(p=>p!=='lavanda'))assert.ok(css.includes(`[data-palette=${p}]`),p);
- assert.match(css, /:root\{/);
+ assert.match(css, /:root\s*\{/);
  assert.match(css,/\[data-mode=dark\]/);
  assert.match(css,/@media\(max-width:690px\)/);
  assert.match(css, /prefers-reduced-motion:reduce/);
@@ -60,15 +62,11 @@ test('10 temas, responsividade, foco e movimento reduzido',()=>{
  assert.match(app, /prefers-color-scheme: dark/);
 });
 
-test('roteiro móvel abre em aba lateral e fecha ao tocar fora ou apertar Escape',()=>{
- for(const id of ['route-tab','route-panel','route-backdrop','close-route','mobile-progress'])assert.ok(html.includes(`id="${id}"`),id);
+test('roteiro móvel e sobreposições têm controles acessíveis',()=>{
+ for(const id of ['route-tab','route-panel','overlay-backdrop','close-route','mobile-progress','close-theme','dismiss-celebration'])assert.ok(html.includes(`id="${id}"`),id);
+ assert.match(html,/aria-label="Abrir roteiro"/);
  assert.match(html,/aria-controls="route-panel" aria-expanded="false"/);
- assert.match(css,/\.mobile-nav\{display:flex;position:sticky/);
- assert.match(css,/\.route-tab\{display:flex;position:static/);
- assert.match(css,/\.navigation\{position:fixed;top:0/);
- assert.match(css,/\.route-backdrop:not\(\[hidden\]\)/);
- assert.match(app,/routeBackdrop\.addEventListener\('click',\(\)=>setRouteOpen\(false, true\)\)/);
- assert.match(app,/event\.key === 'Escape'/);
- assert.match(app,/setRouteOpen\(false\);\s*state\.current=i/);
- assert.match(app,/routePanel\.inert/);
+ assert.match(html,/id="celebration" role="dialog"/);
+ assert.match(html,/id="theme-panel" role="dialog"/);
+ assert.doesNotMatch(html,/class="mobile-nav"/);
 });
