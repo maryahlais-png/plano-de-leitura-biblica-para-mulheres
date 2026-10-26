@@ -67,7 +67,8 @@
       button.setAttribute('aria-label', `Tema ${label}`);
       button.setAttribute('title',label);
       const dot=document.createElement('span');dot.className='swatch-dot';dot.style.setProperty('--swatch-color',color);
-      button.append(dot);
+      const labelText=document.createElement('span');labelText.className='swatch-caption';labelText.textContent=label;
+      button.append(dot,labelText);
       button.addEventListener('click',()=>{state.palette=name;save();applyAppearance();});
       container.append(button);
     });
@@ -99,6 +100,7 @@
   }
   function updateProgress(){
     text('progress-label',`${state.read.length} de ${total}`);
+    text('mobile-progress',`${state.read.length} de ${total} concluídos`);
     $('progress-fill').style.width=`${Math.round(100*state.read.length/total)}%`;
     document.querySelectorAll('.week').forEach((details,wi)=>{
       const n=state.read.filter(i=>plan[i].week===wi).length;
