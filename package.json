@@ -1,0 +1,11 @@
+{
+  "name": "plano-de-leitura-biblica-para-mulheres",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Guia estático de leitura bíblica para mulheres adultas",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "start": "python -m http.server 8000"
+  },
+  "engines": {"node": ">=18"}
+}
