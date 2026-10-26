@@ -15,12 +15,12 @@ Um guia gratuito de estudo bíblico para mulheres adultas que já têm contato c
 - Referências bíblicas para consulta na Bíblia física ou, opcionalmente, na YouVersion (NVI, NAA, ARA, ARC, NVT, NTLH).
 - Perguntas para reflexão individual e seção opcional de contexto e interpretação.
 - Marcação de leitura, sem cadastro, comentários, formulários ou anotações digitais.
-- Cinco paletas: Lavanda, Sálvia, Areia, Azul Névoa e Rosé; modos claro, escuro ou automático.
+- Cinco paletas: Lavanda, Sálvia, Areia, Azul Névoa e Rosé; modos claro, escuro ou automático, com bases neutras, superfícies em camadas e controles arredondados.
 - Orientações no primeiro acesso, disponíveis novamente em **Como usar**. Os encontros não precisam ser feitos em dias consecutivos.
 - Último encontro preservado e atalho opcional para a primeira atividade pendente.
 - Roteiro lateral no computador e botão compacto **Abrir roteiro** no celular.
 - Celebrações centralizadas ao concluir uma semana ou o plano completo, com microbrilhos brancos e apresentação estática quando há preferência por reduzir movimento.
-- Layout responsivo, navegação por teclado e código sem dependências externas.
+- Layout responsivo, navegação por teclado e código sem dependências externas. A leitura permanece opaca; a translucidez discreta de alguns controles e painéis possui alternativa opaca.
 
 ## Executar localmente
 
@@ -61,6 +61,7 @@ Os 14 testes sem dependências cobrem as 35 leituras, estrutura, segurança, com
 │   ├── PRIVACIDADE.md
 │   ├── INTERFACE.md
 │   ├── VALIDACAO.md
+│   ├── VALIDACAO-POLIMENTO.md
 │   └── TESTES.md
 ├── tests/               # Verificações automatizadas sem dependências
 ├── .github/             # CI para testes e Dependabot para Actions
@@ -75,6 +76,8 @@ O repositório e a URL permanecem os mesmos:
 https://maryahlais-png.github.io/plano-de-leitura-biblica-para-mulheres/
 
 Desenvolva em uma branch a partir da `main` atualizada, execute os testes, envie commits ao remoto e abra um Pull Request para revisão. Não faça merge nem publique uma atualização sem autorização explícita da autora. Consulte `CONTRIBUTING.md`.
+
+Nesta segunda rodada, `feature/devotional-days-apple-polish` parte de `feature/devotional-days` e tem essa branch como destino do [PR #5](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/5). O PR #4 e a versão anterior permanecem disponíveis para revisão. A [validação do polimento](docs/VALIDACAO-POLIMENTO.md) reúne os resultados desta rodada sem substituir o [relatório anterior](docs/VALIDACAO.md).
 
 A hospedagem continua estática no GitHub Pages, com `index.html` na raiz e `.nojekyll`. Não publique credenciais ou dados pessoais. Os dados do navegador de cada pessoa não fazem parte do repositório.
 
