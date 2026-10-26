@@ -1,0 +1,26 @@
+
+> plano-de-leitura-biblica-para-mulheres@1.0.0 test
+> node --test tests/*.test.cjs
+
+✔ conteúdo editorial tem 35 encontros, 5 semanas e 5 revisões (1.989078ms)
+✔ cada leitura possui referência e três questões; revisões não inventam versículos (0.328536ms)
+✔ documento apresenta nome, créditos, método e controles necessários (0.746084ms)
+✔ proteções de frontend documentadas e sem execução remota (0.80305ms)
+✔ 10 temas, responsividade, foco e movimento reduzido (0.306672ms)
+✔ roteiro móvel e sobreposições têm controles acessíveis (0.204228ms)
+✔ dados inválidos são filtrados sem perder progresso ou preferências válidas (1.666511ms)
+✔ as duas chaves existentes são lidas e salvas sem apagar a anterior (1.430856ms)
+✔ registro atual tem prioridade e registro malformado permite recuperar a chave antiga (0.301774ms)
+✔ falhas de acesso e de cota não interrompem o uso (0.247673ms)
+✔ próxima pendência não substitui a leitura escolhida (0.174573ms)
+✔ marcar e desmarcar preserva as demais preferências (0.246842ms)
+✔ celebração exige os sete encontros, inclusive revisão, em cada semana (0.243136ms)
+✔ conclusão integral usa uma única mensagem e mantém todos os estudos disponíveis (0.335256ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 79.878898

@@ -8,7 +8,7 @@ Node.js >=18, na raiz do projeto:
 npm test
 ```
 
-`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22.
+`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22. O evento de Pull Request aceita os destinos `main` e `feature/devotional-days`, permitindo validar a segunda rodada incremental; pushes continuam limitados à `main`. O workflow usa apenas `contents: read` e não publica o site.
 
 ## Integração com navegador real
 
@@ -26,7 +26,7 @@ NODE_PATH=/tmp/devotional-browser/node_modules CHROMIUM_PATH=/usr/bin/chromium n
 
 Se Playwright já estiver no caminho de módulos, basta `node --test tests/browser.cjs`. Ajuste `CHROMIUM_PATH` ao executável confiável da máquina. `BASE_URL` muda o servidor de teste (padrão `http://127.0.0.1:8000`); `ARTIFACT_DIR` muda o destino de capturas e relatório de contraste (padrão `/tmp/devotional-days-results`). Use uma origem sem dados pessoais: o teste cria contextos isolados com estado sintético.
 
-Os seis cenários cobrem:
+Os cenários de integração cobrem:
 
 - primeiro acesso, dispensa e nova consulta das orientações;
 - navegação pelos 35 encontros, referências, questões, revisões e seis traduções;
@@ -35,7 +35,9 @@ Os seis cenários cobrem:
 - conclusão semanal e integral, cristais brancos, movimento reduzido, fechamento e ausência de repetição no reload;
 - dez temas em 320, 360, 375, 390, 430, 768 e 1440 px, sem overflow horizontal, painéis dentro da tela, contraste de tokens e modo automático.
 
-A suíte falha se houver erro de JavaScript, console, CSP ou recursos HTTP. O cálculo sRGB verifica pares de tokens usados por texto (>=4,5:1) e contornos de controles (>=3:1); não equivale a certificação WCAG completa. Capturas são geradas em claro/escuro para todas as paletas.
+A segunda rodada acrescenta a verificação dos controles refinados: tamanho de toque, estados de foco/pressão/indisponibilidade, operação por teclado do controle segmentado e respeito à preferência de movimento reduzido. Oito cenários cobrem também a preferência de transparência reduzida, emulada por CDP, e a alternativa opaca. A ausência de suporte a desfoque é simulada no contexto de teste para exercitar o CSS de fallback; isso não equivale a testar um navegador antigo real.
+
+A suíte falha se houver erro de JavaScript, console, CSP ou recursos HTTP. O cálculo sRGB verifica pares de tokens usados por texto (>=4,5:1), contornos de controles e do segmento selecionado (>=3:1), extremos do gradiente da ação principal e cores compostas por transparência. Para o vidro, avalia Aparência sobre os extremos do cabeçalho, Roteiro sobre o fundo e a superfície suave, e painéis sobre os limites preto/branco compostos com o backdrop. Esse cálculo não equivale a certificação WCAG completa. Capturas são geradas em claro/escuro para todas as paletas.
 
 ## Auditoria automatizada de acessibilidade
 
@@ -48,6 +50,17 @@ NODE_PATH=/tmp/devotional-browser/node_modules node tests/a11y.cjs
 
 Usa o mesmo `BASE_URL`, `CHROMIUM_PATH` e `ARTIFACT_DIR`, roda 24 cenários e grava `acessibilidade.json`. Sai com erro se detectar violações; resultados incompletos permanecem no relatório para revisão humana. A injeção do auditor é feita pelo processo de automação, sem mudar CSP ou carregar bibliotecas no site entregue.
 
+## Evidências por rodada
+
+Para não sobrescrever as capturas e os relatórios da primeira revisão, use um destino novo ao validar o polimento:
+
+```bash
+ARTIFACT_DIR=/tmp/devotional-days-polimento node --test tests/browser.cjs
+ARTIFACT_DIR=/tmp/devotional-days-polimento node tests/a11y.cjs
+```
+
+Mantenha `NODE_PATH`, `CHROMIUM_PATH` e `BASE_URL` conforme a instalação local. As evidências selecionadas da segunda rodada são versionadas em `docs/evidencias/polimento/` e `docs/capturas/polimento/`. A matriz também deve conferir a alternativa opaca quando o recurso de desfoque ou a preferência de transparência não estiverem disponíveis.
+
 ## Aceitação complementar
 
 1. Inspecionar capturas e uso real em computador e celular: alinhamento, legibilidade, foco e recortes.
@@ -56,4 +69,4 @@ Usa o mesmo `BASE_URL`, `CHROMIUM_PATH` e `ARTIFACT_DIR`, roda 24 cenários e gr
 4. Confirmar manualmente no destino externo as seis traduções, capítulos e versículos; os testes locais validam construção dos links, não a disponibilidade do serviço.
 5. Revisar com pessoa qualificada a interpretação bíblica e os direitos autorais antes de ampliar a divulgação. O conteúdo editorial não foi alterado.
 
-Resultados reais, versões e limitações da rodada atual estão em `VALIDACAO.md`. Não publicar nem fazer merge sem aprovação da autora.
+Resultados da primeira rodada permanecem em `VALIDACAO.md`. Versões, resultados e limitações da segunda rodada estão em `VALIDACAO-POLIMENTO.md`. Não publicar nem fazer merge sem aprovação da autora.
