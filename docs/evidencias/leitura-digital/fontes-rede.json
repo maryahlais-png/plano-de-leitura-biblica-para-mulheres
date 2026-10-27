@@ -1,0 +1,31 @@
+[
+  {
+    "url": "https://platform.youversion.com/",
+    "status": 200,
+    "final_url": "https://platform.youversion.com/"
+  },
+  {
+    "url": "https://developers.youversion.com/",
+    "status": 200,
+    "final_url": "https://developers.youversion.com/overview"
+  },
+  {
+    "url": "https://www.biblica.com/permissions/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://api.bible/",
+    "status": 200,
+    "final_url": "https://api.bible/"
+  },
+  {
+    "url": "https://docs.api.bible/",
+    "status": 200,
+    "final_url": "https://docs.api.bible/"
+  },
+  {
+    "url": "https://api.bible/terms-and-conditions",
+    "status": 200,
+    "final_url": "https://api.bible/terms-and-conditions"
+  }
+]

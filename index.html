@@ -73,7 +73,10 @@
         <p class="lesson-lead" id="lesson-lead"></p>
         <div class="reading-box" id="reading-box">
           <div class="translation-selector"><label for="translation">Tradução para leitura digital</label><select id="translation"><option value="NVI">NVI — Nova Versão Internacional</option><option value="NAA">NAA — Nova Almeida Atualizada</option><option value="ARA">ARA — Almeida Revista e Atualizada</option><option value="ARC">ARC — Almeida Revista e Corrigida</option><option value="NVT">NVT — Nova Versão Transformadora</option><option value="NTLH">NTLH — Nova Tradução na Linguagem de Hoje</option></select></div>
-          <a id="bible-link" class="read-link" href="https://www.bible.com/pt" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Ler na YouVersion <svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+          <div class="digital-reading">
+            <a id="bible-link" class="quiet-button read-link" href="https://www.bible.com/pt" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-describedby="digital-reading-destination"><svg aria-hidden="true" viewBox="0 0 24 24" width="17" height="17"><path d="M12 5.5C9.5 4.2 6.5 4 3 5v14c3.5-1 6.5-.8 9 .5m0-14c2.5-1.3 5.5-1.5 9-.5v14c-3.5-1-6.5-.8-9 .5m0-14v14"/></svg><span>Ler na Bíblia digital</span><svg aria-hidden="true" viewBox="0 0 24 24" width="13" height="13"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+            <p id="digital-reading-destination" class="digital-reading-destination">A leitura será aberta na YouVersion.<span class="visually-hidden"> Em uma nova aba.</span></p>
+          </div>
         </div>
         <p class="support-note" id="reading-note">Leia a passagem completa, na sua Bíblia física ou no link digital.</p>
         <section class="reflection" aria-labelledby="reflection-title"><div class="section-header"><h3 id="reflection-title">Questões para reflexão</h3><span class="journal-label">No seu caderno</span></div><p class="reflection-prompt">Observe o que a passagem comunica e desenvolva sua reflexão antes de consultar o contexto.</p><ol id="questions"></ol></section>

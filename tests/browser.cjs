@@ -7,6 +7,8 @@ const path = require('node:path');
 const {chromium} = require('playwright');
 const BASE = process.env.BASE_URL || 'http://127.0.0.1:8000';
 const artifacts = process.env.ARTIFACT_DIR || '/tmp/devotional-days-results';
+const referenceWidths = [320,360,375,390,430,768,1024,1440];
+const versions = {NVI:129,NAA:1840,ARA:1608,ARC:212,NVT:1930,NTLH:211};
 const key='leitura-biblica-mulheres-v1', legacy='plano-biblia-estudo-reflexao-v2';
 let browser;
 const errors=[];
@@ -52,7 +54,6 @@ test('primeiro acesso, consulta posterior, navegação, contexto, progresso e li
  await p.reload();assert.equal(await p.locator('html').getAttribute('data-palette'),'azul');
  assert.equal(await p.locator('#mark-read').getAttribute('aria-pressed'),'true');
  await p.locator('#mark-read').click();assert.equal(await p.locator('#progress').getAttribute('aria-valuenow'),'0');
- const versions={NVI:129,NAA:1840,ARA:1608,ARC:212,NVT:1930,NTLH:211};
  for(const [name,id] of Object.entries(versions)) {
   await p.locator('#translation').selectOption(name);
   assert.equal(await p.locator('#bible-link').getAttribute('href'),`https://www.bible.com/pt/bible/${id}/MRK.1.14-20.${name}`);
@@ -65,16 +66,97 @@ test('primeiro acesso, consulta posterior, navegação, contexto, progresso e li
 test('todos os encontros mantêm referência, questões e navegação de revisão',async()=>{
  const p=await pageFor({width:1440,saved:{acknowledged:true}});
  const plan=await p.evaluate(()=>window.READING_PLAN.encounters);
+ const generated=[];
  for(let i=0;i<plan.length;i++) {
   const entry=plan[i];
   assert.equal(await p.locator('#lesson-title').innerText(),entry.title);
   assert.equal(await p.locator('#questions li').count(),3);
   assert.equal(await visible(p,'#reading-box'),!entry.review);
-  if(!entry.review) assert.equal(await p.locator('#bible-link').getAttribute('href'),`https://www.bible.com/pt/bible/129/${entry.code}.${entry.ch}.${entry.a}-${entry.b}.NVI`);
-  else assert.match(await p.locator('#passage-reference').innerText(),/Revisão/);
+  if(!entry.review) {
+   for(const [version,id] of Object.entries(versions)) {
+    await p.locator('#translation').selectOption(version);
+    const expected=`https://www.bible.com/pt/bible/${id}/${entry.code}.${entry.ch}.${entry.a}-${entry.b}.${version}`;
+    assert.equal(await p.locator('#bible-link').getAttribute('href'),expected);
+    generated.push({encounter:i+1,version,href:expected});
+   }
+  } else {
+   assert.match(await p.locator('#passage-reference').innerText(),/Revisão/);
+   assert.equal(await visible(p,'#bible-link'),false);
+   assert.equal(await p.getByRole('link',{name:'Ler na Bíblia digital',exact:true}).count(),0);
+   assert.equal(await p.getByText('A leitura será aberta na YouVersion.',{exact:false}).isVisible(),false);
+  }
   if(i<34)await p.locator('#next').click();
  }
  assert.equal(await p.locator('#next').isDisabled(),true);
+ assert.equal(generated.length,180);
+ fs.writeFileSync(path.join(artifacts,'links-gerados.json'),JSON.stringify({method:'Geração local verificada; disponibilidade e conteúdo no provedor não foram consultados por este teste.',total:generated.length,links:generated},null,2));
+ await p.context().close();
+});
+
+test('leitura digital anuncia destino, abre em nova aba e preserva encontro e progresso',async()=>{
+ const fresh=await pageFor();
+ assert.equal(await fresh.locator('#translation').inputValue(),'NVI');
+ await fresh.context().close();
+ for(const version of Object.keys(versions)) {
+  const saved={read:[0,2],current:4,palette:'rose',mode:'dark',version,acknowledged:true};
+  const existing=await pageFor({saved});
+  assert.equal(await existing.locator('#translation').inputValue(),version);
+  await existing.reload();
+  assert.equal(await existing.locator('#translation').inputValue(),version);
+  assert.equal(await existing.locator('#progress').getAttribute('aria-valuenow'),'2');
+  assert.match(await existing.locator('#encounter-number').innerText(),/05/);
+  await existing.context().close();
+ }
+ const saved={read:[0,2],current:4,palette:'rose',mode:'dark',version:'NAA',acknowledged:true};
+ const p=await pageFor({saved});
+ const link=p.getByRole('link',{name:'Ler na Bíblia digital',exact:true});
+ assert.equal(await link.innerText(),'Ler na Bíblia digital');
+ assert.equal(await p.getByText('A leitura será aberta na YouVersion.',{exact:false}).isVisible(),true);
+ const description=await link.evaluate(node=>(node.getAttribute('aria-describedby')||'').split(/\s+/).filter(Boolean).map(id=>document.getElementById(id)?.textContent).join(' '));
+ assert.match(description,/A leitura será aberta na YouVersion\./);
+ assert.match(description,/nova aba/i);
+ assert.equal(await link.getAttribute('target'),'_blank');
+ assert.match(await link.getAttribute('rel'),/noopener/);assert.match(await link.getAttribute('rel'),/noreferrer/);
+ assert.equal(await link.getAttribute('referrerpolicy'),'no-referrer');
+ assert.ok(await link.locator('svg').count()>=1);
+ assert.equal(await link.locator('svg').evaluateAll(nodes=>nodes.every(node=>node.getAttribute('aria-hidden')==='true')),true);
+ // O comportamento de abrir o contexto já é coberto acima; prepare aqui o estado sem rolagem da automação.
+ await p.locator('#context-details').evaluate(node=>{node.open=true;});
+ await link.hover();
+ await link.evaluate(node=>Promise.all(node.getAnimations().map(animation=>animation.finished)));
+ const clickTarget=await link.boundingBox();
+ assert.ok(clickTarget.y>=0 && clickTarget.y+clickTarget.height<=844,'ação externa precisa estar visível antes do clique');
+ const before=await p.evaluate(k=>({saved:localStorage.getItem(k),url:location.href,scroll:scrollY,encounter:document.getElementById('encounter-number').textContent,context:document.getElementById('context-details').open}),key);
+ const expected=await link.getAttribute('href');
+ // Apenas o destino do clique é simulado. Não consulta o provedor nem contém texto bíblico.
+ const simulatedNavigations=[];
+ await p.context().route('https://www.bible.com/**',route=>{
+  const request=route.request();
+  if(!request.isNavigationRequest())return route.fulfill({status:204,body:''});
+  simulatedNavigations.push({url:request.url(),referrer:request.headers().referer});
+  return route.fulfill({status:200,contentType:'text/html',body:'<!doctype html><html lang="pt-BR"><head><title>Destino externo simulado</title><link rel="icon" href="data:,"></head><body><p>Resposta neutra do teste de navegação.</p></body></html>'});
+ });
+ const opened=p.waitForEvent('popup');
+ // Clique físico evita que o próprio driver reposicione a página durante a ação sob teste.
+ await p.mouse.click(clickTarget.x+clickTarget.width/2,clickTarget.y+clickTarget.height/2);
+ const popup=await opened;
+ await popup.waitForLoadState('domcontentloaded');assert.equal(popup.url(),expected);
+ assert.equal(await popup.evaluate(()=>window.opener===null),true);
+ const after=await p.evaluate(k=>({saved:localStorage.getItem(k),url:location.href,scroll:scrollY,encounter:document.getElementById('encounter-number').textContent,context:document.getElementById('context-details').open}),key);
+ assert.deepEqual(after,before,'abrir a Bíblia externa não altera a leitura, o contexto ou o estado salvo');
+ assert.equal(await p.locator('#mark-read').getAttribute('aria-pressed'),'false');
+ await popup.close();
+ // A mesma ação deve poder ser acionada pelo teclado, com indicação de foco.
+ await link.focus();await p.keyboard.press('Shift+Tab');await p.keyboard.press('Tab');
+ assert.equal(await link.evaluate(node=>node===document.activeElement),true);
+ const focus=await link.evaluate(node=>{const style=getComputedStyle(node);return {width:parseFloat(style.outlineWidth),style:style.outlineStyle};});
+ assert.ok(focus.width>=2 && focus.style!=='none');
+ const keyboardOpened=p.waitForEvent('popup');await p.keyboard.press('Enter');const keyboardPopup=await keyboardOpened;
+ await keyboardPopup.waitForLoadState('domcontentloaded');assert.equal(keyboardPopup.url(),expected);
+ assert.equal(await p.locator('#progress').getAttribute('aria-valuenow'),'2');
+ await keyboardPopup.close();
+ assert.deepEqual(simulatedNavigations.map(request=>request.url),[expected,expected]);
+ assert.ok(simulatedNavigations.every(request=>request.referrer===undefined),'requisições de navegação simuladas não enviam Referer');
  await p.context().close();
 });
 
@@ -181,7 +263,7 @@ test('controles respondem ao toque e ao teclado, com foco visível e áreas aces
  assert.notDeepEqual(pressing,hovering,'pressionar precisa fornecer retorno visual adicional');
  await p.mouse.up();assert.equal(await primary.getAttribute('aria-pressed'),'true');
  await p.mouse.move(0,0);await p.waitForTimeout(230);
- for(const id of ['mark-read','previous','next','route-tab','theme-toggle','show-guide']) {
+ for(const id of ['mark-read','previous','next','route-tab','theme-toggle','show-guide','bible-link']) {
   const box=await p.locator(`#${id}`).boundingBox();
   assert.ok(box.width>=44 && box.height>=44,`${id}: alvo ${box.width} × ${box.height}`);
  }
@@ -219,7 +301,7 @@ test('controles respondem ao toque e ao teclado, com foco visível e áreas aces
  assert.equal(await p.locator('#progress').getAttribute('aria-valuenow'),'0');
  await p.context().close();
  const reduced=await pageFor({saved:{acknowledged:true},reducedMotion:'reduce'});
- for(const id of ['mark-read','next','route-tab','theme-toggle']) {
+ for(const id of ['mark-read','next','route-tab','theme-toggle','bible-link']) {
   const motion=await reduced.locator(`#${id}`).evaluate(node=>{
    const s=getComputedStyle(node);return {durations:s.transitionDuration.split(',').map(Number.parseFloat),animation:s.animationName};
   });
@@ -282,7 +364,7 @@ test('materiais mantêm fundo opaco com transparência reduzida e sem a camada d
  await p.context().close();
 });
 
-test('dez temas, contraste dos tokens, sete larguras, recursos, painel e modo automático',async()=>{
+test('dez temas, contraste dos tokens, oito larguras, recursos, painel e modo automático',async()=>{
  const p=await pageFor({saved:{acknowledged:true}});
  const report=[];
  for(const palette of ['lavanda','salvia','areia','azul','rose'])for(const mode of ['light','dark']) {
@@ -315,7 +397,7 @@ test('dez temas, contraste dos tokens, sete larguras, recursos, painel e modo au
   const primaryBase=channels(tokens.accent),primaryBottom=primaryBase.slice(0,3).map(value=>value*.92);
   const minimumPrimary=Math.min(contrastChannels(channels(tokens['accent-fg']),primaryBase),contrastChannels(channels(tokens['accent-fg']),primaryBottom));
   assert.ok(minimumPrimary>=4.5,`${palette} ${mode}: texto no gradiente primário = ${minimumPrimary.toFixed(2)}`);
-  for(const width of [320,360,375,390,430,768,1440]) {
+  for(const width of referenceWidths) {
    await p.setViewportSize({width,height:900});
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`${palette}/${mode}/${width}: overflow`);
    await p.locator('#theme-toggle').click();
@@ -326,7 +408,7 @@ test('dez temas, contraste dos tokens, sete larguras, recursos, painel e modo au
   await p.setViewportSize({width:1440,height:1000});await p.locator('#theme-toggle').focus();await p.locator('#theme-toggle').evaluate(n=>n.blur());
   await screenshot(p,`desktop-${palette}-${mode}.png`);
   await p.setViewportSize({width:390,height:844});await screenshot(p,`mobile-${palette}-${mode}.png`);
-  report.push({palette,mode,minimumTextContrast:Number(minimum.toFixed(2)),minimumMaterialTextContrast:Number(minimumMaterial.toFixed(2)),minimumPrimaryTextContrast:Number(minimumPrimary.toFixed(2)),widths:[320,360,375,390,430,768,1440]});
+  report.push({palette,mode,minimumTextContrast:Number(minimum.toFixed(2)),minimumMaterialTextContrast:Number(minimumMaterial.toFixed(2)),minimumPrimaryTextContrast:Number(minimumPrimary.toFixed(2)),widths:referenceWidths});
  }
  await p.locator('#theme-toggle').click();await p.locator('[data-mode-choice="system"]').click();await p.locator('#close-theme').click();
  await p.emulateMedia({colorScheme:'dark'});await p.waitForFunction(()=>document.documentElement.dataset.mode==='dark');

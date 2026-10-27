@@ -1,0 +1,9 @@
+✔ leitura digital anuncia destino, abre em nova aba e preserva encontro e progresso (4784.86124ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5256.949243

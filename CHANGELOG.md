@@ -1,5 +1,14 @@
 # Histórico de versões
 
+## Leitura bíblica digital — proposta para revisão (2026-10-27)
+
+- Ação renomeada para **Ler na Bíblia digital**, com formato de cápsula e ícones decorativos de livro e abertura externa coerentes com os controles existentes.
+- Destino explícito na nota **A leitura será aberta na YouVersion.** e descrição acessível da nova aba.
+- Seis traduções preservadas, com NVI padrão para novas leitoras e manutenção das preferências existentes; abertura da passagem sem alterar conclusão ou encontro atual.
+- Pesquisa oficial de viabilidade da NVI brasileira documentada separadamente. Leitor interno não implementado, pois o projeto ainda não possui autorização específica nem aplicação aprovada para reprodução.
+- Cobertura da leitura externa ampliada para os 180 links locais (30 leituras × seis traduções), ativação por teclado e ponteiro e oito larguras de referência, incluindo 1024 px.
+- Base atualizada a partir da `main` com PRs #4 e #5 integrados. Sem alteração do conteúdo bíblico, lógica de progresso, CSP, dependências ou infraestrutura; sem merge ou publicação automática nesta rodada.
+
 ## Segunda rodada — polimento visual incremental (proposta para revisão, 2026-10-26)
 
 - Controles com formas de cápsula, realces discretos, sombras de contato e estados de interação refinados; trilho rebaixado, seleção elevada e contorno funcional no controle de exibição.

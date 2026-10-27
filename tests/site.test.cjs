@@ -70,3 +70,18 @@ test('roteiro móvel e sobreposições têm controles acessíveis',()=>{
  assert.match(html,/id="theme-panel" role="dialog"/);
  assert.doesNotMatch(html,/class="mobile-nav"/);
 });
+
+test('leitura digital identifica o destino externo e mantém as seis traduções',()=>{
+ const link=html.match(/<a\b[^>]*\bid="bible-link"[^>]*>([\s\S]*?)<\/a>/);
+ assert.ok(link,'ação de leitura digital presente');
+ assert.match(link[0],/target="_blank"/);
+ assert.match(link[0],/rel="noopener noreferrer"/);
+ assert.match(link[0],/referrerpolicy="no-referrer"/);
+ assert.match(link[1],/Ler na Bíblia digital/);
+ assert.doesNotMatch(link[1],/Ler na YouVersion/);
+ assert.match(link[0],/aria-describedby="[^"]+"/);
+ assert.match(html,/A leitura será aberta na YouVersion\./);
+ assert.doesNotMatch(html,/<iframe\b/i);
+ assert.match(html,/connect-src 'none'/);
+ for(const version of ['NVI','NAA','ARA','ARC','NVT','NTLH'])assert.match(html,new RegExp(`<option value="${version}">`));
+});
