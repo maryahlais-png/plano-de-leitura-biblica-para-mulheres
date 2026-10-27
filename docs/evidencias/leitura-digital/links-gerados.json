@@ -1,0 +1,906 @@
+{
+  "method": "Geração local verificada; disponibilidade e conteúdo no provedor não foram consultados por este teste.",
+  "total": 180,
+  "links": [
+    {
+      "encounter": 1,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/MRK.1.14-20.NVI"
+    },
+    {
+      "encounter": 1,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/MRK.1.14-20.NAA"
+    },
+    {
+      "encounter": 1,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/MRK.1.14-20.ARA"
+    },
+    {
+      "encounter": 1,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/MRK.1.14-20.ARC"
+    },
+    {
+      "encounter": 1,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/MRK.1.14-20.NVT"
+    },
+    {
+      "encounter": 1,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/MRK.1.14-20.NTLH"
+    },
+    {
+      "encounter": 2,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/MRK.2.13-17.NVI"
+    },
+    {
+      "encounter": 2,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/MRK.2.13-17.NAA"
+    },
+    {
+      "encounter": 2,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/MRK.2.13-17.ARA"
+    },
+    {
+      "encounter": 2,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/MRK.2.13-17.ARC"
+    },
+    {
+      "encounter": 2,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/MRK.2.13-17.NVT"
+    },
+    {
+      "encounter": 2,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/MRK.2.13-17.NTLH"
+    },
+    {
+      "encounter": 3,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/LUK.10.38-42.NVI"
+    },
+    {
+      "encounter": 3,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/LUK.10.38-42.NAA"
+    },
+    {
+      "encounter": 3,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/LUK.10.38-42.ARA"
+    },
+    {
+      "encounter": 3,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/LUK.10.38-42.ARC"
+    },
+    {
+      "encounter": 3,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/LUK.10.38-42.NVT"
+    },
+    {
+      "encounter": 3,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/LUK.10.38-42.NTLH"
+    },
+    {
+      "encounter": 4,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/MRK.8.27-38.NVI"
+    },
+    {
+      "encounter": 4,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/MRK.8.27-38.NAA"
+    },
+    {
+      "encounter": 4,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/MRK.8.27-38.ARA"
+    },
+    {
+      "encounter": 4,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/MRK.8.27-38.ARC"
+    },
+    {
+      "encounter": 4,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/MRK.8.27-38.NVT"
+    },
+    {
+      "encounter": 4,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/MRK.8.27-38.NTLH"
+    },
+    {
+      "encounter": 5,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/LUK.7.36-50.NVI"
+    },
+    {
+      "encounter": 5,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/LUK.7.36-50.NAA"
+    },
+    {
+      "encounter": 5,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/LUK.7.36-50.ARA"
+    },
+    {
+      "encounter": 5,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/LUK.7.36-50.ARC"
+    },
+    {
+      "encounter": 5,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/LUK.7.36-50.NVT"
+    },
+    {
+      "encounter": 5,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/LUK.7.36-50.NTLH"
+    },
+    {
+      "encounter": 6,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/1CO.15.1-11.NVI"
+    },
+    {
+      "encounter": 6,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/1CO.15.1-11.NAA"
+    },
+    {
+      "encounter": 6,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/1CO.15.1-11.ARA"
+    },
+    {
+      "encounter": 6,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/1CO.15.1-11.ARC"
+    },
+    {
+      "encounter": 6,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/1CO.15.1-11.NVT"
+    },
+    {
+      "encounter": 6,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/1CO.15.1-11.NTLH"
+    },
+    {
+      "encounter": 8,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/JHN.4.4-30.NVI"
+    },
+    {
+      "encounter": 8,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/JHN.4.4-30.NAA"
+    },
+    {
+      "encounter": 8,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/JHN.4.4-30.ARA"
+    },
+    {
+      "encounter": 8,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/JHN.4.4-30.ARC"
+    },
+    {
+      "encounter": 8,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/JHN.4.4-30.NVT"
+    },
+    {
+      "encounter": 8,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/JHN.4.4-30.NTLH"
+    },
+    {
+      "encounter": 9,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/LUK.8.40-48.NVI"
+    },
+    {
+      "encounter": 9,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/LUK.8.40-48.NAA"
+    },
+    {
+      "encounter": 9,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/LUK.8.40-48.ARA"
+    },
+    {
+      "encounter": 9,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/LUK.8.40-48.ARC"
+    },
+    {
+      "encounter": 9,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/LUK.8.40-48.NVT"
+    },
+    {
+      "encounter": 9,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/LUK.8.40-48.NTLH"
+    },
+    {
+      "encounter": 10,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/LUK.8.1-3.NVI"
+    },
+    {
+      "encounter": 10,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/LUK.8.1-3.NAA"
+    },
+    {
+      "encounter": 10,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/LUK.8.1-3.ARA"
+    },
+    {
+      "encounter": 10,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/LUK.8.1-3.ARC"
+    },
+    {
+      "encounter": 10,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/LUK.8.1-3.NVT"
+    },
+    {
+      "encounter": 10,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/LUK.8.1-3.NTLH"
+    },
+    {
+      "encounter": 11,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/LUK.13.10-17.NVI"
+    },
+    {
+      "encounter": 11,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/LUK.13.10-17.NAA"
+    },
+    {
+      "encounter": 11,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/LUK.13.10-17.ARA"
+    },
+    {
+      "encounter": 11,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/LUK.13.10-17.ARC"
+    },
+    {
+      "encounter": 11,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/LUK.13.10-17.NVT"
+    },
+    {
+      "encounter": 11,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/LUK.13.10-17.NTLH"
+    },
+    {
+      "encounter": 12,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/JHN.20.11-18.NVI"
+    },
+    {
+      "encounter": 12,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/JHN.20.11-18.NAA"
+    },
+    {
+      "encounter": 12,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/JHN.20.11-18.ARA"
+    },
+    {
+      "encounter": 12,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/JHN.20.11-18.ARC"
+    },
+    {
+      "encounter": 12,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/JHN.20.11-18.NVT"
+    },
+    {
+      "encounter": 12,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/JHN.20.11-18.NTLH"
+    },
+    {
+      "encounter": 13,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/ACT.16.11-15.NVI"
+    },
+    {
+      "encounter": 13,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/ACT.16.11-15.NAA"
+    },
+    {
+      "encounter": 13,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/ACT.16.11-15.ARA"
+    },
+    {
+      "encounter": 13,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/ACT.16.11-15.ARC"
+    },
+    {
+      "encounter": 13,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/ACT.16.11-15.NVT"
+    },
+    {
+      "encounter": 13,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/ACT.16.11-15.NTLH"
+    },
+    {
+      "encounter": 15,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/GEN.1.26-31.NVI"
+    },
+    {
+      "encounter": 15,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/GEN.1.26-31.NAA"
+    },
+    {
+      "encounter": 15,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/GEN.1.26-31.ARA"
+    },
+    {
+      "encounter": 15,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/GEN.1.26-31.ARC"
+    },
+    {
+      "encounter": 15,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/GEN.1.26-31.NVT"
+    },
+    {
+      "encounter": 15,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/GEN.1.26-31.NTLH"
+    },
+    {
+      "encounter": 16,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/GEN.16.1-13.NVI"
+    },
+    {
+      "encounter": 16,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/GEN.16.1-13.NAA"
+    },
+    {
+      "encounter": 16,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/GEN.16.1-13.ARA"
+    },
+    {
+      "encounter": 16,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/GEN.16.1-13.ARC"
+    },
+    {
+      "encounter": 16,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/GEN.16.1-13.NVT"
+    },
+    {
+      "encounter": 16,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/GEN.16.1-13.NTLH"
+    },
+    {
+      "encounter": 17,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/EXO.1.15-22.NVI"
+    },
+    {
+      "encounter": 17,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/EXO.1.15-22.NAA"
+    },
+    {
+      "encounter": 17,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/EXO.1.15-22.ARA"
+    },
+    {
+      "encounter": 17,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/EXO.1.15-22.ARC"
+    },
+    {
+      "encounter": 17,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/EXO.1.15-22.NVT"
+    },
+    {
+      "encounter": 17,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/EXO.1.15-22.NTLH"
+    },
+    {
+      "encounter": 18,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/RUT.1.6-22.NVI"
+    },
+    {
+      "encounter": 18,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/RUT.1.6-22.NAA"
+    },
+    {
+      "encounter": 18,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/RUT.1.6-22.ARA"
+    },
+    {
+      "encounter": 18,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/RUT.1.6-22.ARC"
+    },
+    {
+      "encounter": 18,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/RUT.1.6-22.NVT"
+    },
+    {
+      "encounter": 18,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/RUT.1.6-22.NTLH"
+    },
+    {
+      "encounter": 19,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/RUT.2.1-13.NVI"
+    },
+    {
+      "encounter": 19,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/RUT.2.1-13.NAA"
+    },
+    {
+      "encounter": 19,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/RUT.2.1-13.ARA"
+    },
+    {
+      "encounter": 19,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/RUT.2.1-13.ARC"
+    },
+    {
+      "encounter": 19,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/RUT.2.1-13.NVT"
+    },
+    {
+      "encounter": 19,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/RUT.2.1-13.NTLH"
+    },
+    {
+      "encounter": 20,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/1SA.1.1-20.NVI"
+    },
+    {
+      "encounter": 20,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/1SA.1.1-20.NAA"
+    },
+    {
+      "encounter": 20,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/1SA.1.1-20.ARA"
+    },
+    {
+      "encounter": 20,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/1SA.1.1-20.ARC"
+    },
+    {
+      "encounter": 20,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/1SA.1.1-20.NVT"
+    },
+    {
+      "encounter": 20,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/1SA.1.1-20.NTLH"
+    },
+    {
+      "encounter": 22,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/EPH.2.1-10.NVI"
+    },
+    {
+      "encounter": 22,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/EPH.2.1-10.NAA"
+    },
+    {
+      "encounter": 22,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/EPH.2.1-10.ARA"
+    },
+    {
+      "encounter": 22,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/EPH.2.1-10.ARC"
+    },
+    {
+      "encounter": 22,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/EPH.2.1-10.NVT"
+    },
+    {
+      "encounter": 22,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/EPH.2.1-10.NTLH"
+    },
+    {
+      "encounter": 23,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/ROM.8.1-17.NVI"
+    },
+    {
+      "encounter": 23,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/ROM.8.1-17.NAA"
+    },
+    {
+      "encounter": 23,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/ROM.8.1-17.ARA"
+    },
+    {
+      "encounter": 23,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/ROM.8.1-17.ARC"
+    },
+    {
+      "encounter": 23,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/ROM.8.1-17.NVT"
+    },
+    {
+      "encounter": 23,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/ROM.8.1-17.NTLH"
+    },
+    {
+      "encounter": 24,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/PSA.139.1-18.NVI"
+    },
+    {
+      "encounter": 24,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/PSA.139.1-18.NAA"
+    },
+    {
+      "encounter": 24,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/PSA.139.1-18.ARA"
+    },
+    {
+      "encounter": 24,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/PSA.139.1-18.ARC"
+    },
+    {
+      "encounter": 24,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/PSA.139.1-18.NVT"
+    },
+    {
+      "encounter": 24,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/PSA.139.1-18.NTLH"
+    },
+    {
+      "encounter": 25,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/MAT.6.25-34.NVI"
+    },
+    {
+      "encounter": 25,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/MAT.6.25-34.NAA"
+    },
+    {
+      "encounter": 25,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/MAT.6.25-34.ARA"
+    },
+    {
+      "encounter": 25,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/MAT.6.25-34.ARC"
+    },
+    {
+      "encounter": 25,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/MAT.6.25-34.NVT"
+    },
+    {
+      "encounter": 25,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/MAT.6.25-34.NTLH"
+    },
+    {
+      "encounter": 26,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/MAT.6.5-15.NVI"
+    },
+    {
+      "encounter": 26,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/MAT.6.5-15.NAA"
+    },
+    {
+      "encounter": 26,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/MAT.6.5-15.ARA"
+    },
+    {
+      "encounter": 26,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/MAT.6.5-15.ARC"
+    },
+    {
+      "encounter": 26,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/MAT.6.5-15.NVT"
+    },
+    {
+      "encounter": 26,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/MAT.6.5-15.NTLH"
+    },
+    {
+      "encounter": 27,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/1JN.1.5-10.NVI"
+    },
+    {
+      "encounter": 27,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/1JN.1.5-10.NAA"
+    },
+    {
+      "encounter": 27,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/1JN.1.5-10.ARA"
+    },
+    {
+      "encounter": 27,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/1JN.1.5-10.ARC"
+    },
+    {
+      "encounter": 27,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/1JN.1.5-10.NVT"
+    },
+    {
+      "encounter": 27,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/1JN.1.5-10.NTLH"
+    },
+    {
+      "encounter": 29,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/ROM.12.9-21.NVI"
+    },
+    {
+      "encounter": 29,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/ROM.12.9-21.NAA"
+    },
+    {
+      "encounter": 29,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/ROM.12.9-21.ARA"
+    },
+    {
+      "encounter": 29,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/ROM.12.9-21.ARC"
+    },
+    {
+      "encounter": 29,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/ROM.12.9-21.NVT"
+    },
+    {
+      "encounter": 29,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/ROM.12.9-21.NTLH"
+    },
+    {
+      "encounter": 30,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/JAS.3.1-12.NVI"
+    },
+    {
+      "encounter": 30,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/JAS.3.1-12.NAA"
+    },
+    {
+      "encounter": 30,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/JAS.3.1-12.ARA"
+    },
+    {
+      "encounter": 30,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/JAS.3.1-12.ARC"
+    },
+    {
+      "encounter": 30,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/JAS.3.1-12.NVT"
+    },
+    {
+      "encounter": 30,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/JAS.3.1-12.NTLH"
+    },
+    {
+      "encounter": 31,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/GAL.5.13-26.NVI"
+    },
+    {
+      "encounter": 31,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/GAL.5.13-26.NAA"
+    },
+    {
+      "encounter": 31,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/GAL.5.13-26.ARA"
+    },
+    {
+      "encounter": 31,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/GAL.5.13-26.ARC"
+    },
+    {
+      "encounter": 31,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/GAL.5.13-26.NVT"
+    },
+    {
+      "encounter": 31,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/GAL.5.13-26.NTLH"
+    },
+    {
+      "encounter": 32,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/MAT.18.15-22.NVI"
+    },
+    {
+      "encounter": 32,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/MAT.18.15-22.NAA"
+    },
+    {
+      "encounter": 32,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/MAT.18.15-22.ARA"
+    },
+    {
+      "encounter": 32,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/MAT.18.15-22.ARC"
+    },
+    {
+      "encounter": 32,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/MAT.18.15-22.NVT"
+    },
+    {
+      "encounter": 32,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/MAT.18.15-22.NTLH"
+    },
+    {
+      "encounter": 33,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/PRO.31.10-31.NVI"
+    },
+    {
+      "encounter": 33,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/PRO.31.10-31.NAA"
+    },
+    {
+      "encounter": 33,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/PRO.31.10-31.ARA"
+    },
+    {
+      "encounter": 33,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/PRO.31.10-31.ARC"
+    },
+    {
+      "encounter": 33,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/PRO.31.10-31.NVT"
+    },
+    {
+      "encounter": 33,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/PRO.31.10-31.NTLH"
+    },
+    {
+      "encounter": 34,
+      "version": "NVI",
+      "href": "https://www.bible.com/pt/bible/129/JHN.15.1-17.NVI"
+    },
+    {
+      "encounter": 34,
+      "version": "NAA",
+      "href": "https://www.bible.com/pt/bible/1840/JHN.15.1-17.NAA"
+    },
+    {
+      "encounter": 34,
+      "version": "ARA",
+      "href": "https://www.bible.com/pt/bible/1608/JHN.15.1-17.ARA"
+    },
+    {
+      "encounter": 34,
+      "version": "ARC",
+      "href": "https://www.bible.com/pt/bible/212/JHN.15.1-17.ARC"
+    },
+    {
+      "encounter": 34,
+      "version": "NVT",
+      "href": "https://www.bible.com/pt/bible/1930/JHN.15.1-17.NVT"
+    },
+    {
+      "encounter": 34,
+      "version": "NTLH",
+      "href": "https://www.bible.com/pt/bible/211/JHN.15.1-17.NTLH"
+    }
+  ]
+}

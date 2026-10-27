@@ -35,7 +35,7 @@ Clique explícito no link externo → YouVersion
 1. **Primeiro acesso:** carrega estado local (ou valores padrão), mostra instrução, renderiza encontro e roteiro.
 2. **Marcação:** adiciona/remove índice no conjunto local, recalcula progresso, apresenta a sobreposição quando os sete encontros da semana são concluídos. Ao completar os 35, a mensagem integral tem precedência sobre a semanal. Desmarcar não celebra; recarregar não celebra; marcar novamente após desmarcar constitui uma nova conclusão explícita.
 3. **Personalização:** altera paleta e modo; persiste no navegador; não envia informações a terceiros.
-4. **Leitura digital:** cria link para passagem usando enumeração fechada de versões e catálogo próprio de livros.
+4. **Leitura digital:** cria link para a passagem usando enumeração fechada de versões e catálogo próprio de livros. A ação **Ler na Bíblia digital** abre a YouVersion em nova aba e não altera a marcação de conclusão ou o encontro atual. As revisões permanecem sem passagem nova.
 
 ## Estado e compatibilidade
 
@@ -50,6 +50,12 @@ O encontro atual não muda no carregamento. `nextPending` apenas calcula o desti
 `overlays.js` mantém no máximo um painel ativo. Roteiro móvel, Aparência e conclusão compartilham backdrop, Escape, contenção de Tab/Shift+Tab e restauração de foco. Irmãos ao longo da árvore DOM ficam `inert`, preservando os que já estavam inativos; a página usa posicionamento fixo para bloquear rolagem e recuperar a posição ao fechar. Os focáveis excluem conteúdo de `<details>` fechado, mesmo quando o navegador mantém retângulos de layout.
 
 O roteiro é um `aside` no desktop e recebe papel de diálogo somente até 690 px. Ao cruzar esse limite, o modal fecha e o estado acessível é recalculado. Escolher um encontro leva o foco e a rolagem ao artigo. Não há barra móvel com contexto de empilhamento; um único backdrop fica abaixo do painel ativo.
+
+## Situação do leitor interno
+
+O fluxo de leitura digital permanece externo, sem consulta de texto bíblico pelo código do guia. A rodada atual altera a apresentação e a comunicação desse acesso; não inclui leitor integrado, SDK, iframe, API, backend, chave de autenticação ou armazenamento de versículos.
+
+A NVI brasileira só poderá ser reproduzida internamente após confirmação de autorização aplicável ao Devotional Days e de um caminho técnico seguro. Cadastro, aprovação, aceite de termos, eventual custo ou infraestrutura dependem de ação e autorização da proprietária. A análise dessas possibilidades está em [VIABILIDADE-LEITOR-BIBLICO.md](VIABILIDADE-LEITOR-BIBLICO.md), separada do que já está implementado.
 
 ## Extensões futuras
 

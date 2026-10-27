@@ -8,7 +8,7 @@ Node.js >=18, na raiz do projeto:
 npm test
 ```
 
-`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22. O evento de Pull Request aceita os destinos `main` e `feature/devotional-days`, permitindo validar a segunda rodada incremental; pushes continuam limitados à `main`. O workflow usa apenas `contents: read` e não publica o site.
+`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22. O evento de Pull Request aceita os destinos `main` e `feature/devotional-days`; pushes continuam limitados à `main`. O PR da rodada de leitura digital tem a `main` como destino. O workflow usa apenas `contents: read` e não publica o site.
 
 ## Integração com navegador real
 
@@ -33,11 +33,17 @@ Os cenários de integração cobrem:
 - roteiro/Aparência, foco inicial e circular, Escape, clique fora, fundo inerte, scroll e mudança desktop/mobile;
 - progresso, leitura atual e preferências após reload, ambas as chaves antigas, falhas no getter e na gravação;
 - conclusão semanal e integral, cristais brancos, movimento reduzido, fechamento e ausência de repetição no reload;
-- dez temas em 320, 360, 375, 390, 430, 768 e 1440 px, sem overflow horizontal, painéis dentro da tela, contraste de tokens e modo automático.
+- dez temas em 320, 360, 375, 390, 430, 768, 1024 e 1440 px, sem overflow horizontal, painéis dentro da tela, contraste de tokens e modo automático.
 
-A segunda rodada acrescenta a verificação dos controles refinados: tamanho de toque, estados de foco/pressão/indisponibilidade, operação por teclado do controle segmentado e respeito à preferência de movimento reduzido. Oito cenários cobrem também a preferência de transparência reduzida, emulada por CDP, e a alternativa opaca. A ausência de suporte a desfoque é simulada no contexto de teste para exercitar o CSS de fallback; isso não equivale a testar um navegador antigo real.
+A segunda rodada acrescenta a verificação dos controles refinados: tamanho de toque, estados de foco/pressão/indisponibilidade, operação por teclado do controle segmentado e respeito à preferência de movimento reduzido. A suíte cobre também a preferência de transparência reduzida, emulada por CDP, e a alternativa opaca. A ausência de suporte a desfoque é simulada no contexto de teste para exercitar o CSS de fallback; isso não equivale a testar um navegador antigo real.
 
 A suíte falha se houver erro de JavaScript, console, CSP ou recursos HTTP. O cálculo sRGB verifica pares de tokens usados por texto (>=4,5:1), contornos de controles e do segmento selecionado (>=3:1), extremos do gradiente da ação principal e cores compostas por transparência. Para o vidro, avalia Aparência sobre os extremos do cabeçalho, Roteiro sobre o fundo e a superfície suave, e painéis sobre os limites preto/branco compostos com o backdrop. Esse cálculo não equivale a certificação WCAG completa. Capturas são geradas em claro/escuro para todas as paletas.
+
+## Cobertura da ação de leitura digital
+
+`site.test.cjs` verifica o texto **Ler na Bíblia digital**, a descrição do destino e da nova aba e os atributos de segurança do link. A suíte de navegador mantém NVI como padrão, percorre os 35 encontros e verifica as 180 URLs locais das 30 leituras nas seis traduções; as cinco revisões continuam sem ação de passagem nova.
+
+O cenário da ação externa testa nome e descrição acessíveis, área de toque, foco por teclado e ativação por Enter e ponteiro, preservando o estado salvo. A nova aba é interceptada pelo teste e recebe uma resposta sintética sem texto bíblico. Assim, valida-se a navegação solicitada pelo guia sem consultar o provedor, copiar passagens ou afirmar disponibilidade e conteúdo no destino real. Isso não é teste de um leitor interno, que não foi implementado.
 
 ## Auditoria automatizada de acessibilidade
 
@@ -60,6 +66,18 @@ ARTIFACT_DIR=/tmp/devotional-days-polimento node tests/a11y.cjs
 ```
 
 Mantenha `NODE_PATH`, `CHROMIUM_PATH` e `BASE_URL` conforme a instalação local. As evidências selecionadas da segunda rodada são versionadas em `docs/evidencias/polimento/` e `docs/capturas/polimento/`. A matriz também deve conferir a alternativa opaca quando o recurso de desfoque ou a preferência de transparência não estiverem disponíveis.
+
+As evidências da rodada de leitura digital usam `docs/evidencias/leitura-digital/` e `docs/capturas/leitura-digital/`, preservando os registros anteriores. Para uma nova execução, escolha outro `ARTIFACT_DIR`, por exemplo `/tmp/devotional-days-leitura-digital`.
+
+## Resultados da rodada de leitura digital
+
+- `npm test`: 15 testes aprovados, zero falhas ou testes pulados.
+- Suíte de navegador: nove cenários aprovados, zero falhas ou testes pulados. Após endurecer a interceptação da nova aba para incluir eventuais recursos do provedor e verificar a ausência de `Referer`, o cenário afetado foi reexecutado e passou (1/1), sem alteração na interface ou na lógica do site.
+- Cobertura local: 180 URLs de passagem e 80 combinações de tema/largura (dez temas × oito larguras), sem rolagem horizontal involuntária nas verificações executadas.
+- Contraste mínimo calculado: 4,55:1 nos pares de tokens opacos, 5,02:1 nos materiais com composição alfa e 5,85:1 nos extremos do gradiente da ação principal.
+- Axe-core: 24 cenários, zero violações detectadas e 36 verificações inconclusivas (12 de valores ARIA e 24 de contraste), preservadas para revisão humana. Não equivale a certificação WCAG.
+
+Os registros locais ficam em [evidencias/leitura-digital](evidencias/leitura-digital/), incluindo `testes-node.txt`, `testes-browser.txt`, `testes-popup.txt`, `acessibilidade.json` e `temas-contraste.json`. O estado da CI deve ser confirmado no novo Pull Request destinado à `main`; ele é distinto dos resultados locais acima.
 
 ## Aceitação complementar
 

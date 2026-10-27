@@ -1,0 +1,17 @@
+✔ primeiro acesso, consulta posterior, navegação, contexto, progresso e links (2014.464933ms)
+✔ todos os encontros mantêm referência, questões e navegação de revisão (8502.267306ms)
+✔ leitura digital anuncia destino, abre em nova aba e preserva encontro e progresso (4096.281768ms)
+✔ roteiro e aparência: foco, teclado, clique fora, rolagem e troca de viewport (2903.284046ms)
+✔ dados anteriores, leitura atual preservada, retorno explícito e armazenamento recusado (2235.095925ms)
+✔ celebração semanal, final, foco, Escape, movimento reduzido e nenhuma repetição ao recarregar (2339.842392ms)
+✔ controles respondem ao toque e ao teclado, com foco visível e áreas acessíveis (2487.535802ms)
+✔ materiais mantêm fundo opaco com transparência reduzida e sem a camada de blur (2111.156304ms)
+✔ dez temas, contraste dos tokens, oito larguras, recursos, painel e modo automático (48583.086202ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75781.973498

@@ -1,4 +1,4 @@
-# Requisitos — Devotional Days 1.3 (proposta para revisão)
+# Requisitos — Devotional Days
 
 ## Objetivo
 
@@ -10,7 +10,7 @@ Ajudar mulheres adultas a realizar um primeiro percurso de estudo bíblico aprof
 |---|---|---|
 | RF01 | Exibir 35 encontros distribuídos em 5 semanas | 7 encontros por semana; 6 leituras e uma revisão |
 | RF02 | Mostrar referência bíblica, objetivo e três perguntas | Conteúdo sem transcrição integral da tradução |
-| RF03 | Oferecer leitura digital opcional | Links seguros para versão selecionada da YouVersion |
+| RF03 | Oferecer leitura digital opcional | Ação Ler na Bíblia digital com destino YouVersion explícito; seis traduções, NVI padrão sem substituir preferência anterior |
 | RF04 | Permitir marcar/desmarcar estudo | Progresso permanece no navegador após recarregar |
 | RF05 | Mostrar metodologia no primeiro acesso | Aviso pode ser dispensado, não reaparece automaticamente e pode ser consultado em Como usar |
 | RF06 | Oferecer cinco paletas e dois modos | Suportar claro, escuro e modo automático do dispositivo |
@@ -44,7 +44,7 @@ Cadastro, autenticação, chat, áudio, formulários de oração ou aconselhamen
 | Pedido | Implementação | Evidência |
 |---|---|---|
 | Nome, português e assinatura | `index.html`, metadados e rodapé | `site.test.cjs`; captura inicial |
-| Dez temas e profundidade | Tokens únicos em `styles.css` | Matriz de 70 combinações de tema/largura e cálculo de contraste em `browser.cjs` |
+| Dez temas e profundidade | Tokens únicos em `styles.css` | Matriz de 80 combinações de tema/largura e cálculo de contraste em `browser.cjs` |
 | Roteiro compacto e conflito de camadas | `app.js`, `overlays.js` e breakpoint 690 px | Cenário de foco, backdrop, Escape, seleção, rolagem e resize |
 | Orientações e retomada gentil | `guide-notice`, Como usar e `nextPending` | Primeiro acesso, dispensa/reabertura e manutenção de `current` |
 | Progresso retrocompatível | `state.js`, mesmas duas chaves | Testes unitários e browser com dados antigos, quota e acesso negado |

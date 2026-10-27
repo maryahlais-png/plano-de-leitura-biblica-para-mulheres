@@ -1,0 +1,47 @@
+{
+  "note": "Requisições HEAD sem texto bíblico; erro de túnel não é status do provedor nem prova de link inválido.",
+  "results": [
+    {
+      "version": "NVI",
+      "url": "https://www.bible.com/pt/bible/129/MRK.1.14-20.NVI",
+      "method": "HEAD",
+      "provider_status": 200,
+      "final_url": "https://www.bible.com/pt/bible/129/MRK.1.14-20.NVI"
+    },
+    {
+      "version": "NAA",
+      "url": "https://www.bible.com/pt/bible/1840/MRK.1.14-20.NAA",
+      "method": "HEAD",
+      "provider_status": 200,
+      "final_url": "https://www.bible.com/pt/bible/1840/MRK.1.14-20.NAA"
+    },
+    {
+      "version": "ARA",
+      "url": "https://www.bible.com/pt/bible/1608/MRK.1.14-20.ARA",
+      "method": "HEAD",
+      "provider_status": 200,
+      "final_url": "https://www.bible.com/pt/bible/1608/MRK.1.14-20.ARA"
+    },
+    {
+      "version": "ARC",
+      "url": "https://www.bible.com/pt/bible/212/MRK.1.14-20.ARC",
+      "method": "HEAD",
+      "provider_status": 200,
+      "final_url": "https://www.bible.com/pt/bible/212/MRK.1.14-20.ARC"
+    },
+    {
+      "version": "NVT",
+      "url": "https://www.bible.com/pt/bible/1930/MRK.1.14-20.NVT",
+      "method": "HEAD",
+      "provider_status": 200,
+      "final_url": "https://www.bible.com/pt/bible/1930/MRK.1.14-20.NVT"
+    },
+    {
+      "version": "NTLH",
+      "url": "https://www.bible.com/pt/bible/211/MRK.1.14-20.NTLH",
+      "method": "HEAD",
+      "provider_status": 200,
+      "final_url": "https://www.bible.com/pt/bible/211/MRK.1.14-20.NTLH"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ Um guia gratuito de estudo bíblico para mulheres adultas que já têm contato c
 ## Funcionalidades
 
 - 35 encontros: 30 leituras bíblicas e cinco revisões, organizados em cinco semanas.
-- Referências bíblicas para consulta na Bíblia física ou, opcionalmente, na YouVersion (NVI, NAA, ARA, ARC, NVT, NTLH).
+- Referências bíblicas para consulta na Bíblia física ou pelo botão **Ler na Bíblia digital**, que abre a passagem na YouVersion em uma nova aba (NVI, NAA, ARA, ARC, NVT, NTLH). A NVI é o padrão para novas leitoras; escolhas anteriores permanecem salvas.
 - Perguntas para reflexão individual e seção opcional de contexto e interpretação.
 - Marcação de leitura, sem cadastro, comentários, formulários ou anotações digitais.
 - Cinco paletas: Lavanda, Sálvia, Areia, Azul Névoa e Rosé; modos claro, escuro ou automático, com bases neutras, superfícies em camadas e controles arredondados.
@@ -32,6 +32,12 @@ python -m http.server 8000
 
 Acesse `http://localhost:8000`. Nenhum `npm install` é necessário para executar o site.
 
+## Leitura digital e NVI
+
+O botão **Ler na Bíblia digital** segue o acabamento em cápsula dos demais controles. A nota **A leitura será aberta na YouVersion.** identifica o destino externo; a descrição acessível também informa a abertura de uma nova aba. Abrir a passagem não marca o encontro como concluído nem muda seu progresso.
+
+O texto bíblico continua sendo lido fora do Devotional Days. Um leitor interno da NVI brasileira não foi implementado nesta etapa: não há licença específica ou aplicação aprovada para essa reprodução no projeto. A pesquisa de plataformas oficiais, condições, credenciais e ações da proprietária está em [Viabilidade do leitor bíblico](docs/VIABILIDADE-LEITOR-BIBLICO.md). A disponibilidade de uma tradução em outro serviço não estabelece autorização para copiá-la para o site. Os resultados e limites dos testes desta entrega estão em [Validação da leitura digital](docs/VALIDACAO-LEITURA-DIGITAL.md).
+
 ## Testes
 
 É necessário Node.js recente (18 ou superior) **somente para os testes**:
@@ -40,7 +46,7 @@ Acesse `http://localhost:8000`. Nenhum `npm install` é necessário para executa
 npm test
 ```
 
-Os 14 testes sem dependências cobrem as 35 leituras, estrutura, segurança, compatibilidade das chaves de armazenamento, validação de estado, persistência e transições de conclusão. A suíte opcional `tests/browser.cjs` exercita o site no Chromium com Playwright, instalado fora do projeto; instruções e limites em `docs/TESTES.md`. O workflow do GitHub Actions executa os testes em pushes e pull requests. Testes visuais e de navegação humana ainda são recomendados antes da divulgação ampla: confira o roteiro em `docs/TESTES.md`.
+Os 15 testes sem dependências cobrem as 35 leituras, estrutura, segurança, compatibilidade das chaves de armazenamento, validação de estado, persistência e transições de conclusão. A suíte opcional `tests/browser.cjs` exercita o site no Chromium com Playwright, instalado fora do projeto; instruções e limites em `docs/TESTES.md`. O workflow do GitHub Actions executa os testes em pushes e pull requests. Testes visuais e de navegação humana ainda são recomendados antes da divulgação ampla: confira o roteiro em `docs/TESTES.md`.
 
 ## Organização
 
@@ -62,6 +68,8 @@ Os 14 testes sem dependências cobrem as 35 leituras, estrutura, segurança, com
 │   ├── INTERFACE.md
 │   ├── VALIDACAO.md
 │   ├── VALIDACAO-POLIMENTO.md
+│   ├── VIABILIDADE-LEITOR-BIBLICO.md
+│   ├── VALIDACAO-LEITURA-DIGITAL.md
 │   └── TESTES.md
 ├── tests/               # Verificações automatizadas sem dependências
 ├── .github/             # CI para testes e Dependabot para Actions
@@ -77,7 +85,7 @@ https://maryahlais-png.github.io/plano-de-leitura-biblica-para-mulheres/
 
 Desenvolva em uma branch a partir da `main` atualizada, execute os testes, envie commits ao remoto e abra um Pull Request para revisão. Não faça merge nem publique uma atualização sem autorização explícita da autora. Consulte `CONTRIBUTING.md`.
 
-Nesta segunda rodada, `feature/devotional-days-apple-polish` parte de `feature/devotional-days` e tem essa branch como destino do [PR #5](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/5). O PR #4 e a versão anterior permanecem disponíveis para revisão. A [validação do polimento](docs/VALIDACAO-POLIMENTO.md) reúne os resultados desta rodada sem substituir o [relatório anterior](docs/VALIDACAO.md).
+As entregas dos [PRs #4](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/4) e [#5](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/5) já foram integradas à `main`. A rodada de leitura digital parte dessa versão atualizada na branch `feature/leitura-biblica-digital`, com novo Pull Request destinado à `main`. A [validação do polimento](docs/VALIDACAO-POLIMENTO.md) e o [relatório anterior](docs/VALIDACAO.md) permanecem como registros históricos das entregas anteriores.
 
 A hospedagem continua estática no GitHub Pages, com `index.html` na raiz e `.nojekyll`. Não publique credenciais ou dados pessoais. Os dados do navegador de cada pessoa não fazem parte do repositório.
 

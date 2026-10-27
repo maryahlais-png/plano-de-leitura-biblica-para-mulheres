@@ -18,6 +18,14 @@ A ação principal adota a forma de cápsula, com realce superior discreto e som
 
 O seletor Claro/Escuro/Automático mantém botões nativos e estados `aria-pressed`. O trilho parece rebaixado; a seleção usa uma superfície elevada, maior peso tipográfico e um contorno neutro funcional. Esse contorno identifica o estado selecionado sem depender apenas de uma diferença suave de luminosidade. A seleção não altera as marcações nem avança a leitura. O roteiro móvel mantém a área de toque de 44 × 44 px e não se transforma em barra horizontal.
 
+## Leitura bíblica digital
+
+A ação **Ler na Bíblia digital** é um link com aparência de cápsula, no mesmo material e sistema de sombras das ações secundárias. Os ícones de livro e saída são decorativos; o nome acessível permanece o texto da ação. Abaixo, **A leitura será aberta na YouVersion.** informa o destino, e a descrição acessível acrescenta que será aberta uma nova aba.
+
+O seletor preserva NVI, NAA, ARA, ARC, NVT e NTLH, com siglas e nomes completos. NVI continua o padrão para novas leitoras; uma preferência já salva prevalece. O link usa a referência do encontro atual e a tradução escolhida. Revisões semanais continuam sem passagem nova e sem ação digital artificial.
+
+A leitura ocorre na YouVersion. O Devotional Days não exibe versículos integrais nem oferece controles de fonte de um leitor interno nesta etapa. Abrir o destino externo mantém o encontro, a aparência e o progresso do guia. A [pesquisa de viabilidade](VIABILIDADE-LEITOR-BIBLICO.md) registra as condições que precisariam ser atendidas antes de uma integração autorizada.
+
 ## Material translúcido e alternativa opaca
 
 A área principal do estudo permanece opaca para que o texto não dependa do conteúdo ao fundo. A translucidez é limitada aos controles de Roteiro/Aparência e aos painéis flutuantes de Aparência e conclusão. A alta opacidade, o desfoque discreto e o realce de borda sugerem material sem tornar a página inteira transparente. Os painéis usam aproximadamente 93% de opacidade no claro e 96% no escuro, com desfoque de 12 px; os pequenos controles usam desfoque de 8 px. A sobreposição de fundo conserva desfoque de 3 px.

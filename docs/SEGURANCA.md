@@ -24,6 +24,12 @@
 - Falhas do armazenamento são comunicadas sem pedir valores sensíveis nem interromper navegação.
 - Nenhuma alteração nas configurações da conta GitHub, proteção de branch, licença ou hospedagem foi feita nesta atualização.
 
+## Rodada de leitura digital
+
+O novo nome e acabamento da ação externa preservam HTTPS, `target="_blank"`, `rel="noopener noreferrer"` e `referrerpolicy="no-referrer"`. O destino e a nova aba são comunicados antes da ativação. Nenhuma credencial, SDK ou texto bíblico protegido foi acrescentado ao frontend.
+
+A CSP mantém `connect-src 'none'` e `frame-src 'none'`: o guia continua sem buscar ou incorporar texto de terceiros. O acesso à YouVersion resulta da ação explícita da leitora no link externo. Uma eventual integração depende de licença aplicável e avaliação de autenticação, CORS, CSP e privacidade; não se expõem chaves privadas para viabilizar uma página estática. As condições pesquisadas estão em [VIABILIDADE-LEITOR-BIBLICO.md](VIABILIDADE-LEITOR-BIBLICO.md).
+
 ## Limitações e cuidados operacionais
 
 - GitHub Pages oferece HTTPS e hospedagem estática, mas o site não consegue definir todos os headers HTTP (a CSP aqui é definida por meta tag; algumas diretivas dependem de header no servidor).

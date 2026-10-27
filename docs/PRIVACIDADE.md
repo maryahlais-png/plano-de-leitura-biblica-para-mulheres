@@ -13,6 +13,8 @@ Esses valores não são enviados pelo código deste projeto a um servidor. Podem
 
 Ao clicar em links externos, como YouVersion, BibleProject ou Sociedade Bíblica do Brasil, a pessoa sai deste guia e passa a estar sujeita às políticas desses serviços. A hospedagem GitHub Pages e a infraestrutura de navegação ainda podem processar registros técnicos de acesso conforme suas próprias políticas; não fazemos promessas sobre coleta por terceiros.
 
+A ação **Ler na Bíblia digital** abre a passagem escolhida na YouVersion em uma nova aba, com aviso do destino externo. Nesta atualização, nenhuma preferência ou chave de armazenamento foi acrescentada ou migrada, e textos bíblicos não são armazenados pelo guia.
+
 Não há mecanismo de sincronização ou recuperação de progresso.
 
 ## Para futuras versões
