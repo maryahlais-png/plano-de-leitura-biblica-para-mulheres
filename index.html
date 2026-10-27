@@ -6,14 +6,22 @@
   <meta name="description" content="Devotional Days — 35 dias de leitura e reflexão bíblica, feito para mulheres. 30 leituras e cinco revisões para estudar no seu ritmo.">
   <meta name="color-scheme" content="light dark">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; font-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; font-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; upgrade-insecure-requests">
+  <meta name="theme-color" content="#ded2ed">
+  <meta name="apple-mobile-web-app-title" content="Devotional Days">
   <title>Devotional Days — 35 dias de leitura e reflexão bíblica</title>
   <link rel="icon" type="image/svg+xml" href="./src/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./src/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="./src/print.css" media="print">
   <script defer src="./src/data.js"></script>
   <script defer src="./src/state.js"></script>
   <script defer src="./src/overlays.js"></script>
   <script defer src="./src/app.js"></script>
+  <script defer src="./src/print.js"></script>
+  <script defer src="./src/actions.js"></script>
+  <script defer src="./src/pwa.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#leitura">Ir para o estudo</a>
@@ -54,7 +62,9 @@
       <button id="route-tab" class="route-tab icon-button" type="button" aria-label="Abrir roteiro" title="Abrir roteiro" aria-haspopup="dialog" aria-controls="route-panel" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h9"/></svg></button>
       <button id="resume-reading" class="text-button" type="button" hidden>Continuar leitura pendente</button>
       <button id="show-guide" class="text-button guide-toggle" type="button" aria-controls="guide-notice" aria-expanded="false">Como usar</button>
+      <button id="tools-toggle" class="quiet-button tools-toggle" type="button" aria-haspopup="dialog" aria-controls="tools-panel" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><span>Mais opções</span></button>
     </div>
+    <p id="update-notice" class="update-notice" role="status" hidden>Uma atualização está disponível. Abra Mais opções quando quiser atualizar.</p>
     <p id="storage-notice" class="storage-notice" role="status" hidden>Não foi possível guardar suas escolhas neste navegador. Você pode continuar estudando, mas as alterações podem não permanecer ao sair.</p>
     <div class="workspace">
       <aside class="card navigation" id="route-panel" aria-label="Roteiro do plano" tabindex="-1">
@@ -95,5 +105,32 @@
     <div class="crystal-field" aria-hidden="true"></div>
     <div class="celebration-content"><p class="small-heading">Sua caminhada continua</p><h2 id="celebration-title">Semana concluída</h2><p id="celebration-message">Você concluiu mais uma etapa da sua caminhada pela Palavra.</p><button class="primary-button" type="button" id="dismiss-celebration">Continuar</button></div>
   </section>
+  <section class="appearance-panel utility-panel" id="tools-panel" role="dialog" tabindex="-1" aria-labelledby="tools-title" hidden>
+    <div class="panel-heading"><h2 id="tools-title">Mais opções</h2><button id="close-tools" class="icon-button" type="button" aria-label="Fechar opções"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <p class="utility-intro">Leve o guia com você ou convide uma amiga.</p>
+    <div class="utility-actions">
+      <button id="share-site" class="quiet-button" type="button"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M12 15V3m-4 4 4-4 4 4M7 10H4v11h16V10h-3"/></svg>Compartilhar</button>
+      <div id="share-fallback" class="share-fallback" hidden>
+        <p>Escolha como compartilhar o link do guia.</p>
+        <button id="copy-link" class="quiet-button" type="button"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></svg>Copiar link</button>
+        <a id="share-whatsapp" class="quiet-button" href="https://wa.me/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Compartilhar no WhatsApp<span class="visually-hidden"> (abre uma nova aba)</span></a>
+        <div id="share-manual" hidden><label for="share-link">Link para copiar manualmente</label><input id="share-link" type="url" readonly spellcheck="false" aria-describedby="share-manual-help"><p id="share-manual-help">Selecione o endereço e use Copiar no seu dispositivo, ou Ctrl+C / ⌘C no teclado.</p></div>
+      </div>
+      <p id="share-status" class="utility-status" role="status"></p>
+      <button id="print-plan" class="quiet-button" type="button"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M7 8V3h10v5M7 17H3V8h18v9h-4M7 14h10v7H7zM17 11h1"/></svg>Imprimir roteiro</button>
+      <p class="utility-hint">35 encontros em A4. Imprima ou escolha Salvar como PDF no navegador.</p>
+      <button id="install-app" class="quiet-button" type="button" hidden><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M12 6v9m-3-3 3 3 3-3M10 19h4"/></svg>Instalar aplicativo</button>
+    </div>
+    <details class="context install-help" id="install-help">
+      <summary>Adicionar à tela inicial</summary>
+      <h3>No Android</h3><p>Quando aparecer, use <strong>Instalar aplicativo</strong>. Você também pode procurar Instalar app ou Adicionar à tela inicial no menu do navegador. A disponibilidade depende do navegador e do aparelho.</p>
+      <h3>No iPhone</h3><ol><li>Abra este site no Safari, se necessário.</li><li>Abra o menu de compartilhamento.</li><li>Escolha <strong>Adicionar à Tela de Início</strong> (pode estar em Mais, conforme a versão do iOS).</li><li>Confirme a adição.</li></ol>
+      <p>O progresso pode começar separado ao instalar ou trocar de navegador. Continue no mesmo aplicativo ou navegador para manter suas marcações. Não há transferência automática nem sincronização.</p>
+      <p>Após o primeiro carregamento com internet, o guia pode ficar disponível offline neste dispositivo. A Bíblia digital externa precisa de internet.</p>
+    </details>
+    <div id="pwa-update" class="pwa-update" hidden><p>Há uma nova versão do guia. Atualize quando terminar sua leitura; a página será recarregada e suas marcações serão mantidas neste armazenamento.</p><button id="apply-update" class="quiet-button" type="button">Atualizar agora</button></div>
+    <p id="pwa-status" class="utility-status" role="status"></p>
+  </section>
+  <section id="print-plan-content" class="print-plan" aria-label="Roteiro imprimível" hidden></section>
 </body>
 </html>

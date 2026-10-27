@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#eee5f6"/><path d="M13 10h6c9 0 13 4 13 10s-4 10-13 10h-6m5-20v20" fill="none" stroke="#70518e" stroke-width="2.5" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="lavanda" x2="1" y2="1"><stop stop-color="#cdb6ea"/><stop offset="1" stop-color="#a990cf"/></linearGradient>
+    <linearGradient id="pages" x2="0" y2="1"><stop stop-color="#fffdf6"/><stop offset="1" stop-color="#f1dfd3"/></linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="9" fill="url(#lavanda)"/>
+  <path d="M7 27c5-1 9-.2 13 2 4-2.2 8-3 13-2" fill="none" stroke="#71518b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M20 28c-3.5-3.2-7.5-4.5-12-4V14c5 0 9 2 12 6 3-4 7-6 12-6v10c-4.5-.5-8.5.8-12 4Z" fill="url(#pages)" stroke="#eee1db" stroke-width=".5" stroke-linejoin="round"/>
+  <path d="M20 20v8" fill="none" stroke="#b59ac9" stroke-width=".8"/>
+  <path d="M20 7c-.2 3.4-2 4.3 0 7 2-2.7.2-3.6 0-7Z" fill="#fff8df"/>
+</svg>

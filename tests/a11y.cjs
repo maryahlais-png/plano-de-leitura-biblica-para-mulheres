@@ -5,6 +5,10 @@ const fs=require('fs');
 (async()=>{
  const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',args:['--no-sandbox']});
  const p=await b.newPage({viewport:{width:390,height:844}});
+ await p.addInitScript(()=>{
+  Object.defineProperty(navigator,'share',{configurable:true,value:undefined});
+  Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new DOMException('Denied','NotAllowedError');}}});
+ });
  await p.goto(process.env.BASE_URL || 'http://127.0.0.1:8000/');
  const axe=require('axe-core').source;
  const results=[];
@@ -13,6 +17,11 @@ const fs=require('fs');
  await p.locator('#dismiss-guide').click();
  for(const palette of ['lavanda','salvia','areia','azul','rose'])for(const mode of ['light','dark']){
   await p.locator('#theme-toggle').click();await p.locator(`[data-palette-choice="${palette}"]`).click();await p.locator(`[data-mode-choice="${mode}"]`).click();await audit(`aparencia ${palette} ${mode}`);await p.keyboard.press('Escape');await audit(`leitura ${palette} ${mode}`);
+  await p.locator('#tools-toggle').click();await audit(`opcoes ${palette} ${mode}`);
+  await p.locator('#share-site').click();await p.locator('#copy-link').click();
+  await p.locator('#share-link').waitFor({state:'visible'});await audit(`compartilhar manual ${palette} ${mode}`);
+  if(await p.locator('#install-help').getAttribute('open')===null)await p.locator('#install-help summary').click();
+  await audit(`orientacoes instalacao ${palette} ${mode}`);await p.keyboard.press('Escape');
  }
  await p.locator('#route-tab').click();await p.waitForTimeout(250);await audit('roteiro móvel');await p.keyboard.press('Escape');
  await p.evaluate(()=>{localStorage.setItem('leitura-biblica-mulheres-v1',JSON.stringify({current:6,read:[0,1,2,3,4,5],acknowledged:true}));});await p.reload();await p.locator('#mark-read').click();await audit('celebração');

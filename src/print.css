@@ -1,0 +1,27 @@
+/* A4, duas páginas: semanas 1–3 e 4–5. Sem temas ou marcações digitais. */
+@page { size:A4 portrait; margin:14mm 15mm; }
+@media print {
+  html, body { margin:0!important; padding:0!important; width:auto!important; height:auto!important; min-height:0!important; background:#fff!important; color:#25232b!important; color-scheme:light; }
+  body.modal-open { position:static!important; overflow:visible!important; top:auto!important; }
+  body > :not(#print-plan-content) { display:none!important; }
+  #print-plan-content[hidden] { display:block!important; }
+  #print-plan-content { font:10.5pt/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-align:left; background:#fff; color:#25232b; }
+  .print-heading { margin:0 0 7mm; padding-bottom:5mm; border-bottom:.35mm solid #aaa0b6; }
+  .print-heading h1 { font:normal 27pt/1.1 Georgia,"Times New Roman",serif; letter-spacing:-.8pt; margin:0 0 2mm; color:#4f3f62; }
+  .print-subtitle { margin:0; font-size:11pt; }
+  .print-audience { margin:1mm 0 0; font-size:10pt; color:#55515d; }
+  .print-instruction { font-size:10pt; color:#55515d; margin:4mm 0 0; }
+  .print-week { margin:0 0 6mm; break-inside:avoid-page; page-break-inside:avoid; }
+  .print-week[data-week="4"] { break-before:page; page-break-before:always; }
+  .print-week-title { margin:0 0 1.5mm; font:normal 14pt/1.25 Georgia,"Times New Roman",serif; color:#332b3c; break-after:avoid-page; page-break-after:avoid; }
+  .print-week-number { display:block; font:600 9pt/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.8pt; text-transform:uppercase; margin:0 0 1mm; color:#655373; }
+  .print-encounters { padding:0; margin:0; list-style:none; }
+  .print-encounter { display:flex; align-items:center; gap:2.5mm; min-height:8mm; padding:1.5mm 0; border-bottom:.15mm solid #d9d5de; break-inside:avoid-page; page-break-inside:avoid; }
+  .print-checkbox { display:block; width:4mm; height:4mm; border:.25mm solid #665f6f; border-radius:.5mm; background:#fff; flex:0 0 4mm; }
+  .print-encounter-number { flex:0 0 5mm; color:#655e6d; font-size:9pt; font-variant-numeric:tabular-nums; }
+  .print-encounter-title { flex:1; min-width:0; }
+  .print-reference { flex:0 0 auto; margin-left:1mm; font-size:10pt; white-space:nowrap; color:#55515d; }
+  .print-footer { margin-top:8mm; padding-top:4mm; border-top:.25mm solid #aaa0b6; text-align:center; font-size:10pt; color:#55515d; break-inside:avoid-page; page-break-inside:avoid; }
+  .print-footer p { margin:0; }
+  .print-signature { margin-top:3mm!important; font:italic 12pt/1.4 Georgia,"Times New Roman",serif; color:#4f3f62; }
+}
