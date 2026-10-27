@@ -1,0 +1,18 @@
+✔ Web Share recebe só o endereço canônico e a mensagem, sem alterar o devocional (963.897988ms)
+✔ cancelar o compartilhamento nativo é silencioso e não abre alternativas insistentes (1013.312163ms)
+✔ falha da Web Share oferece alternativas sem enviar ou registrar o compartilhamento (1195.647464ms)
+✔ sem Web Share, a cópia só anuncia sucesso depois da confirmação da Clipboard API (896.645566ms)
+✔ cópia recusada ou indisponível oferece campo readonly selecionável e inclui o campo no teclado (2512.308803ms)
+✔ WhatsApp abre somente após o clique e transmite mensagem sem parâmetros de rastreamento (1082.360919ms)
+✔ Mais opções preserva foco, Escape, clique fora e instruções de instalação não invasivas (1485.611766ms)
+✔ Imprimir roteiro chama o diálogo explicitamente e mostra os mesmos 35 encontros com caixas vazias (1685.243765ms)
+✔ a área auxiliar cabe com e sem retomada, sem encobrir a leitura (3279.273047ms)
+✔ novos controles cabem nas oito larguras e nos dez temas com alternativa manual e ajuda abertas (23542.191143ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38114.315435

@@ -1,0 +1,10 @@
+{
+  "before": "v1",
+  "waiting": "v2",
+  "after": "v2",
+  "progressPreserved": true,
+  "caches": [
+    "outro-projeto:v1",
+    "devotional-days:/plano-de-leitura-biblica-para-mulheres/:v2"
+  ]
+}

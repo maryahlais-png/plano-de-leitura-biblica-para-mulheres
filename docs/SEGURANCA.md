@@ -4,7 +4,7 @@
 
 ## Controles aplicados
 
-- Não há login, sessão, API, banco de dados, uploads ou coleta de texto digitado.
+- Não há login, sessão, API remota de conteúdo, banco de dados, uploads ou coleta de texto digitado. Compartilhamento, impressão e instalação usam APIs nativas do navegador.
 - A Content Security Policy em `index.html` restringe scripts, estilos, conexões, imagens e formulários aos recursos necessários; não utiliza scripts inline ou `eval`.
 - `textContent` e criação de nós DOM no lugar de `innerHTML` para conteúdo vindo de estado local.
 - Dados de `localStorage` são validados: identificadores de leitura são inteiros dentro da faixa; tradução, paleta e modo usam enumerações fechadas.
@@ -28,7 +28,17 @@
 
 O novo nome e acabamento da ação externa preservam HTTPS, `target="_blank"`, `rel="noopener noreferrer"` e `referrerpolicy="no-referrer"`. O destino e a nova aba são comunicados antes da ativação. Nenhuma credencial, SDK ou texto bíblico protegido foi acrescentado ao frontend.
 
-A CSP mantém `connect-src 'none'` e `frame-src 'none'`: o guia continua sem buscar ou incorporar texto de terceiros. O acesso à YouVersion resulta da ação explícita da leitora no link externo. Uma eventual integração depende de licença aplicável e avaliação de autenticação, CORS, CSP e privacidade; não se expõem chaves privadas para viabilizar uma página estática. As condições pesquisadas estão em [VIABILIDADE-LEITOR-BIBLICO.md](VIABILIDADE-LEITOR-BIBLICO.md).
+Na rodada de leitura digital, a CSP mantinha `connect-src 'none'` e `frame-src 'none'`. A versão com PWA permite conexões à própria origem para preparar arquivos locais, mantendo a proibição de frames; o guia continua sem buscar ou incorporar texto de terceiros. O acesso à YouVersion resulta da ação explícita da leitora no link externo. Uma eventual integração depende de licença aplicável e avaliação de autenticação, CORS, CSP e privacidade; não se expõem chaves privadas para viabilizar uma página estática. As condições pesquisadas estão em [VIABILIDADE-LEITOR-BIBLICO.md](VIABILIDADE-LEITOR-BIBLICO.md).
+
+## Compartilhamento, impressão e PWA
+
+- O compartilhamento transmite somente mensagem fixa e URL canônica, sem dados do progresso, identificadores pessoais ou parâmetros de rastreamento. WhatsApp é aberto apenas por ação da leitora; nenhum contato é consultado e nenhuma mensagem é enviada automaticamente pelo guia.
+- A cópia usa a API do navegador e confirma sucesso após sua resolução. Quando bloqueada, um campo somente leitura permite seleção manual; não há uso de serviços de encurtamento ou SDK social.
+- A impressão usa HTML/CSS locais e o diálogo do navegador. A composição é gerada com nós DOM seguros a partir dos dados existentes; não exporta o estado digital nem replica textos protegidos.
+- A CSP usa `connect-src 'self'`, `worker-src 'self'` e `manifest-src 'self'` para o PWA. Scripts e estilos continuam locais, sem `unsafe-inline`/`unsafe-eval`; `frame-src 'none'`, `font-src 'none'` e a política de formulários são preservados.
+- O worker aceita apenas requisições GET de uma lista exata do diretório do projeto, sem query nem terceiros. Não há proxy, cache de YouVersion, sincronização em segundo plano ou notificações.
+- A reutilização indevida de uma versão de cache ativa é recusada antes de mutar seus arquivos. A ativação limpa apenas caches com o prefixo deste escopo; não limpa dados de `localStorage`. Atualizar imediatamente exige uma ação explícita em uma página permitida do próprio guia.
+- Registro/instalação dependem de contexto seguro (HTTPS ou localhost para desenvolvimento) e de suporte do navegador. Falhas não justificam desabilitar CSP ou incluir credenciais.
 
 ## Limitações e cuidados operacionais
 
