@@ -1,0 +1,37 @@
+{
+  "method": "Assinatura e cabeçalho PNG locais; inspeção visual de composição geral, máscara circular de raio40% e favicon em16/32px; sem validação em aparelho físico.",
+  "files": [
+    {
+      "file": "src/icons/icon-192.png",
+      "width": 192,
+      "height": 192,
+      "colorType": "RGB sem canal alfa",
+      "bytes": 30855,
+      "sha256": "b54e929153122c640d876a439d326c3f874fd41dd6c93b1328cbb510244fdb1d"
+    },
+    {
+      "file": "src/icons/icon-512.png",
+      "width": 512,
+      "height": 512,
+      "colorType": "RGB sem canal alfa",
+      "bytes": 193537,
+      "sha256": "a495dcd177b8847f92472ac44cec74390de18936a5819b178cf675ef564231a6"
+    },
+    {
+      "file": "src/icons/maskable-512.png",
+      "width": 512,
+      "height": 512,
+      "colorType": "RGB sem canal alfa",
+      "bytes": 193537,
+      "sha256": "a495dcd177b8847f92472ac44cec74390de18936a5819b178cf675ef564231a6"
+    },
+    {
+      "file": "src/icons/apple-touch-icon.png",
+      "width": 180,
+      "height": 180,
+      "colorType": "RGB sem canal alfa",
+      "bytes": 27586,
+      "sha256": "f82a2c34fa3239af4fe22fc74a31472b042f4e074190aa6b280e92f8a08f5cab"
+    }
+  ]
+}

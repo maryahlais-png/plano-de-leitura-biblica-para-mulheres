@@ -1,0 +1,14 @@
+✔ manifesto, ícones e registro respeitam o subcaminho; shell completo funciona offline e mantém progresso (12559.782385ms)
+✔ instalação depende de ação explícita e suporte; recusa e estado instalado não geram insistência (971.838963ms)
+✔ falha de registro mantém o guia online utilizável e informa o limite do offline (534.525315ms)
+✔ nova versão aguarda consentimento sem misturar recursos e atualiza preservando estado e caches alheios (1849.189875ms)
+✔ precache incompleto rejeita a atualização e mantém a versão anterior disponível offline (625.150235ms)
+✔ candidato sem incremento de VERSION é rejeitado sem alterar ou apagar o cache ativo (577.762959ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17676.214524

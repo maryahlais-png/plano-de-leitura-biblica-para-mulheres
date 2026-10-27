@@ -23,6 +23,11 @@ Ajudar mulheres adultas a realizar um primeiro percurso de estudo bíblico aprof
 | RF13 | Evitar conflito de painéis | Um modal ativo; fundo inerte, foco contido, Escape e clique fora |
 | RF14 | Reconhecer conclusão integral | Mensagem própria ao completar 35, sem reset e sem repetir no reload |
 | RF15 | Informar falhas de armazenamento | Aplicação segue em memória; não promete persistência ou recuperação |
+| RF16 | Compartilhar o endereço público | Web Share quando disponível; alternativas copiar/WhatsApp/manual, sem rastreamento ou envio automático |
+| RF17 | Imprimir roteiro reutilizando os dados | 35 encontros, cinco semanas/revisões e caixas vazias, sem alterar progresso digital |
+| RF18 | Instalar opcionalmente na tela inicial | Manifesto/ícones relativos ao projeto; oferta do navegador ou instruções reais por plataforma |
+| RF19 | Oferecer guia local offline e atualização segura | Cache fechado/versionado de arquivos locais; atualização explícita, sem cache de terceiros |
+| RF20 | Explicar limites do progresso instalado | Aviso de possível isolamento entre navegador e aplicativo; sem promessa de transferência ou sincronização |
 
 ## Requisitos não funcionais
 
@@ -34,6 +39,8 @@ Ajudar mulheres adultas a realizar um primeiro percurso de estudo bíblico aprof
 - **RNF06 — Desempenho:** evitar imagens e bibliotecas pesadas.
 - **RNF07 — Transparência:** informar armazenamento local e saída para links de terceiros.
 - **RNF08 — Respeito editorial:** temas para adultas, sem infantilização ou estereótipos de gênero.
+- **RNF09 — Instalação e cache:** escopo restrito ao diretório do projeto, sem notificações ou sincronização em segundo plano; guia utilizável online quando a preparação offline falhar.
+- **RNF10 — Impressão:** composição A4 legível em cor ou preto e branco, com referências derivadas da fonte atual e quebras de semana controladas.
 
 ## Fora do escopo
 

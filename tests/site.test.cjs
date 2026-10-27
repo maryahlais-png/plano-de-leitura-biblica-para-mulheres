@@ -9,7 +9,7 @@ const read = (p) => fs.readFileSync(path.join(root,p),'utf8');
 const scope = {window:{}};
 vm.runInNewContext(read('src/data.js'),scope);
 const { weeks,encounters } = scope.window.READING_PLAN;
-const html = read('index.html'), app = ['src/app.js','src/state.js','src/overlays.js'].map(read).join('\n'), css = read('src/styles.css');
+const html = read('index.html'), app = ['src/app.js','src/state.js','src/overlays.js','src/actions.js','src/print.js','src/pwa.js'].map(read).join('\n'), css = read('src/styles.css');
 test('conteúdo editorial tem 35 encontros, 5 semanas e 5 revisões',()=>{
  assert.equal(weeks.length,5);assert.equal(encounters.length,35);
  assert.equal(encounters.filter(e=>e.review).length,5);
@@ -44,7 +44,9 @@ test('documento apresenta nome, créditos, método e controles necessários',()=
 test('proteções de frontend documentadas e sem execução remota',()=>{
  assert.match(html,/Content-Security-Policy/);
  assert.match(html,/script-src 'self'/);
- assert.match(html,/connect-src 'none'/);
+ assert.match(html,/connect-src 'self';/);
+ assert.match(html,/worker-src 'self';/);
+ assert.match(html,/manifest-src 'self';/);
  assert.doesNotMatch(html,/<script[^>]+https?:\/\//i);
  assert.doesNotMatch(app,/\b(?:innerHTML|outerHTML|eval)\b(?=\s*(?:=|\())/);
  assert.match(app,/rel=.*noopener noreferrer|linkFor/);
@@ -82,6 +84,6 @@ test('leitura digital identifica o destino externo e mantém as seis traduções
  assert.match(link[0],/aria-describedby="[^"]+"/);
  assert.match(html,/A leitura será aberta na YouVersion\./);
  assert.doesNotMatch(html,/<iframe\b/i);
- assert.match(html,/connect-src 'none'/);
+ assert.match(html,/connect-src 'self';/);
  for(const version of ['NVI','NAA','ARA','ARC','NVT','NTLH'])assert.match(html,new RegExp(`<option value="${version}">`));
 });

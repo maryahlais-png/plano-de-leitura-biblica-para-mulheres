@@ -8,7 +8,7 @@ Node.js >=18, na raiz do projeto:
 npm test
 ```
 
-`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22. O evento de Pull Request aceita os destinos `main` e `feature/devotional-days`; pushes continuam limitados à `main`. O PR da rodada de leitura digital tem a `main` como destino. O workflow usa apenas `contents: read` e não publica o site.
+`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `print.test.cjs` verifica a geração do roteiro a partir dos dados existentes e sua independência do progresso; `pwa.test.cjs` verifica manifesto, recursos e regras de escopo/cache do Service Worker. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22. O evento de Pull Request aceita os destinos `main` e `feature/devotional-days`; pushes continuam limitados à `main`. O PR da rodada de compartilhamento, impressão e instalação tem a `main` como destino. O workflow usa apenas `contents: read` e não publica o site.
 
 ## Integração com navegador real
 
@@ -45,6 +45,26 @@ A suíte falha se houver erro de JavaScript, console, CSP ou recursos HTTP. O c�
 
 O cenário da ação externa testa nome e descrição acessíveis, área de toque, foco por teclado e ativação por Enter e ponteiro, preservando o estado salvo. A nova aba é interceptada pelo teste e recebe uma resposta sintética sem texto bíblico. Assim, valida-se a navegação solicitada pelo guia sem consultar o provedor, copiar passagens ou afirmar disponibilidade e conteúdo no destino real. Isso não é teste de um leitor interno, que não foi implementado.
 
+## Compartilhamento, impressão e instalação
+
+Com o mesmo Chromium/Playwright, sirva o checkout e execute os cenários de ações auxiliares:
+
+```bash
+BASE_URL=http://127.0.0.1:8000 ARTIFACT_DIR=/tmp/devotional-days-compartilhar-imprimir-pwa node --test tests/features-browser.cjs
+```
+
+A suíte verifica compartilhamento nativo disponível/ausente, cancelamento e falha, cópia confirmada somente após sucesso, alternativa manual, WhatsApp sem envio automático, foco e retorno ao guia. APIs de dispositivo são simuladas e o destino do WhatsApp é interceptado; isso não equivale a compartilhar mensagens reais ou conferir a interface de aplicativos de terceiros. A impressão verifica a ação explícita, a mídia de impressão, o conteúdo gerado e a preservação do progresso.
+
+Os testes reais de Service Worker usam um servidor local isolado no mesmo subcaminho do GitHub Pages, criado pela própria suíte:
+
+```bash
+ARTIFACT_DIR=/tmp/devotional-days-compartilhar-imprimir-pwa node --test tests/pwa-browser.cjs
+```
+
+Eles verificam manifesto/ícones/escopo, recursos offline, preservação das preferências, versão nova em espera, atualização consentida, falhas de instalação/registro e rejeição de uma versão reutilizada sem destruir o cache ativo. A instalação pelo sistema operacional continua sendo uma validação separada; a suíte emula eventos quando precisa exercitar a oferta ou o estado instalado.
+
+Para a impressão, gerar PDF A4 no Chromium e inspecionar páginas, referências, caixas vazias, legibilidade em preto e branco e ausência de cortes. A composição de referência é de duas páginas (semanas 1–3 e 4–5). Conferir também a prévia no navegador e uma impressora real, pois margens, fontes disponíveis e opções de cabeçalho/rodapé podem alterar o resultado.
+
 ## Auditoria automatizada de acessibilidade
 
 Instale `axe-core@4.10.3` também fora do checkout, no mesmo prefixo usado para Playwright:
@@ -54,7 +74,7 @@ npm install --cache /tmp/devotional-npm-cache --prefix /tmp/devotional-browser -
 NODE_PATH=/tmp/devotional-browser/node_modules node tests/a11y.cjs
 ```
 
-Usa o mesmo `BASE_URL`, `CHROMIUM_PATH` e `ARTIFACT_DIR`, roda 24 cenários e grava `acessibilidade.json`. Sai com erro se detectar violações; resultados incompletos permanecem no relatório para revisão humana. A injeção do auditor é feita pelo processo de automação, sem mudar CSP ou carregar bibliotecas no site entregue.
+Usa o mesmo `BASE_URL`, `CHROMIUM_PATH` e `ARTIFACT_DIR` e grava `acessibilidade.json`. A rodada de compartilhamento amplia a cobertura para Mais opções, cópia manual e instruções de instalação nos dez temas, além dos cenários existentes. Sai com erro se detectar violações; resultados incompletos permanecem no relatório para revisão humana. A injeção do auditor é feita pelo processo de automação, sem mudar CSP ou carregar bibliotecas no site entregue.
 
 ## Evidências por rodada
 
@@ -79,6 +99,8 @@ As evidências da rodada de leitura digital usam `docs/evidencias/leitura-digita
 
 Os registros locais ficam em [evidencias/leitura-digital](evidencias/leitura-digital/), incluindo `testes-node.txt`, `testes-browser.txt`, `testes-popup.txt`, `acessibilidade.json` e `temas-contraste.json`. O estado da CI deve ser confirmado no novo Pull Request destinado à `main`; ele é distinto dos resultados locais acima.
 
+As evidências de compartilhamento, impressão e instalação usam diretórios próprios, preservando todos os registros anteriores. O [relatório desta entrega](VALIDACAO-COMPARTILHAR-IMPRIMIR-PWA.md) registra 24 testes Node, nove cenários de regressão, dez de ações auxiliares, seis de PWA e a auditoria de 54 cenários. As contagens da rodada de leitura digital acima são históricas.
+
 ## Aceitação complementar
 
 1. Inspecionar capturas e uso real em computador e celular: alinhamento, legibilidade, foco e recortes.
@@ -86,5 +108,7 @@ Os registros locais ficam em [evidencias/leitura-digital](evidencias/leitura-dig
 3. Usar leitor de tela e Safari/iOS: anúncio dos diálogos, retorno de foco, rolagem e opções de seleção.
 4. Confirmar manualmente no destino externo as seis traduções, capítulos e versículos; os testes locais validam construção dos links, não a disponibilidade do serviço.
 5. Revisar com pessoa qualificada a interpretação bíblica e os direitos autorais antes de ampliar a divulgação. O conteúdo editorial não foi alterado.
+6. Conferir instalação em iPhone/Android físicos, opções reais de compartilhamento e impressão física. Não tratar eventos simulados ou PDF do Chromium como esses testes.
+7. Verificar o aviso de progresso separado; não prometer transferência entre Safari, Chrome e aplicativo instalado. Apagar dados do dispositivo pode remover progresso/cache.
 
 Resultados da primeira rodada permanecem em `VALIDACAO.md`. Versões, resultados e limitações da segunda rodada estão em `VALIDACAO-POLIMENTO.md`. Não publicar nem fazer merge sem aprovação da autora.

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-27",
+  "axe": {
+    "scenarios": 54,
+    "violations": 0,
+    "incomplete": 66,
+    "incompleteByRule": {
+      "aria-valid-attr-value": 12,
+      "color-contrast": 54
+    }
+  },
+  "contrastMinima": {
+    "minimumTextContrast": 4.55,
+    "minimumMaterialTextContrast": 5.02,
+    "minimumPrimaryTextContrast": 5.85
+  }
+}

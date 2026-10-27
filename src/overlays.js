@@ -45,7 +45,7 @@
     initialFocus.focus({preventScroll:true});
   }
   function focusable(panel) {
-    return [...panel.querySelectorAll('button:not(:disabled),summary,a[href],select,[tabindex="0"]')]
+    return [...panel.querySelectorAll('button:not(:disabled),summary,a[href],select,input:not(:disabled):not([type="hidden"]),[tabindex="0"]')]
       .filter(node=>{
         // Filhos de <details> fechado podem manter retângulos de layout no Chromium.
         const closed = node.closest('details:not([open])');

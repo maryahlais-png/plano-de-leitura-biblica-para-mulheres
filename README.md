@@ -20,17 +20,40 @@ Um guia gratuito de estudo bíblico para mulheres adultas que já têm contato c
 - Último encontro preservado e atalho opcional para a primeira atividade pendente.
 - Roteiro lateral no computador e botão compacto **Abrir roteiro** no celular.
 - Celebrações centralizadas ao concluir uma semana ou o plano completo, com microbrilhos brancos e apresentação estática quando há preferência por reduzir movimento.
+- Compartilhamento pelo dispositivo ou alternativas de copiar o link e abrir o WhatsApp, sem rastreamento.
+- Roteiro imprimível dos 35 encontros, com quadradinhos vazios para marcar no papel.
+- Instalação opcional na tela inicial e acesso offline aos arquivos locais do guia, quando suportado. A Bíblia digital externa continua exigindo internet.
 - Layout responsivo, navegação por teclado e código sem dependências externas. A leitura permanece opaca; a translucidez discreta de alguns controles e painéis possui alternativa opaca.
 
 ## Executar localmente
 
-**Opção rápida:** abra `index.html` no navegador. Para servir como um site local, execute na pasta do projeto:
+Para desenvolver e testar o guia, execute na pasta do projeto:
 
 ```bash
 python -m http.server 8000
 ```
 
-Acesse `http://localhost:8000`. Nenhum `npm install` é necessário para executar o site.
+Acesse `http://localhost:8000`. Nenhum `npm install` é necessário para executar o site. Os recursos de instalação e Service Worker precisam de HTTPS ou de um contexto local confiável, como localhost; abrir `index.html` diretamente pelo sistema de arquivos não valida esses recursos.
+
+## Compartilhar e levar o roteiro para o papel
+
+Abra **Mais opções** próximo às ações auxiliares do guia:
+
+- **Compartilhar** abre as opções do dispositivo quando disponíveis. Caso contrário, escolha **Copiar link** ou **Compartilhar no WhatsApp**. Se a cópia automática for bloqueada, selecione o endereço mostrado e copie manualmente. O WhatsApp abre uma opção de compartilhamento; nenhuma mensagem é enviada automaticamente.
+- **Imprimir roteiro** abre a impressão do navegador. Escolha papel A4 ou **Salvar como PDF**, quando essa opção estiver disponível. O roteiro usa os mesmos 35 encontros, em cinco semanas, com referências e caixas sempre vazias para marcar à mão. A composição de referência tem duas páginas A4: semanas 1–3 na primeira e 4–5 na segunda. Confira a prévia, pois opções do navegador e da impressora podem alterar a paginação. Imprimir não muda seu progresso digital.
+
+## Adicionar à tela inicial
+
+A instalação é opcional e depende do navegador e do aparelho:
+
+- **Android:** quando aparecer em Mais opções, toque em **Instalar aplicativo**. Você também pode procurar **Instalar app** ou **Adicionar à tela inicial** no menu do navegador.
+- **iPhone:** abra o site no Safari, se necessário; use o menu de compartilhamento, escolha **Adicionar à Tela de Início** (pode estar em **Mais**, conforme a versão do iOS) e confirme.
+
+O progresso fica apenas no navegador ou aplicativo em que você estuda. Ao instalar ou trocar de navegador, as marcações podem começar separadas; não há transferência automática nem sincronização. Continue usando o mesmo contexto para acompanhar suas leituras. Saiba mais em [Privacidade e dados locais](docs/PRIVACIDADE.md).
+
+Após um primeiro carregamento com internet e a preparação dos arquivos locais, o guia pode ficar disponível offline neste dispositivo. A leitura na YouVersion continua precisando de internet. Se o navegador bloquear ou remover o armazenamento, o acesso offline pode deixar de estar disponível. Uma atualização do guia é oferecida de forma discreta: use **Atualizar agora** quando terminar sua leitura. Essa ação recarrega a página e preserva as marcações que ainda estiverem disponíveis neste armazenamento.
+
+Confira o [relatório de validação desta entrega](docs/VALIDACAO-COMPARTILHAR-IMPRIMIR-PWA.md), com resultados, capturas e um PDF A4 de revisão.
 
 ## Leitura digital e NVI
 
@@ -46,7 +69,7 @@ O texto bíblico continua sendo lido fora do Devotional Days. Um leitor interno 
 npm test
 ```
 
-Os 15 testes sem dependências cobrem as 35 leituras, estrutura, segurança, compatibilidade das chaves de armazenamento, validação de estado, persistência e transições de conclusão. A suíte opcional `tests/browser.cjs` exercita o site no Chromium com Playwright, instalado fora do projeto; instruções e limites em `docs/TESTES.md`. O workflow do GitHub Actions executa os testes em pushes e pull requests. Testes visuais e de navegação humana ainda são recomendados antes da divulgação ampla: confira o roteiro em `docs/TESTES.md`.
+Os testes sem dependências cobrem as 35 leituras, estrutura, segurança, compatibilidade das chaves de armazenamento, validação de estado, persistência e transições de conclusão. A suíte opcional `tests/browser.cjs` exercita o site no Chromium com Playwright, instalado fora do projeto; instruções e limites em `docs/TESTES.md`. O workflow do GitHub Actions executa os testes em pushes e pull requests. Testes visuais e de navegação humana ainda são recomendados antes da divulgação ampla: confira o roteiro em `docs/TESTES.md`.
 
 ## Organização
 
@@ -58,6 +81,11 @@ Os 15 testes sem dependências cobrem as 35 leituras, estrutura, segurança, com
 │   ├── state.js         # Validação, persistência e transições de progresso
 │   ├── overlays.js      # Foco, fundo inerte e rolagem dos painéis
 │   ├── app.js           # Navegação, aparência e composição da interface
+│   ├── actions.js       # Compartilhar e ações de Mais opções
+│   ├── print.js         # Roteiro gerado a partir dos mesmos dados
+│   ├── print.css        # Composição A4 para impressão
+│   ├── pwa.js           # Instalação opcional e atualização consentida
+│   ├── icons/           # Ícones locais de instalação e Apple Touch
 │   ├── favicon.svg      # Ícone local, sem requisição a terceiros
 │   └── styles.css       # Interface responsiva e 10 temas
 ├── docs/
@@ -71,7 +99,9 @@ Os 15 testes sem dependências cobrem as 35 leituras, estrutura, segurança, com
 │   ├── VIABILIDADE-LEITOR-BIBLICO.md
 │   ├── VALIDACAO-LEITURA-DIGITAL.md
 │   └── TESTES.md
-├── tests/               # Verificações automatizadas sem dependências
+├── manifest.webmanifest # Nome, escopo e ícones do aplicativo
+├── sw.js                # Cache versionado dos recursos locais do guia
+├── tests/               # Verificações automatizadas e de navegador
 ├── .github/             # CI para testes e Dependabot para Actions
 ├── AGENTS.md            # Restrições para contribuições assistidas por IA/Codex
 ├── SECURITY.md          # Como reportar riscos de segurança
@@ -85,7 +115,7 @@ https://maryahlais-png.github.io/plano-de-leitura-biblica-para-mulheres/
 
 Desenvolva em uma branch a partir da `main` atualizada, execute os testes, envie commits ao remoto e abra um Pull Request para revisão. Não faça merge nem publique uma atualização sem autorização explícita da autora. Consulte `CONTRIBUTING.md`.
 
-As entregas dos [PRs #4](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/4) e [#5](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/5) já foram integradas à `main`. A rodada de leitura digital parte dessa versão atualizada na branch `feature/leitura-biblica-digital`, com novo Pull Request destinado à `main`. A [validação do polimento](docs/VALIDACAO-POLIMENTO.md) e o [relatório anterior](docs/VALIDACAO.md) permanecem como registros históricos das entregas anteriores.
+As entregas dos [PRs #4](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/4), [#5](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/5) e [#6](https://github.com/maryahlais-png/plano-de-leitura-biblica-para-mulheres/pull/6) já foram integradas à `main`. A rodada de compartilhamento, impressão e instalação parte dessa versão atualizada na branch `feature/compartilhar-imprimir-pwa`, com novo Pull Request destinado à `main`. Os relatórios e as capturas das entregas anteriores permanecem preservados.
 
 A hospedagem continua estática no GitHub Pages, com `index.html` na raiz e `.nojekyll`. Não publique credenciais ou dados pessoais. Os dados do navegador de cada pessoa não fazem parte do repositório.
 

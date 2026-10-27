@@ -1,0 +1,36 @@
+
+> plano-de-leitura-biblica-para-mulheres@1.0.0 test
+> node --test tests/*.test.cjs
+
+✔ roteiro reutiliza os 35 encontros na ordem e com suas referências atuais (6.481088ms)
+✔ impressão mantém autoria, quadradinhos vazios e exclui perguntas e contexto (1.47971ms)
+✔ estilo A4 usa duas páginas, semanas indivisíveis e caixas sem preenchimento (0.658643ms)
+✔ manifesto mantém identidade e todos os caminhos no subdiretório do GitHub Pages (2.250692ms)
+✔ precache cobre somente os arquivos essenciais existentes, sem dados de terceiros (32.49362ms)
+✔ cache responde offline ao shell e ignora terceiros, outros projetos, queries e métodos de escrita (1.959533ms)
+✔ ativação remove apenas versões do próprio escopo e falha de precache é descartada (2.353537ms)
+✔ atualização só ignora espera após mensagem explícita de uma página do guia (2.346236ms)
+✔ candidato que reutiliza a versão ativa não sobrescreve nem remove o cache anterior (1.070032ms)
+✔ conteúdo editorial tem 35 encontros, 5 semanas e 5 revisões (1.072736ms)
+✔ cada leitura possui referência e três questões; revisões não inventam versículos (0.430579ms)
+✔ documento apresenta nome, créditos, método e controles necessários (0.330608ms)
+✔ proteções de frontend documentadas e sem execução remota (0.638252ms)
+✔ 10 temas, responsividade, foco e movimento reduzido (0.287613ms)
+✔ roteiro móvel e sobreposições têm controles acessíveis (0.213241ms)
+✔ leitura digital identifica o destino externo e mantém as seis traduções (0.432883ms)
+✔ dados inválidos são filtrados sem perder progresso ou preferências válidas (2.376692ms)
+✔ as duas chaves existentes são lidas e salvas sem apagar a anterior (2.086164ms)
+✔ registro atual tem prioridade e registro malformado permite recuperar a chave antiga (0.300963ms)
+✔ falhas de acesso e de cota não interrompem o uso (0.366883ms)
+✔ próxima pendência não substitui a leitura escolhida (0.236977ms)
+✔ marcar e desmarcar preserva as demais preferências (0.300042ms)
+✔ celebração exige os sete encontros, inclusive revisão, em cada semana (0.671162ms)
+✔ conclusão integral usa uma única mensagem e mantém todos os estudos disponíveis (0.370758ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 158.115989

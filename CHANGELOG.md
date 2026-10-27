@@ -1,5 +1,16 @@
 # Histórico de versões
 
+## Compartilhar, imprimir e instalar — proposta para revisão
+
+- Ação **Mais opções** reúne Compartilhar, Imprimir roteiro e instalação opcional, preservando o espaço dedicado à leitura e o acabamento visual existente.
+- Compartilhamento nativo quando disponível, com alternativas de cópia, WhatsApp e seleção manual do endereço canônico; cancelamento normal e nenhuma mensagem automática ou métrica.
+- Roteiro A4 gerado da mesma fonte dos 35 encontros, com cinco semanas, referências, revisões e caixas vazias independentes do progresso digital; impressão pelo navegador, sem biblioteca de PDF.
+- Manifesto relativo ao subcaminho do GitHub Pages, ícones locais próprios e apresentação standalone quando suportada.
+- Cache versionado e restrito aos arquivos locais essenciais, com atualização opcional e sem interrupção automática da leitura; nenhuma passagem da YouVersion é armazenada.
+- Orientações de instalação no Android/iPhone e aviso sobre possível separação do progresso entre navegador e aplicativo instalado; sem transferência, sincronização ou mudanças nas chaves existentes.
+- CSP ampliada somente para manifesto, worker e conexões à própria origem; sem backend, notificações, contatos, credenciais ou novos serviços.
+- Nova branch a partir da `main` com PRs #4, #5 e #6 integrados; nenhuma publicação ou merge automático nesta rodada.
+
 ## Leitura bíblica digital — proposta para revisão (2026-10-27)
 
 - Ação renomeada para **Ler na Bíblia digital**, com formato de cápsula e ícones decorativos de livro e abertura externa coerentes com os controles existentes.
