@@ -1,0 +1,743 @@
+{
+  "baseline": "78e663756d4d4ca28fc41920bdcbe7b8e2a41d28",
+  "encounters": 35,
+  "pairs": 105,
+  "allMatched": true,
+  "verified": [
+    {
+      "encounter": 1,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 1,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 1,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 2,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 2,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 2,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 3,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 3,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 3,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 4,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 4,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 4,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 5,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 5,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 5,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 6,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 6,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 6,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 7,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 7,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 7,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 8,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 8,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 8,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 9,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 9,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 9,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 10,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 10,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 10,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 11,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 11,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 11,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 12,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 12,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 12,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 13,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 13,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 13,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 14,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 14,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 14,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 15,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 15,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 15,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 16,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 16,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 16,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 17,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 17,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 17,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 18,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 18,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 18,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 19,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 19,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 19,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 20,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 20,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 20,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 21,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 21,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 21,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 22,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 22,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 22,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 23,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 23,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 23,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 24,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 24,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 24,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 25,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 25,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 25,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 26,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 26,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 26,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 27,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 27,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 27,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 28,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 28,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 28,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 29,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 29,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 29,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 30,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 30,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 30,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 31,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 31,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 31,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 32,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 32,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 32,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 33,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 33,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 33,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 34,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 34,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 34,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 35,
+      "question": 1,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 35,
+      "question": 2,
+      "original": true,
+      "revised": true,
+      "help": true
+    },
+    {
+      "encounter": 35,
+      "question": 3,
+      "original": true,
+      "revised": true,
+      "help": true
+    }
+  ]
+}

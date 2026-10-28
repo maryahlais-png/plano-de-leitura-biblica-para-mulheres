@@ -6,7 +6,7 @@ Site estático HTML + CSS + JavaScript puro, hospedável pelo GitHub Pages. Sem 
 
 ```text
 Visitante → index.html → src/styles.css
-                       → src/data.js  (plano e perguntas)
+                       → src/data.js  (plano e pares pergunta/ajuda)
                        → src/state.js (estado validado e persistência)
                        → src/overlays.js (sobreposições acessíveis)
                        → src/app.js   (composição da interface)
@@ -41,6 +41,16 @@ Clique explícito no link externo → YouVersion
 4. **Leitura digital:** cria link para a passagem usando enumeração fechada de versões e catálogo próprio de livros. A ação **Ler na Bíblia digital** abre a YouVersion em nova aba e não altera a marcação de conclusão ou o encontro atual. As revisões permanecem sem passagem nova.
 5. **Compartilhamento:** `actions.js` envia o endereço canônico e uma mensagem fixa à API nativa somente após toque; oferece cópia/WhatsApp/manual quando necessário, sem métricas ou acesso a contatos.
 6. **Impressão:** `print.js` lê o mesmo catálogo de semanas/encontros e constrói um roteiro separado do artigo. `print.css` seleciona apenas essa composição no modo de impressão. Não consulta nem modifica o progresso.
+
+## Conteúdo editorial e apresentação das perguntas
+
+Cada item de `encounters[].questions` reúne `{text, help}`: a pergunta e sua orientação específica permanecem juntas. O aplicativo cria os elementos da pergunta e do `<details>` por APIs seguras de DOM, usando `textContent`; a ajuda não vem de serviço remoto nem é gerada durante o estudo. Os três objetivos de leitura e os três de revisão são rótulos de apresentação, sem criar novas passagens.
+
+Essa mudança é de conteúdo e representação da pergunta, não de identidade dos encontros. Os índices, referências, títulos, campos de contexto e semanas são comparados com a base publicada. `state.js` continua armazenando conclusão e preferências pelas mesmas chaves; nenhuma migração de progresso é necessária. A abertura das ajudas existe apenas no DOM e é reconstruída fechada quando o encontro é apresentado novamente.
+
+O roteiro de impressão usa os campos já existentes dos encontros e continua omitindo perguntas, explicações e contextos extensos. O cache `v2` distribui o conjunto novo de dados e interface de forma consistente, usando o mesmo mecanismo de atualização consentida da versão anterior.
+
+O documento [REVISAO-EDITORIAL-PERGUNTAS.md](REVISAO-EDITORIAL-PERGUNTAS.md) é produzido por `docs/scripts/gerar-revisao-editorial.cjs`, fora do runtime. O gerador compara a base imutável `78e663756d4d4ca28fc41920bdcbe7b8e2a41d28` com o arquivo final, valida contagens e metadados e preserva a associação pergunta/ajuda na revisão. Isso verifica integridade e correspondência; clareza e interpretação bíblica exigem revisão editorial própria.
 
 ## Estado e compatibilidade
 

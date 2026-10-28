@@ -2,7 +2,7 @@
 
 ## Identidade e leitura
 
-A identidade segue o site existente: tipografia de sistema para controles, Georgia para títulos, cinco paletas delicadas, cartões arredondados e assinatura de Lais Fernandes. O título é **Devotional Days**, seguido de **35 dias de leitura e reflexão bíblica** e **feito para mulheres**. Apenas o nome está em inglês. O conteúdo de `src/data.js` não foi alterado.
+A identidade segue o site existente: tipografia de sistema para controles, Georgia para títulos, cinco paletas delicadas, cartões arredondados e assinatura de Lais Fernandes. O título é **Devotional Days**, seguido de **35 dias de leitura e reflexão bíblica** e **feito para mulheres**. Apenas o nome está em inglês. A revisão atual altera somente as perguntas e suas ajudas em `src/data.js`; a identidade dos encontros, suas referências, títulos e contextos permanece a mesma.
 
 O cabeçalho usa iluminação suave, sem imagens ou fontes remotas. O artigo é a superfície principal; contexto, progresso e referências ficam próximos ao estudo. O roteiro permanece na coluna esquerda no desktop. No celular, o botão com nome acessível **Abrir roteiro** ocupa 44 × 44 px perto do início da leitura, sem barra fixa. A área de leitura mostra o progresso e o atalho opcional de retomada não força avanço.
 
@@ -17,6 +17,16 @@ Textos usam `--text`, `--muted`, `--accent` ou `--hero-ink` sobre superfícies a
 A ação principal adota a forma de cápsula, com realce superior discreto e sombra de contato. Ações secundárias e controles de ícone recebem camadas mais suaves, com diferença visual entre repouso, hover, pressão, foco e indisponibilidade. Movimentos breves de transformação e sombra acompanham a interação sem deslocar o layout; a preferência por reduzir movimento os desativa. A troca de tema atualiza texto e fundo no mesmo instante, mantendo o contraste durante a mudança.
 
 O seletor Claro/Escuro/Automático mantém botões nativos e estados `aria-pressed`. O trilho parece rebaixado; a seleção usa uma superfície elevada, maior peso tipográfico e um contorno neutro funcional. Esse contorno identifica o estado selecionado sem depender apenas de uma diferença suave de luminosidade. A seleção não altera as marcações nem avança a leitura. O roteiro móvel mantém a área de toque de 44 × 44 px e não se transforma em barra horizontal.
+
+## Perguntas e ajuda opcional
+
+As três perguntas são apresentadas com finalidade explícita: **01 · Observe a passagem**, **02 · Entenda o texto** e **03 · Reflita sobre sua vida**. Nas revisões semanais, os rótulos passam a **Recorde as leituras**, **Compare e aprofunde** e **Continue o estudo**, sem acrescentar uma referência bíblica nova.
+
+Abaixo de cada pergunta, **Entenda essa pergunta** abre sua explicação específica em um `<details>` nativo com `<summary>`. As ajudas começam fechadas, podem ser abertas de forma independente e mostram seu estado expandido no próprio controle. O conteúdo aparece junto à pergunta, sem abrir painel modal ou encobrir o restante do estudo. O foco e a ativação seguem o comportamento nativo de teclado; movimentos visuais respeitam a preferência por reduzir movimento.
+
+A ajuda explica a intenção, indica o que observar ou comparar e esclarece palavras quando necessário. Ela apoia a leitura da passagem e a reflexão própria; o contexto continua disponível em sua seção. Texto e ajuda ficam associados no mesmo objeto editorial. O estado de expansão não é persistido e não altera a marcação de conclusão. Ao apresentar novamente um encontro, as explicações voltam ao estado inicial fechado.
+
+O [comparativo editorial](REVISAO-EDITORIAL-PERGUNTAS.md) permite revisar cada redação e sua explicação antes de aprovar a publicação. Ele não substitui avaliação bíblica qualificada ou testes com leitoras que tenham dificuldades de leitura.
 
 ## Ações auxiliares em Mais opções
 
@@ -54,4 +64,4 @@ As conclusões aparecem centralizadas sobre a leitura atual. São 16 partículas
 
 ## Limites de validação
 
-O relatório da primeira rodada está em `VALIDACAO.md`; a matriz de navegador, contraste e estados da segunda rodada está em `VALIDACAO-POLIMENTO.md`. Verificações automatizadas não substituem avaliação com leitor de tela, zoom nativo, aparelhos reais, Safari/iOS ou revisão editorial humana.
+O relatório da primeira rodada está em `VALIDACAO.md`; a matriz de navegador, contraste e estados da segunda rodada está em `VALIDACAO-POLIMENTO.md`. Os resultados atuais das perguntas e ajudas estão em `VALIDACAO-REVISAO-PERGUNTAS.md`. Verificações automatizadas não substituem avaliação com leitor de tela, zoom nativo, aparelhos reais, Safari/iOS ou revisão editorial humana e compreensão com leitoras reais.

@@ -9,7 +9,7 @@ Ajudar mulheres adultas a realizar um primeiro percurso de estudo bíblico aprof
 | ID | Requisito | Critério de aceite |
 |---|---|---|
 | RF01 | Exibir 35 encontros distribuídos em 5 semanas | 7 encontros por semana; 6 leituras e uma revisão |
-| RF02 | Mostrar referência bíblica, objetivo e três perguntas | Conteúdo sem transcrição integral da tradução |
+| RF02 | Mostrar referência bíblica, objetivo e três perguntas | Finalidades de observar, entender e refletir; revisões com objetivos próprios; conteúdo sem transcrição integral da tradução |
 | RF03 | Oferecer leitura digital opcional | Ação Ler na Bíblia digital com destino YouVersion explícito; seis traduções, NVI padrão sem substituir preferência anterior |
 | RF04 | Permitir marcar/desmarcar estudo | Progresso permanece no navegador após recarregar |
 | RF05 | Mostrar metodologia no primeiro acesso | Aviso pode ser dispensado, não reaparece automaticamente e pode ser consultado em Como usar |
@@ -28,6 +28,8 @@ Ajudar mulheres adultas a realizar um primeiro percurso de estudo bíblico aprof
 | RF18 | Instalar opcionalmente na tela inicial | Manifesto/ícones relativos ao projeto; oferta do navegador ou instruções reais por plataforma |
 | RF19 | Oferecer guia local offline e atualização segura | Cache fechado/versionado de arquivos locais; atualização explícita, sem cache de terceiros |
 | RF20 | Explicar limites do progresso instalado | Aviso de possível isolamento entre navegador e aplicativo; sem promessa de transferência ou sincronização |
+| RF21 | Oferecer Entenda essa pergunta | Uma ajuda específica por pergunta, opcional, inicialmente fechada e independente; sem persistir expansão ou fornecer resposta pronta |
+| RF22 | Permitir revisão editorial completa | Comparativo das 105 perguntas originais, novas perguntas e ajudas, preservando os demais metadados dos 35 encontros |
 
 ## Requisitos não funcionais
 
@@ -38,7 +40,7 @@ Ajudar mulheres adultas a realizar um primeiro percurso de estudo bíblico aprof
 - **RNF05 — Manutenção:** dados, estilo e lógica em arquivos separados; sem ferramentas de build para iniciar.
 - **RNF06 — Desempenho:** evitar imagens e bibliotecas pesadas.
 - **RNF07 — Transparência:** informar armazenamento local e saída para links de terceiros.
-- **RNF08 — Respeito editorial:** temas para adultas, sem infantilização ou estereótipos de gênero.
+- **RNF08 — Respeito editorial:** linguagem clara para adultas, sem infantilização ou estereótipos; distinguir observação, interpretação e aplicação e evitar conclusões ou experiências emocionais impostas.
 - **RNF09 — Instalação e cache:** escopo restrito ao diretório do projeto, sem notificações ou sincronização em segundo plano; guia utilizável online quando a preparação offline falhar.
 - **RNF10 — Impressão:** composição A4 legível em cor ou preto e branco, com referências derivadas da fonte atual e quebras de semana controladas.
 
@@ -56,7 +58,8 @@ Cadastro, autenticação, chat, áudio, formulários de oração ou aconselhamen
 | Orientações e retomada gentil | `guide-notice`, Como usar e `nextPending` | Primeiro acesso, dispensa/reabertura e manutenção de `current` |
 | Progresso retrocompatível | `state.js`, mesmas duas chaves | Testes unitários e browser com dados antigos, quota e acesso negado |
 | Celebração semanal e integral | `toggleRead`, sobreposição e CSS de cristais | Sete encontros por semana, 35 no total, movimento reduzido e reload |
-| Conteúdo editorial preservado | `src/data.js` sem alterações | Integridade das 35 leituras e navegação por todos os encontros |
+| Identidade editorial preservada | `src/data.js`: mesmas referências, títulos, contextos, ordem e semanas; perguntas e ajudas revisadas | Comparação com a base publicada e integridade dos 35 encontros |
+| Clareza e ajuda por pergunta | Pares `text`/`help` e controles nativos Entenda essa pergunta | Documento comparativo completo, validação dos pares e cenários de expansão por teclado |
 | Segurança e privacidade | CSP, enumerações, DOM seguro e zero runtime externo | Testes estáticos, console e auditoria automatizada descrita em `VALIDACAO.md` |
 | Qualidade e rastreabilidade | Testes, documentação e branch específica | Relatório de validação, commits, referência remota e PR quando permitido pela rede |
 

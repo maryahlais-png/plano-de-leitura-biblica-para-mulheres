@@ -1,0 +1,172 @@
+[
+  {
+    "palette": "lavanda",
+    "mode": "light",
+    "minimumTextContrast": 4.87,
+    "minimumMaterialTextContrast": 5.44,
+    "minimumPrimaryTextContrast": 6.45,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "lavanda",
+    "mode": "dark",
+    "minimumTextContrast": 6.16,
+    "minimumMaterialTextContrast": 6.37,
+    "minimumPrimaryTextContrast": 7.43,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "salvia",
+    "mode": "light",
+    "minimumTextContrast": 5.03,
+    "minimumMaterialTextContrast": 5.33,
+    "minimumPrimaryTextContrast": 6.2,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "salvia",
+    "mode": "dark",
+    "minimumTextContrast": 5.76,
+    "minimumMaterialTextContrast": 6.37,
+    "minimumPrimaryTextContrast": 9.14,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "areia",
+    "mode": "light",
+    "minimumTextContrast": 4.55,
+    "minimumMaterialTextContrast": 5.02,
+    "minimumPrimaryTextContrast": 5.85,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "areia",
+    "mode": "dark",
+    "minimumTextContrast": 5.73,
+    "minimumMaterialTextContrast": 6.37,
+    "minimumPrimaryTextContrast": 8.63,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "azul",
+    "mode": "light",
+    "minimumTextContrast": 4.85,
+    "minimumMaterialTextContrast": 5.16,
+    "minimumPrimaryTextContrast": 6,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "azul",
+    "mode": "dark",
+    "minimumTextContrast": 5.72,
+    "minimumMaterialTextContrast": 6.37,
+    "minimumPrimaryTextContrast": 8.77,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "rose",
+    "mode": "light",
+    "minimumTextContrast": 4.71,
+    "minimumMaterialTextContrast": 5.17,
+    "minimumPrimaryTextContrast": 6.01,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  },
+  {
+    "palette": "rose",
+    "mode": "dark",
+    "minimumTextContrast": 6.09,
+    "minimumMaterialTextContrast": 6.37,
+    "minimumPrimaryTextContrast": 8.27,
+    "widths": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1440
+    ]
+  }
+]
