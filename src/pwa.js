@@ -6,6 +6,7 @@
   const updateNotice = $('pwa-update');
   const updateHint = $('update-notice');
   const updateButton = $('apply-update');
+  const bannerUpdateButton = $('apply-update-banner');
   const status = $('pwa-status');
   const standalone = window.matchMedia('(display-mode: standalone)');
   let installPrompt = null;
@@ -43,14 +44,23 @@
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     if (updating) location.reload();
   });
-  updateButton.addEventListener('click', () => {
+  function applyUpdate() {
     if (!registration?.waiting || updating) return;
     updating = true;
     updateButton.disabled = true;
-    if (updateHint) updateHint.hidden = true;
+    if (bannerUpdateButton) {
+      bannerUpdateButton.disabled = true;
+      bannerUpdateButton.textContent = 'Atualizando...';
+    }
+    if (updateHint) {
+      const description = $('update-banner-description');
+      if (description) description.textContent = 'Atualizando o guia. Suas marcações neste navegador serão mantidas.';
+    }
     status.textContent = 'Atualizando o guia. Seu progresso neste navegador será mantido.';
     registration.waiting.postMessage({type:'ACTIVATE_UPDATE'});
-  });
+  }
+  updateButton.addEventListener('click',applyUpdate);
+  bannerUpdateButton?.addEventListener('click',applyUpdate);
   async function checkUpdate() {
     if (!registration || document.visibilityState === 'hidden' || Date.now() - lastCheck < 60000) return;
     lastCheck = Date.now();

@@ -167,12 +167,15 @@ test('nova versão aguarda consentimento sem misturar recursos e atualiza preser
  release='v2';await page.evaluate(async()=>{await (await navigator.serviceWorker.getRegistration()).update();});
  await waitForWaiting(page);
  assert.equal(await page.locator('#update-notice').isVisible(),true);
+ assert.equal(await page.locator('#apply-update-banner').isVisible(),true,'botão para atualizar deve aparecer fora de Mais opções');
+ assert.equal(await page.locator('#tools-panel').isVisible(),false);
  assert.deepEqual(await markers(page),{html:'v1',css:'v1'});
  assert.equal(await state(page),original);
  await page.reload();
  assert.deepEqual(await markers(page),{html:'v1',css:'v1'},'reload sem consentimento mantém o conjunto ativo coerente');
- await waitForWaiting(page);await page.locator('#tools-toggle').click();
- await Promise.all([page.waitForEvent('load'),page.locator('#apply-update').click()]);
+ await waitForWaiting(page);
+ await Promise.all([page.waitForEvent('load'),page.locator('#apply-update-banner').click()]);
+ assert.equal(await page.locator('#update-notice').isVisible(),false,'aviso some depois de atualizar');
  await page.waitForFunction(()=>document.querySelectorAll('.day').length===35);
  assert.deepEqual(await markers(page),{html:'v2',css:'v2'});assert.equal(await state(page),original);
  const names=await page.evaluate(()=>caches.keys());
@@ -233,7 +236,7 @@ test('candidato sem incremento de VERSION é rejeitado sem alterar ou apagar o c
  await page.context().close();release='v1';reuseVersion=false;
 });
 
-test('migração dos bytes publicados v1 para as 105 perguntas e ajudas v2 preserva ambas as chaves e só ocorre após consentimento',async()=>{
+test('migração dos bytes publicados v1 para as 105 perguntas e ajudas v3 preserva ambas as chaves e só ocorre após consentimento',async()=>{
  const historical={window:{}};
  vm.runInNewContext(publishedFiles.get('src/data.js').toString(),historical);
  const oldPlan=JSON.parse(JSON.stringify(historical.window.READING_PLAN));
@@ -291,11 +294,11 @@ test('migração dos bytes publicados v1 para as 105 perguntas e ajudas v2 prese
   assert.equal(await page.locator('html').getAttribute('data-mode'),seed.mode);
   assert.equal(await page.locator('#progress').getAttribute('aria-valuenow'),String(seed.read.length));
   const names=await page.evaluate(()=>caches.keys());
-  assert.ok(names.includes(`devotional-days:${mount}:v2`));
+  assert.ok(names.includes(`devotional-days:${mount}:v3`));
   assert.ok(!names.includes(`devotional-days:${mount}:v1`));
   assert.equal(await page.evaluate(async()=>{const r=await(await caches.open('outro-projeto:v1')).match(`${location.origin}/outro-projeto/example.txt`);return r.text();}),'preservado');
   const entries=await page.evaluate(async()=>{
-   const cache=await caches.open(`devotional-days:${location.pathname}:v2`);
+   const cache=await caches.open(`devotional-days:${location.pathname}:v3`);
    return(await cache.keys()).map(request=>request.url);
   });
   assert.ok(entries.length>=16);assert.ok(entries.every(url=>url.startsWith(base)&&!new URL(url).search));
@@ -326,7 +329,7 @@ test('migração dos bytes publicados v1 para as 105 perguntas e ajudas v2 prese
   const final=JSON.parse(await state(page));assert.deepEqual(final.read,seed.read);
   assert.equal((await storageSnapshot(page)).legacy,original.legacy,'a chave antiga não é apagada nem regravada');
   await page.screenshot({path:path.join(artifacts,`pwa-migracao-${storageCase}-offline.png`),fullPage:true});
-  result.push({storageCase,publishedCommit,from:'v1',to:'v2',offlineDuringConsent:true,storageByteExactBeforeNavigation:true,verifiedQuestionsAndHelps:verified,oldCompletedEncountersPreserved:seed.read,caches:names,onlyLocalResourcesCached:true});
+  result.push({storageCase,publishedCommit,from:'v1',to:'v3',offlineDuringConsent:true,storageByteExactBeforeNavigation:true,verifiedQuestionsAndHelps:verified,oldCompletedEncountersPreserved:seed.read,caches:names,onlyLocalResourcesCached:true});
   await page.context().close();
  }
  fs.writeFileSync(path.join(artifacts,'pwa-migracao-publicada.json'),JSON.stringify(result,null,2));
