@@ -65,7 +65,7 @@ test('impressão mantém autoria, quadradinhos vazios e exclui perguntas e conte
   assert.ok(nodes.every(node => !['button','input','select','a'].includes(node.tag)));
   for (const entry of plan.encounters) {
     assert.ok(!content.includes(entry.context));
-    for (const question of entry.questions) assert.ok(!content.includes(question));
+    for (const question of entry.questions) {assert.ok(!content.includes(question.text));assert.ok(!content.includes(question.help));}
   }
   assert.equal(printed(), 0, 'não abre diálogo durante o carregamento');
   window.READING_PRINT.print();
