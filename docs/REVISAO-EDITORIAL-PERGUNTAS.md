@@ -32,7 +32,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia Marcos 1:14–15 e observe a sequência da fala de Jesus. Procure ligar o anúncio ao convite que vem em seguida. Arrependimento envolve reconhecer o pecado e voltar-se para Deus; fé envolve confiança nele.
+> Jesus faz um anúncio antes de convidar as pessoas a responder. A pergunta quer que você observe essa ligação em Marcos 1:14–15. Arrepender-se envolve voltar-se para Deus; ter fé envolve confiar nele.
 
 **Nota editorial**
 
@@ -50,7 +50,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe o que os discípulos estavam fazendo quando Jesus os chamou e como responderam. Considere esses detalhes ao pensar no que significa segui-lo. Distinguir o ensino do relato dos detalhes daquela situação ajuda a refletir sem exigir escolhas idênticas de todas as pessoas.
+> Os discípulos estavam trabalhando quando Jesus os chamou. A ideia é entender o que a atitude deles ensina e o que pertence à situação particular que viveram, sem esperar que todas as histórias sejam iguais.
 
 **Nota editorial**
 
@@ -86,11 +86,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> O que os religiosos criticam ao ver Jesus à mesa com Levi e seus convidados?
+> O que alguns mestres da lei questionam quando veem Jesus com Levi e seus convidados?
 
 **Entenda essa pergunta**
 
-> No versículo 16, identifique quem faz a pergunta aos discípulos e qual é a crítica. Observe com quem Jesus está à mesa. Fique no que essa cena mostra, sem supor que todos os religiosos da época pensavam da mesma forma.
+> Em Marcos 2:16, algumas pessoas questionam a companhia de Jesus durante a refeição. O importante é perceber quem faz a crítica e o motivo apresentado, sem atribuir essa atitude a todos os judeus.
 
 **Nota editorial**
 
@@ -108,7 +108,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare a crítica feita durante a refeição com a resposta de Jesus no versículo 17. Pense no que o trabalho de um médico ajuda a explicar nessa resposta. Observe também como Jesus fala do pecado, sem confundir acolher uma pessoa com aprovar todas as suas atitudes.
+> Jesus responde à crítica com uma comparação sobre médicos e doentes. Ela ajuda a investigar sua missão e o motivo de se aproximar daquelas pessoas. Acolher alguém não significa aprovar tudo o que ela faz.
 
 #### 03 · Reflita sobre sua vida
 
@@ -122,7 +122,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em como uma pessoa é recebida quando chega à sua comunidade. Graça é o favor de Deus que não se compra pelo próprio desempenho. A pergunta convida a relacionar esse acolhimento com uma vida que leva a vontade de Deus a sério.
+> A pergunta aproxima a refeição de Jesus do modo como recebemos pessoas hoje. Pense no que significa acolher alguém e, ao mesmo tempo, levar a fé a sério. Graça é o favor de Deus que não precisamos comprar ou merecer.
 
 ### Encontro 03 · Servir sem perder a presença
 
@@ -140,7 +140,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe o que Marta pede e leia com atenção a resposta de Jesus nos versículos 41–42. Procure identificar a preocupação tratada por Ele naquela conversa. Evite concluir de antemão que toda atividade de serviço é um problema.
+> Marta está preocupada e faz um pedido a Jesus. O objetivo é entender o que Ele responde em Lucas 10:41–42, sem concluir que servir seja sempre um problema.
 
 #### 02 · Entenda o texto
 
@@ -154,7 +154,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare a atitude de Maria no versículo 39 com o que Jesus diz nos versículos 41–42. Procure entender por que essa escolha recebe atenção na passagem. Não é preciso classificar uma irmã como boa e a outra como ruim.
+> Maria está ouvindo Jesus enquanto Marta se ocupa de outras tarefas. A pergunta convida você a relacionar a escolha de Maria com a resposta de Jesus, sem transformar uma das irmãs em exemplo de pessoa ruim.
 
 **Nota editorial**
 
@@ -168,11 +168,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Na sua rotina de igreja, o que ajuda você a servir e também ter tempo para ouvir a Palavra?
+> Na sua rotina, o que ajuda ou dificulta encontrar tempo para ouvir a Palavra de Deus?
 
 **Entenda essa pergunta**
 
-> Pense no tempo que você dedica às tarefas e à leitura da Bíblia. Observe o que favorece sua atenção e o que costuma deixá-la sobrecarregada. A reflexão pode incluir algo que já faz bem a você, sem exigir uma mudança apenas por mudar.
+> A passagem coloca lado a lado tarefas e atenção ao ensino de Jesus. Traga isso para sua rotina, dentro ou fora da igreja, pensando no que ajuda você a reservar espaço para ouvir e aprender.
 
 ### Encontro 04 · Seguir além de admirar
 
@@ -190,7 +190,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare Marcos 8:29 com os versículos 31–33. Observe primeiro o que Pedro diz sobre Jesus e depois como reage ao ouvir o que vai acontecer. Procure descrever essa diferença com base na cena.
+> Pedro diz algo sobre quem Jesus é e, pouco depois, reage ao que Ele anuncia. Compare Marcos 8:29 com 8:31–33 para perceber o contraste antes de tentar explicá-lo.
 
 #### 02 · Entenda o texto
 
@@ -204,7 +204,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 34–38 junto com o que Jesus anunciou antes. Observe como as palavras sobre segui-lo se ligam ao caminho que Ele mesmo descreve. Pense no que isso permite afirmar sobre expectativas de poder, sucesso ou ausência de dificuldades.
+> Depois de falar do próprio sofrimento, Jesus ensina sobre segui-lo. A pergunta procura entender como essas duas partes se ligam, sem concluir que sofrer abusos seja uma obrigação cristã.
 
 #### 03 · Reflita sobre sua vida
 
@@ -218,7 +218,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma ideia que você já ouviu sobre sucesso, sofrimento ou segurança na vida cristã. Volte ao trecho para ver o que a sustenta e o que precisa ser revisto. Seguir Jesus não exige aceitar violência ou abandonar a busca por proteção.
+> É comum ouvir ideias diferentes sobre o que significa seguir Jesus. Escolha uma delas e veja como combina — ou não — com as palavras desta passagem. Não é necessário partir da ideia de que tudo o que você ouviu estava errado.
 
 **Nota editorial**
 
@@ -240,7 +240,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Acompanhe o que Simão pensa e o que a mulher faz. Nos versículos 44–46, veja quais atitudes Jesus destaca. Compare essas atitudes sem acrescentar à mulher uma identidade ou profissão que Lucas não informa.
+> Simão e a mulher participam da mesma refeição, mas aparecem de formas diferentes no relato. Em Lucas 7:44–46, Jesus chama atenção para atitudes de ambos. Observe o que é contado, sem inventar detalhes sobre a mulher.
 
 #### 02 · Entenda o texto
 
@@ -254,7 +254,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Na história dos versículos 41–43, os devedores são duas pessoas que tinham dívidas. Observe a dívida, o perdão e a pergunta feita a Simão. Depois, procure ligar essa conversa ao que Jesus diz sobre a mulher.
+> Jesus usa uma pequena história sobre pessoas que receberam perdão de dívidas. A pergunta convida você a ligar essa história ao que Ele diz sobre o amor, sem escolher uma resposta antes de ler os versículos 41–47.
 
 **Nota editorial**
 
@@ -272,7 +272,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em como uma reputação pode influenciar sua maneira de receber ou ouvir uma pessoa. Relacione isso ao que você reconhece sobre sua própria necessidade da graça de Deus. Não é preciso expor a história de ninguém para fazer essa reflexão.
+> O relato mostra como a reputação de alguém pode influenciar o olhar dos outros. A reflexão é sobre sua maneira de receber pessoas e sobre o que significa também precisar da graça de Deus.
 
 ### Encontro 06 · O centro da nossa fé
 
@@ -290,7 +290,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe especialmente 1 Coríntios 15:3–8. Identifique os acontecimentos que Paulo recorda e a importância que dá a essa mensagem. Neste momento, procure descrever o que ele anuncia antes de pensar na aplicação à sua vida.
+> Paulo apresenta acontecimentos que considera centrais à mensagem cristã. Em 1 Coríntios 15:3–8, procure identificar quais são eles antes de pensar na sua própria experiência.
 
 #### 02 · Entenda o texto
 
@@ -304,7 +304,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> As Escrituras são os textos bíblicos aos quais Paulo recorre; as testemunhas são as pessoas que ele menciona como tendo visto Jesus vivo. Observe como essas referências aparecem junto aos acontecimentos anunciados. Pense no motivo de Paulo incluí-las ao falar com os leitores.
+> Paulo fala de textos sagrados e de pessoas que testemunharam a ressurreição. A ideia é descobrir por que ele menciona essas fontes ao explicar a mensagem, e não apenas decorar nomes.
 
 #### 03 · Reflita sobre sua vida
 
@@ -318,7 +318,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Veja como Paulo fala da graça de Deus e do próprio trabalho no versículo 10. Pense em como você reage aos seus acertos e às suas falhas. A pergunta convida a relacionar essa reação ao que você acabou de ler sobre Jesus.
+> Paulo também fala da graça de Deus ao recordar a própria história. A pergunta convida a pensar em como a morte e a ressurreição de Jesus se relacionam com sua confiança em Deus, inclusive nos dias difíceis.
 
 ### Encontro 07 · Revisão — o que é seguir Jesus?
 
@@ -336,7 +336,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma das passagens que você leu nesta semana. Volte a uma fala ou atitude de Jesus que ajudou sua compreensão. Você pode reconhecer algo novo ou aprofundar algo que já sabia.
+> Você não precisa terminar a semana entendendo tudo. A ideia é perceber o que aprendeu sobre Jesus e voltar à passagem que mais ajudou nessa compreensão.
 
 #### 02 · Compare e aprofunde
 
@@ -350,7 +350,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Recorde uma explicação, uma frase ou um ensino que você ouviu antes. Releia uma das passagens e procure o que dá apoio àquela ideia ou pede mais cuidado. Não é necessário encontrar uma contradição para fazer essa comparação.
+> Às vezes ouvimos uma frase sobre Jesus sem saber de onde ela veio. Esta pergunta convida a conferir uma dessas ideias nas leituras da semana, mesmo que sua compreensão inicial seja confirmada.
 
 #### 03 · Continue o estudo
 
@@ -364,7 +364,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma pergunta que tenha surgido ao longo da semana. Procure mostrar em qual passagem ela apareceu e o que você ainda deseja compreender. Uma dúvida bem apresentada pode ser um bom começo de conversa, sem pressa para encerrar o assunto.
+> Uma dúvida não significa que seu estudo falhou. A pergunta ajuda você a reconhecer algo que gostaria de investigar e, se quiser, conversar sobre isso com alguém de confiança.
 
 ## Semana 2 · Mulheres diante de Jesus
 
@@ -384,7 +384,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Comece pelo pedido de água e acompanhe as perguntas que a mulher faz a Jesus. Veja como as respostas se ligam ao que ela pergunta. Procure descrever o caminho da conversa sem precisar explicar todos os símbolos agora.
+> A conversa começa com um pedido de água, mas passa por outros assuntos. A intenção é acompanhar essa mudança em João 4, prestando atenção às perguntas da mulher e às respostas de Jesus.
 
 #### 02 · Entenda o texto
 
@@ -394,11 +394,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> O que a forma de Jesus conversar com a mulher mostra sobre unir respeito e verdade?
+> O que você percebe na maneira como Jesus conversa com a mulher sobre sua vida e sobre a fé?
 
 **Entenda essa pergunta**
 
-> Observe como Jesus responde às perguntas da mulher e como fala da vida dela. Diferencie o que o texto informa de suposições feitas a respeito de sua história. Pense no conjunto da conversa, sem resumir a mulher a um único episódio.
+> Jesus conversa com a mulher sobre sua vida e sobre adoração. Repare na maneira como Ele fala e escuta, sem acrescentar julgamentos ou detalhes que o texto não conta sobre ela.
 
 #### 03 · Reflita sobre sua vida
 
@@ -412,7 +412,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em uma conversa real em que haja diferenças de crença ou de escolhas. Considere o espaço para ouvir, fazer perguntas e falar com sinceridade. A reflexão é sobre a maneira de conversar, sem exigir que vocês terminem pensando igual.
+> É possível falar com sinceridade sobre fé sem deixar de ouvir alguém que pensa diferente. A pergunta é sobre como conduzir essas conversas na vida real, não sobre convencer a outra pessoa a qualquer custo.
 
 ### Encontro 09 · Fé em meio à vulnerabilidade
 
@@ -430,7 +430,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia Lucas 8:43–44 e observe o que o narrador conta sobre a mulher. Descreva sua aproximação com base nesses detalhes. Evite preencher o que o texto não diz sobre as reações de outras pessoas ou sua vida social.
+> A mulher vive há muitos anos com um problema de saúde. Em Lucas 8:43–44, veja como ela chega até Jesus e o que a narrativa de fato informa, sem supor como todos ao redor a tratavam.
 
 **Nota editorial**
 
@@ -448,7 +448,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 45–48 e acompanhe o diálogo que acontece depois do toque. Observe o que a mulher conta e como Jesus se dirige a ela. Pense no que essas falas ajudam a compreender sobre esse encontro.
+> O encontro não termina no momento da cura. A conversa dos versículos 45–48 merece atenção porque acrescenta palavras e atitudes ao que já aconteceu. Procure perceber isso na cena.
 
 #### 03 · Reflita sobre sua vida
 
@@ -462,7 +462,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em como você escuta alguém que vive com uma doença ou outra situação difícil. A condição de uma pessoa, sozinha, não revela o que ela crê nem autoriza culpar sua fé. Considere que tipo de presença ou cuidado cabe a você oferecer.
+> A história pode nos fazer pensar em como tratamos quem está sofrendo. Ter uma doença ou passar por uma dificuldade não prova falta de fé; o foco é acolher sem tirar conclusões sobre a pessoa.
 
 ### Encontro 10 · Mulheres no discipulado
 
@@ -480,7 +480,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe os nomes registrados em Lucas 8:1–3 e o que se diz sobre essas mulheres. Procure identificar suas ações no trecho. Separe o que Lucas informa daquilo que você já ouviu a respeito delas.
+> Lucas registra nomes e formas de participação de algumas mulheres na missão de Jesus. O convite é olhar para o que ele realmente conta, sem acrescentar funções ou histórias que não aparecem ali.
 
 #### 02 · Entenda o texto
 
@@ -494,7 +494,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Considere quem acompanha Jesus e como o texto descreve a contribuição dessas pessoas. Pense no que essa descrição ajuda a entender sobre o discipulado, isto é, a vida de quem o segue. Mantenha o cuidado de não atribuir cargos ou tarefas que a passagem não menciona.
+> Nem toda participação numa missão acontece do mesmo jeito. A pergunta convida a entender o que Lucas mostra sobre essas contribuições. Discipulado é a vida de quem aprende com Jesus e o segue.
 
 #### 03 · Reflita sobre sua vida
 
@@ -504,11 +504,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Como sua comunidade reconhece o serviço de pessoas que aparecem pouco?
+> Na igreja ou em outros grupos que você conhece, como as pessoas valorizam quem ajuda sem aparecer muito?
 
 **Entenda essa pergunta**
 
-> Pense em contribuições que recebem muita atenção e em outras que quase não são vistas. A pergunta não pede que você compare o valor das pessoas. Observe como o cuidado e o reconhecimento chegam a quem serve.
+> Algumas tarefas são muito visíveis; outras quase não aparecem. Pense em como as pessoas são reconhecidas por sua contribuição, sem medir o valor delas pela atenção que recebem.
 
 ### Encontro 11 · Misericórdia acima do legalismo
 
@@ -526,7 +526,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Leia Lucas 13:14–16. Identifique o que o dirigente critica e os exemplos que Jesus usa na resposta. Observe como esses exemplos se ligam à situação da mulher.
+> Há uma crítica porque Jesus realiza uma cura no sábado. Observe em Lucas 13:14–16 que comparação Ele usa para responder e como ela se relaciona com a mulher.
 
 #### 02 · Entenda o texto
 
@@ -540,7 +540,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Ligue a resposta de Jesus à cura que você acabou de ler. O debate é sobre essa situação no sábado, dia de descanso e adoração para o povo judeu. Evite usar o episódio para descrever todos os judeus ou toda prática religiosa da mesma forma.
+> O sábado era um dia de descanso e adoração para o povo judeu. Aqui a pergunta é sobre o argumento de Jesus nessa situação específica, não sobre julgar todos os judeus ou todas as tradições religiosas.
 
 **Nota editorial**
 
@@ -558,7 +558,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em uma rotina ou regra concreta, se alguma vier à sua memória. Procure observar seus efeitos nas pessoas, em vez de julgar suas intenções. A reflexão pode ajudar a preparar uma conversa cuidadosa na comunidade.
+> Uma prática pode ter boas intenções e ainda assim dificultar o cuidado com alguém. A ideia é observar efeitos concretos, caso você conheça uma situação assim, sem presumir que toda regra religiosa seja ruim.
 
 ### Encontro 12 · A voz que chama pelo nome
 
@@ -576,7 +576,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Acompanhe a cena em João 20:11–16. Observe o que Maria vê, ouve e entende ao longo da conversa. Fique com os detalhes registrados por João.
+> Maria está triste e ainda não reconhece quem fala com ela. A pergunta convida a acompanhar João 20:11–16 e perceber como a cena se desenvolve, passo a passo.
 
 #### 02 · Entenda o texto
 
@@ -590,7 +590,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia João 20:17–18 e compare o pedido de Jesus com o que Maria faz depois. Pergunte a quem ela deve falar e sobre o quê. Use esses detalhes para pensar no sentido dessa tarefa.
+> Depois do encontro, Jesus dá a Maria algo para comunicar. Veja a quem ela fala e o que anuncia em João 20:17–18; isso ajuda a entender o papel dela nesse episódio.
 
 #### 03 · Reflita sobre sua vida
 
@@ -604,7 +604,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense na diferença entre contar algo sobre Jesus e descrever apenas como você se sentiu. Seus sentimentos podem fazer parte da conversa, mas a pergunta pede atenção ao que você comunica sobre Ele. Você não precisa ter uma experiência igual à de Maria para refletir sobre isso.
+> A ideia é refletir sobre o que você comunica quando fala de Jesus. Seus sentimentos podem fazer parte do testemunho, mas a passagem também convida a prestar atenção à mensagem compartilhada.
 
 **Nota editorial**
 
@@ -626,7 +626,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Em Atos 16:14–15, observe o que é atribuído a Deus e o que Lídia faz. Procure as expressões que falam de sua escuta e de sua resposta. Mantenha essas observações juntas ao reler a cena.
+> A passagem menciona tanto a ação de Deus quanto a resposta de Lídia. Observe Atos 16:14–15 para reconhecer o que é atribuído a cada um, sem separar partes que o relato apresenta juntas.
 
 #### 02 · Entenda o texto
 
@@ -640,7 +640,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare o que acontece antes do convite com a forma como Lídia o faz. Hospitalidade é acolher alguém e oferecer espaço ou cuidado. Observe o que esse encontro mostra, sem atribuir a Lídia um cargo que o texto não menciona.
+> Lídia convida pessoas para sua casa após ouvir a mensagem de Paulo. Hospitalidade significa acolher e oferecer cuidado. A pergunta quer compreender esse gesto naquela história, não transformar isso numa obrigação para todas as mulheres.
 
 #### 03 · Reflita sobre sua vida
 
@@ -650,11 +650,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Ao pensar nas suas condições e nos seus limites, que oportunidade de acolher ou ajudar alguém você percebe?
+> Pensando no tempo e nos recursos que você tem hoje, como poderia acolher ou ajudar alguém, se surgir uma oportunidade?
 
 **Entenda essa pergunta**
 
-> O convite de Lídia acontece em uma situação concreta. Pense no tempo, nos recursos e no apoio de que você dispõe hoje. Acolher alguém não exige oferecer sempre sua casa nem estar disponível a qualquer hora.
+> A situação de Lídia pode inspirar formas diferentes de acolher. Pense no que é possível na sua realidade, considerando tempo, recursos e limites; ajudar não exige estar disponível sempre.
 
 **Nota editorial**
 
@@ -676,7 +676,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Relembre as falas e as ações das mulheres nos encontros da semana. Observe também como elas são tratadas. Escolha detalhes das passagens para sustentar o que você percebeu.
+> As leituras da semana mostram mulheres em situações diferentes. O objetivo é recordar o que elas disseram, fizeram e viveram, usando detalhes das passagens para sustentar suas observações.
 
 #### 02 · Compare e aprofunde
 
@@ -686,11 +686,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Ao comparar duas cenas da semana, como Jesus trata as pessoas ao questionar uma atitude ou ideia delas?
+> Escolha dois encontros de Jesus nas leituras desta semana. O que você percebe de parecido ou diferente na maneira como Ele conversa com as pessoas?
 
 **Entenda essa pergunta**
 
-> Escolha duas das passagens em que Jesus participa de uma conversa. Compare suas palavras e atitudes diante de algo que Ele questiona. Procure perceber como o cuidado com as pessoas se relaciona com a verdade que Ele ensina.
+> Jesus encontra pessoas em circunstâncias diferentes. Compare duas dessas conversas para entender o que acontece em cada uma, sem esperar que Ele diga ou faça exatamente o mesmo em todas.
 
 #### 03 · Continue o estudo
 
@@ -704,7 +704,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma questão importante para você a partir das leituras da semana. Anote o que os trechos já ajudam a entender e o que ainda pede estudo. Uma cena isolada não resolve todas as questões sobre a vida da igreja; você pode continuar a conversa com pessoas cristãs de confiança.
+> Nem toda dúvida sobre mulheres e igreja pode ser resolvida com um episódio isolado. A pergunta ajuda você a identificar algo que gostaria de estudar melhor e a procurar outras passagens com cuidado.
 
 ## Semana 3 · Fé em circunstâncias difíceis
 
@@ -724,7 +724,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe como o texto se refere ao homem e à mulher nesses versículos. Procure as palavras que descrevem sua relação com Deus, antes de pensar em diferenças de trabalho ou de posição na sociedade.
+> Gênesis 1:26–27 fala da criação de homens e mulheres. Primeiro procure o que o próprio trecho afirma sobre eles, antes de pensar nas expectativas que a sociedade costuma ter.
 
 **Nota editorial**
 
@@ -742,7 +742,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> A pergunta liga duas partes da passagem: a maneira como Deus descreve as pessoas e a tarefa que lhes entrega. Compare os versículos 26 a 28 e pense no que essa ligação ajuda a entender sobre valor e responsabilidade.
+> A passagem fala da imagem de Deus e também de uma tarefa confiada às pessoas. A ideia é investigar como essas partes se relacionam em Gênesis 1:26–28, sem precisar saber termos técnicos.
 
 #### 03 · Reflita sobre sua vida
 
@@ -756,7 +756,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma dessas áreas da sua vida e observe como você costuma avaliar a si mesma nela. Depois, compare essa avaliação com a maneira como a passagem fala da criação das pessoas. A reflexão pode incluir algo que você já reconhece com gratidão e algo que ainda deseja compreender melhor.
+> Às vezes avaliamos nosso valor pela aparência, pelo trabalho ou pelos relacionamentos. Esta reflexão aproxima essas cobranças do que o texto diz sobre a criação humana, sem exigir que você se sinta de uma maneira específica.
 
 ### Encontro 16 · Deus vê quem é esquecida
 
@@ -774,7 +774,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Acompanhe o que cada pessoa faz até a saída de Agar. Observe quem decide sobre a vida dela e o que acontece quando Sarai procura Abrão. Procure distinguir essas ações da maneira como você as avalia.
+> A história mostra decisões de Abrão e Sarai que atingem Agar. Observe quem tem poder de escolha e quais consequências aparecem; narrar uma atitude não é o mesmo que dizer que Deus a aprovou.
 
 #### 02 · Entenda o texto
 
@@ -788,7 +788,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia a conversa dos versículos 7 a 13 e a forma como Agar se refere a Deus no final. Procure relacionar suas palavras ao que ela vivia, sem tratar o sofrimento dela como algo bom.
+> Agar dá um nome a Deus depois do encontro narrado em Gênesis 16:7–13. A pergunta convida a pensar no sentido das palavras dela diante do que viveu, sem tratar a injustiça como algo bom.
 
 #### 03 · Reflita sobre sua vida
 
@@ -798,11 +798,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Que tipo de ajuda pode proteger uma pessoa que sofre exploração, sem desconsiderar sua fé?
+> Ao pensar na história de Agar, como podemos cuidar de alguém que está sofrendo injustiça sem decidir tudo por essa pessoa?
 
 **Entenda essa pergunta**
 
-> A pergunta aproxima a situação de Agar de pessoas que hoje têm pouca liberdade para decidir. Considere como o cuidado pode respeitar a voz de quem sofre e favorecer sua segurança. A ordem narrada a Agar não deve ser usada para exigir a volta de alguém a uma situação de abuso.
+> Agar vive numa situação em que outras pessoas decidem muito sobre sua vida. A reflexão é sobre cuidado, segurança e respeito pela voz de quem sofre hoje. O relato não autoriza obrigar alguém a voltar para uma relação abusiva.
 
 **Nota editorial**
 
@@ -824,7 +824,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Leia primeiro o que o faraó exige e depois o que as parteiras fazem. Compare essas duas partes antes de explicar os motivos da decisão delas.
+> O faraó dá uma ordem, mas as parteiras agem de outra maneira. O primeiro passo é perceber essa diferença em Êxodo 1:15–17, antes de avaliar a decisão delas.
 
 #### 02 · Entenda o texto
 
@@ -838,7 +838,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Temor de Deus envolve levar sua autoridade a sério, e não apenas sentir medo. Compare a ordem recebida com a atitude das parteiras nos versículos 17 a 21. Observe o que o narrador destaca ao explicar a decisão delas.
+> Temor de Deus significa levar a sério quem Deus é e sua autoridade. A pergunta quer que você descubra como isso aparece nas escolhas das parteiras, observando o que o narrador explica.
 
 #### 03 · Reflita sobre sua vida
 
@@ -848,11 +848,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Como você pode avaliar uma ordem ou expectativa que coloca outra pessoa em risco?
+> Se alguém pedir que você faça algo que pode prejudicar outra pessoa, o que poderia ajudar você a decidir como agir?
 
 **Entenda essa pergunta**
 
-> A pergunta leva a pensar em situações em que obedecer a alguém pode causar dano. Relembre o que estava em jogo na decisão das parteiras e considere o que você precisaria observar antes de agir. Se houver risco ou ameaça, buscar orientação e proteção é compatível com essa reflexão.
+> Nem toda ordem recebida deve ser seguida sem pensar. A ideia é refletir sobre como agir com responsabilidade quando alguém pode ser prejudicado, lembrando que buscar proteção e orientação também é uma possibilidade.
 
 ### Encontro 18 · Fidelidade durante a perda
 
@@ -870,7 +870,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia as palavras de Noemi nos versículos 20 e 21. Procure perceber como ela descreve sua experiência, distinguindo o que ela diz daquilo que o narrador afirma.
+> Noemi fala de suas perdas ao chegar a Belém. Em Rute 1:20–21, preste atenção às palavras dela, distinguindo seus sentimentos da avaliação feita pelo narrador.
 
 **Nota editorial**
 
@@ -888,7 +888,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare as possibilidades apresentadas a Rute com a decisão que ela toma nos versículos 15 a 18. Observe a quem e a quê suas palavras a ligam. Limite-se ao que a passagem permite reconhecer, sem imaginar todos os motivos dela.
+> Rute tem caminhos possíveis, mas escolhe permanecer com Noemi. A pergunta procura entender o que suas palavras e atitudes mostram sobre esse compromisso, sem inventar motivos que o texto não informa.
 
 #### 03 · Reflita sobre sua vida
 
@@ -902,7 +902,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> A pergunta aproxima a decisão de Rute das escolhas que fazemos nos relacionamentos. Pense na liberdade de decidir e nos efeitos desse vínculo sobre a segurança de cada pessoa. A lealdade dessa história não deve ser usada para cobrar que alguém suporte violência ou abuso.
+> Uma relação de cuidado não é a mesma coisa que permanecer por medo. A história de Rute abre espaço para pensar na liberdade de escolha, sem usar a lealdade dela para justificar relações violentas.
 
 **Nota editorial**
 
@@ -924,7 +924,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Acompanhe as ações de Rute ao chegar ao campo e as orientações de Boaz nos versículos 8 e 9. Escolha atitudes que o texto realmente descreve, antes de dizer o que você pensa sobre elas.
+> No campo, Rute e Boaz tomam decisões concretas. Observe o que cada um faz em Rute 2 e quais efeitos essas atitudes têm, antes de escolher a que mais chamou sua atenção.
 
 #### 02 · Entenda o texto
 
@@ -938,7 +938,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Rute chega como estrangeira e depende da possibilidade de recolher espigas. Compare sua posição com a de Boaz e observe o que ele pode decidir sobre o trabalho no campo. Pense no peso que suas orientações têm para alguém na situação dela.
+> Rute é estrangeira e depende do trabalho de recolher espigas; Boaz tem autoridade naquele campo. Essa diferença ajuda a perceber o peso das orientações de proteção dadas por ele.
 
 #### 03 · Reflita sobre sua vida
 
@@ -952,7 +952,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Relembre os efeitos das atitudes descritas na passagem, em vez de procurar apenas palavras gentis. Escolha uma situação da sua rotina e pense no que está ao seu alcance fazer com respeito pela outra pessoa.
+> A bondade pode aparecer em atitudes pequenas ou grandes. A pergunta convida a pensar no cuidado que cabe à sua realidade, sem assumir que todas as pessoas dispõem dos mesmos recursos.
 
 ### Encontro 20 · Oração sem respostas fáceis
 
@@ -970,7 +970,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 12 a 16 e acompanhe a ordem da conversa. Separe o que Eli observa da conclusão que ele tira antes de escutar Ana.
+> Eli vê Ana orando, mas não conhece sua história. A ideia é perceber o que ele supõe antes de ouvir a explicação dela, em 1 Samuel 1:12–16.
 
 #### 02 · Entenda o texto
 
@@ -984,7 +984,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe a maneira como Ana ora e o que ela diz ao explicar sua oração a Eli. Pense no que essa atitude revela sobre falar com Deus em um momento difícil. O desfecho dessa história não é uma promessa de que toda oração terá a mesma resposta.
+> Ana leva sua dor a Deus e depois explica o que está vivendo. Observe como ela se expressa. O desfecho dessa história não significa que toda oração receberá a mesma resposta.
 
 **Nota editorial**
 
@@ -1002,7 +1002,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare a primeira reação de Eli com o espaço que Ana precisa para explicar o que vive. Pense nos cuidados necessários ao ouvir uma dor que você não conhece por dentro. A pergunta não pede que você encontre uma frase capaz de resolver o sofrimento dela.
+> Antes de tentar aconselhar alguém, é importante entender o que a pessoa vive. A pergunta convida a pensar numa escuta cuidadosa, sem exigir que você tenha uma solução para a dor dela.
 
 ### Encontro 21 · Revisão — fidelidade na vida real
 
@@ -1020,7 +1020,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Volte aos encontros sobre criação, Agar, parteiras, Rute e Ana. Escolha uma cena e identifique quem age e como outra pessoa é afetada. Procure apoiar sua lembrança em um detalhe do texto.
+> A semana trouxe histórias de cuidado, injustiça, coragem e perda. Escolha uma atitude que ficou na sua memória e encontre a cena que mostra como ela afetou outra pessoa.
 
 #### 02 · Compare e aprofunde
 
@@ -1030,11 +1030,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Ao comparar as histórias, quais atitudes o relato conta sem recomendar que sejam repetidas?
+> Ao lembrar das histórias desta semana, como você percebe a diferença entre o que a Bíblia conta e o que ela nos ensina a fazer?
 
 **Entenda essa pergunta**
 
-> Escolha uma cena da semana e observe quem age, quem fala e quais consequências aparecem. Diferencie uma ação da personagem de uma ordem ou avaliação feita por Deus no texto. Nem toda fala sobre Deus é apresentada como uma fala do próprio Deus.
+> A Bíblia conta ações humanas que nem sempre apresenta como exemplos a seguir. A ideia é aprender a separar o que aconteceu daquilo que o texto de fato orienta, elogia ou critica.
 
 #### 03 · Continue o estudo
 
@@ -1048,7 +1048,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em uma parte que ainda deixou dúvida, incomodou ou parece difícil de entender. Escolha algo específico para reler no próprio capítulo e registre o que gostaria de compreender melhor. Você não precisa resolver essa dúvida hoje.
+> Algumas histórias ficam conosco porque levantam dúvidas ou emoções difíceis. Você pode escolher uma delas e reler com calma, sem precisar resolver todas as perguntas agora.
 
 ## Semana 4 · Graça e vida interior
 
@@ -1068,7 +1068,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Percorra os versículos e procure o que Deus faz em favor das pessoas. Observe também as palavras usadas para explicar o motivo dessas ações. A primeira tarefa é reunir o que a passagem afirma, antes de avaliar sua própria vida.
+> Efésios 2 apresenta o que Deus faz em favor das pessoas. A pergunta é um convite para identificar essas ações antes de pensar no que nós fazemos.
 
 #### 02 · Entenda o texto
 
@@ -1082,7 +1082,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Leia esses três versículos em sequência, sem separar uma frase das outras. Compare o que o texto diz sobre receber a salvação com o lugar dado às boas obras. Graça é o favor de Deus que não pode ser comprado ou merecido.
+> Os versículos 8–10 falam de salvação e de boas obras. Veja como uma coisa se relaciona com a outra; graça é o favor de Deus que não compramos nem merecemos por esforço.
 
 #### 03 · Reflita sobre sua vida
 
@@ -1096,7 +1096,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma prática da sua vida cristã e pense no que costuma motivá-la. Relacione essa motivação ao que a passagem diz sobre salvação e boas obras. A reflexão pode reconhecer gratidão já presente e também dúvidas ou pressões que você percebe.
+> Você pode fazer coisas boas por motivos diferentes. A reflexão procura relacionar suas motivações com o que Paulo ensina, sem transformar a vida cristã numa disputa por desempenho.
 
 ### Encontro 23 · Pertencimento e liberdade
 
@@ -1114,7 +1114,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe os contrastes nos versículos 5 a 13, procurando como cada modo de viver é descrito. Aqui, carne não é simplesmente o corpo físico. Leia a expressão junto das referências ao pecado e à ação do Espírito, sem associá-la ao fato de ser mulher.
+> Paulo contrasta duas maneiras de viver em Romanos 8. Aqui, 'carne' não significa simplesmente o corpo físico. Observe como o autor usa essa palavra ao falar de pecado e da ação do Espírito.
 
 #### 02 · Entenda o texto
 
@@ -1128,7 +1128,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 14 a 17 e observe as palavras usadas para falar de família e herança. Procure o que o texto diz sobre a maneira de se dirigir a Deus e sobre a ação do Espírito. Você pode explorar essa imagem sem tomar sua própria experiência familiar como medida de como Deus é.
+> Paulo usa palavras da vida familiar, como adoção e herança, para falar da relação com Deus. O objetivo é descobrir o que essa imagem comunica no texto, sem medir Deus pelas experiências que você teve com sua família.
 
 #### 03 · Reflita sobre sua vida
 
@@ -1138,11 +1138,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Ao procurar crescer na fé, como você distingue o desejo de obedecer do medo de ser rejeitada por Deus?
+> Como o que Paulo diz sobre ser filha de Deus ajuda você a entender por que obedecemos a Ele?
 
 **Entenda essa pergunta**
 
-> A pergunta relaciona os convites a uma nova maneira de viver com as palavras sobre ser recebido na família de Deus. Pense nas suas práticas de fé e em como esse medo, se aparece, influencia sua relação com Deus. Não é preciso afirmar que você sente esse medo para refletir sobre a passagem.
+> A passagem fala de obedecer a Deus e de pertencer à sua família. A pergunta convida a pensar na relação entre essas ideias, sem pressupor que você viva com medo de ser rejeitada.
 
 ### Encontro 24 · Ser conhecida diante de Deus
 
@@ -1160,7 +1160,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 7 a 12 e observe os lugares e as situações que o poema menciona. Antes de explicar as imagens, identifique o que elas fazem você imaginar. Depois, veja como se relacionam com o restante do salmo.
+> O salmo usa imagens de lugares e situações para falar da presença de Deus. Em Salmo 139:7–12, tente perceber o que essas imagens expressam, em vez de tratá-las como descrições científicas.
 
 #### 02 · Entenda o texto
 
@@ -1174,7 +1174,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma imagem e releia os versos que vêm antes e depois dela. Observe se a mesma ideia reaparece com outras palavras. O objetivo é compreender o que o poema comunica, sem tratar cada imagem como uma descrição técnica.
+> Uma poesia pode repetir uma ideia usando imagens diferentes. Esta pergunta ajuda a perceber como isso acontece no salmo e por que o modo de escrever importa para a compreensão.
 
 **Nota editorial**
 
@@ -1192,7 +1192,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense no que o poema desperta como assunto de oração, sem se cobrar uma emoção específica. Você pode refletir sobre suas escolhas, dúvidas ou motivos de gratidão. Procure relacionar essa conversa com o que o salmo realmente diz sobre Deus.
+> O salmo pode abrir assuntos para uma conversa sincera com Deus. A ideia é relacionar a oração ao que foi lido, sem achar que existe um sentimento obrigatório para todas as pessoas.
 
 ### Encontro 25 · Confiança sem negar a realidade
 
@@ -1210,7 +1210,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe os exemplos dos versículos 25 a 32 e identifique as necessidades de que Jesus fala. Acompanhe a passagem inteira para perceber como Ele passa desses exemplos ao ensino final.
+> Jesus menciona preocupações comuns, como comida e roupa. Primeiro repare nos exemplos de Mateus 6:25–32 e em como Ele os utiliza ao ensinar.
 
 #### 02 · Entenda o texto
 
@@ -1224,7 +1224,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 31 a 34 junto dos exemplos anteriores. Reino de Deus se refere ao governo de Deus, e justiça aponta para o que é correto diante dele. Procure como esse convite se liga às necessidades mencionadas, sem entender confiança como abandono das responsabilidades.
+> O convite para buscar o Reino aparece no meio de um ensino sobre preocupações reais. Reino de Deus fala de seu governo; a pergunta quer explorar essa ligação, não dizer que planejamento ou trabalho sejam errados.
 
 #### 03 · Reflita sobre sua vida
 
@@ -1238,7 +1238,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma preocupação concreta e pense em como você tem lidado com ela. Considere o que está ao seu alcance e o que exige apoio, sem se cobrar o controle de tudo. Sentir ansiedade não mede sua fé; o texto não substitui cuidado de saúde ou ajuda profissional quando necessários.
+> Confiar em Deus e cuidar da vida cotidiana não precisam ser atitudes opostas. Pense em uma preocupação real sem se cobrar controle absoluto. Ansiedade ou doença não são medidas da sua fé, e buscar ajuda é válido.
 
 **Nota editorial**
 
@@ -1260,7 +1260,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 5 a 8 e observe tanto as atitudes quanto os motivos mencionados. Procure distinguir o que Jesus critica do simples fato de uma oração poder ser ouvida por outras pessoas.
+> Jesus fala sobre o modo e a intenção de algumas orações. Em Mateus 6:5–8, o foco é descobrir o que Ele critica, sem concluir que orar junto de outras pessoas seja errado.
 
 #### 02 · Entenda o texto
 
@@ -1274,7 +1274,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Leia a oração dos versículos 9 a 13 observando o que aparece primeiro e como os pedidos seguem. Compare os assuntos levados a Deus, sem transformar essa sequência numa fórmula que garante uma resposta. A pergunta pede que você pense no sentido dessa organização.
+> O Pai-Nosso reúne pedidos diferentes numa ordem. A pergunta convida a perceber o que essa sequência comunica sobre a oração, sem tratá-la como fórmula para conseguir o que queremos.
 
 #### 03 · Reflita sobre sua vida
 
@@ -1288,7 +1288,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> A pergunta convida a observar a motivação, não a julgar o tamanho ou a beleza das palavras. Pense no que costuma ocupar sua atenção ao orar, sozinha ou com outras pessoas. Você não precisa criar uma oração perfeita para refletir sobre isso.
+> Às vezes a preocupação com o olhar das pessoas afeta até momentos de oração. A reflexão é sobre notar essa possibilidade com sinceridade, sem precisar ter palavras bonitas ou uma oração perfeita.
 
 ### Encontro 27 · Verdade, confissão e recomeço
 
@@ -1306,7 +1306,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Percorra os versículos 5 a 10 e compare o que as pessoas dizem com a forma como vivem. Observe também onde o autor fala de comunhão, isto é, de relação com Deus e com outras pessoas. Primeiro, reúna os contrastes presentes no texto.
+> João usa imagens como luz e trevas e fala de verdade e comunhão. Comunhão é viver em relação com Deus e com outras pessoas. A ideia é perceber os contrastes que aparecem nos versículos 5–10.
 
 #### 02 · Entenda o texto
 
@@ -1320,7 +1320,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare as afirmações dos versículos 8 a 10, prestando atenção ao que o autor diz sobre cada atitude. Confessar é reconhecer com sinceridade diante de Deus o que foi errado. Observe a relação dessa atitude com a fidelidade de Deus, em vez de procurar palavras que funcionem como uma fórmula.
+> O texto contrasta negar o pecado e reconhecê-lo. Confessar significa admitir com sinceridade diante de Deus o que fizemos de errado. Observe o que João diz sobre cada atitude e sobre a fidelidade de Deus.
 
 #### 03 · Reflita sobre sua vida
 
@@ -1334,7 +1334,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em um erro que seja de sua responsabilidade, sem assumir culpa pelo que outra pessoa fez contra você. Relacione o convite à sinceridade com o que a passagem diz sobre Deus. A pergunta não pede que você se puna nem que ignore as consequências do que fez.
+> Reconhecer um erro pode ser difícil, mas a passagem também fala de esperança. Pense apenas em algo que seja responsabilidade sua: ninguém precisa assumir culpa pelo mal que outra pessoa lhe causou.
 
 **Nota editorial**
 
@@ -1356,7 +1356,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Volte especialmente a Efésios 2 e Romanos 8 e observe o que essas passagens dizem sobre a ação de Deus. Compare isso com a ideia de precisar ser boa o bastante para ser aceita. Procure apoiar sua reflexão em palavras do texto, sem avaliar a espiritualidade de outras pessoas.
+> Nesta semana você leu sobre graça, obediência e pertencimento. A pergunta ajuda a comparar a ação de Deus com a ideia de ter que provar o próprio valor para ser aceita.
 
 #### 02 · Compare e aprofunde
 
@@ -1366,11 +1366,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Como ler um salmo foi diferente de acompanhar o ensino de Jesus ou uma carta nesta semana?
+> Ao comparar o Salmo 139 com uma carta de Paulo, o que você percebe de diferente na maneira como cada texto fala de Deus?
 
 **Entenda essa pergunta**
 
-> Escolha uma imagem do Salmo 139 e um trecho de Mateus 6 ou das cartas lidas na semana. Compare a maneira de escrever e releia as frases próximas de cada trecho escolhido. A ideia é perceber como a forma do texto pode ajudar você a compreender a mensagem, em vez de ler todas as passagens do mesmo jeito.
+> Um salmo usa poesia, enquanto cartas e ensinamentos podem organizar as ideias de outro jeito. A comparação ajuda a perceber por que ler os trechos ao redor e prestar atenção à forma do texto faz diferença.
 
 #### 03 · Continue o estudo
 
@@ -1384,7 +1384,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma palavra, uma pergunta ou uma passagem que ainda merece mais atenção para você. Anote o que já entendeu e o que continua em aberto. Esse registro pode orientar uma releitura e uma conversa com alguém de confiança que estude a Bíblia com cuidado.
+> Nem toda dúvida precisa de resposta imediata. Escolha um assunto que despertou seu interesse e veja como poderia continuar estudando, com calma e sem pressão.
 
 ## Semana 5 · Maturidade e comunidade
 
@@ -1404,7 +1404,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 9–16 e procure os verbos que descrevem como tratar outras pessoas. Escolha algumas orientações e explique com suas palavras o que cada uma pede.
+> Paulo descreve o amor por meio de atitudes concretas. Em Romanos 12:9–16, observe como essas orientações se relacionam com a forma de tratar as pessoas.
 
 #### 02 · Entenda o texto
 
@@ -1418,7 +1418,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Leia o versículo 18 inteiro, sem separar a orientação à paz das condições que a acompanham. Pense no que uma pessoa pode escolher fazer e no que depende da resposta de outras pessoas.
+> Romanos 12:18 fala da busca pela paz, mas também reconhece limites. A pergunta procura distinguir o que depende de você e o que depende da participação de outras pessoas.
 
 #### 03 · Reflita sobre sua vida
 
@@ -1432,7 +1432,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense em um conflito que você se sinta à vontade para considerar. Pergunte-se quais atitudes cabem a você e quais limites são necessários para sua proteção. A busca da paz não exige conviver com violência, encobrir crimes ou desistir de buscar ajuda.
+> Buscar a paz não significa abrir mão da segurança. Pense no que está ao seu alcance num conflito, lembrando que ninguém é obrigado a se expor à violência, esconder crimes ou deixar de pedir ajuda.
 
 **Nota editorial**
 
@@ -1454,7 +1454,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia as comparações dos versículos 3–6 e observe a relação entre tamanho e efeito. O leme é a peça que ajuda a dirigir uma embarcação. Pense no que cada imagem acrescenta à descrição da fala.
+> Tiago compara a fala a objetos pequenos capazes de causar grandes efeitos. O leme, por exemplo, ajuda a dirigir um barco. As imagens convidam a pensar sobre a influência das palavras.
 
 #### 02 · Entenda o texto
 
@@ -1468,7 +1468,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia os versículos 9–12 e observe como Tiago descreve as pessoas de quem fala. Compare o que sai da mesma boca nas situações que ele apresenta. Leve em conta também que, no versículo 2, Tiago reconhece a dificuldade humana de acertar sempre.
+> Nos versículos 9–12, Tiago aproxima aquilo que dizemos sobre Deus da maneira como tratamos pessoas. A pergunta ajuda a enxergar essa ligação, sem exigir perfeição em cada conversa.
 
 #### 03 · Reflita sobre sua vida
 
@@ -1482,7 +1482,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Considere uma conversa comum, presencial ou por mensagem, em que suas palavras tenham peso. Pense no efeito do que você diz ou escreve sobre quem escuta ou lê. A reflexão pode levar a um cuidado que você queira manter ou desenvolver.
+> Nossas palavras chegam às pessoas em conversas, mensagens e comentários. A reflexão convida a pensar no efeito delas e nos cuidados que você gostaria de cultivar, sem transformar tudo em culpa.
 
 ### Encontro 31 · Liberdade e formação do caráter
 
@@ -1500,7 +1500,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe os verbos e as advertências dos versículos 13–15. Veja a quem se dirigem as atitudes mencionadas e explique com suas palavras como elas se relacionam com a liberdade.
+> Paulo fala de liberdade e de convivência no mesmo trecho. A ideia é entender por que essas coisas aparecem juntas em Gálatas 5:13–15, observando a orientação do autor.
 
 #### 02 · Entenda o texto
 
@@ -1514,7 +1514,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Leia os versículos 22–23 junto com as advertências dos versículos 15 e 26. Fruto é a imagem usada por Paulo para falar do que uma vida guiada pelo Espírito produz. Observe como as atitudes citadas podem aparecer no convívio, além do jeito de ser de cada pessoa.
+> 'Fruto do Espírito' é uma imagem para falar do que a vida guiada pelo Espírito produz. Leia as atitudes mencionadas junto das orientações sobre convivência e veja como se relacionam.
 
 **Nota editorial**
 
@@ -1532,7 +1532,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Observe como a passagem fala tanto da ação do Espírito quanto do caminho de quem procura segui-lo. Considere sua vida ao longo do tempo, e não só um dia difícil ou a imagem que apresenta aos outros. A pergunta não pede uma nota para sua fé nem uma comparação com outras pessoas.
+> Crescer na fé é um caminho, não uma prova de perfeição. A pergunta convida a reconhecer mudanças e aprendizados ao longo do tempo, sem se comparar com outras pessoas.
 
 **Nota editorial**
 
@@ -1554,7 +1554,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Nos versículos 15–17, acompanhe quem participa da conversa em cada etapa. Observe o que acontece quando a pessoa ouve ou não ouve, sem inventar passos que o trecho não descreve. Essa orientação não substitui proteção em situações de violência.
+> Jesus apresenta passos para lidar com uma ofensa dentro da comunidade. Observe Mateus 18:15–17 para entender a sequência, lembrando que situações de violência exigem cuidados de proteção que esse trecho não detalha.
 
 **Nota editorial**
 
@@ -1568,11 +1568,11 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Nova pergunta**
 
-> Como o ensino de Jesus sobre perdão se relaciona com a confiança depois de uma ofensa?
+> O que Jesus ensina sobre perdoar? Que dúvidas sobre voltar a confiar em alguém essa passagem não responde diretamente?
 
 **Entenda essa pergunta**
 
-> Compare a orientação sobre a ofensa, nos versículos 15–17, com a conversa sobre perdão, nos versículos 21–22. Observe o que Jesus diz diretamente e quais questões sobre confiança e convivência não são detalhadas nesse trecho. Diferenciar essas coisas evita apresentar uma aplicação nossa como se fosse uma frase do texto.
+> Mateus 18 fala sobre tratar ofensas e sobre perdoar. A pergunta ajuda a separar esses ensinamentos de outra questão: como reconstruir confiança. O texto não apresenta uma regra completa sobre voltar a conviver após uma agressão.
 
 **Nota editorial**
 
@@ -1590,7 +1590,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Considere de quem a comunidade precisa ouvir a experiência e como suas decisões afetam a segurança das pessoas. Em situações de violência, reconciliação não pode ser usada para impor contato com a pessoa agressora ou impedir proteção e denúncia. A pergunta não exige contar uma experiência pessoal.
+> Falar em reconciliação exige cuidado com quem sofreu dano. A reflexão é sobre como uma comunidade pode ouvir, proteger e agir com responsabilidade. Perdoar não obriga ninguém a ter contato com agressores nem impede denúncias.
 
 **Nota editorial**
 
@@ -1612,7 +1612,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Percorra o poema e observe as ações ligadas ao trabalho, às relações e ao cuidado com outras pessoas. Veja a variedade do retrato apresentado, sem se limitar a uma tarefa. Depois, descreva com suas palavras quais qualidades você percebe nessas ações.
+> Provérbios 31 descreve muitas ações da mulher elogiada no poema. A ideia é perceber quais qualidades aparecem nessas ações, sem reduzir o retrato a tarefas domésticas.
 
 #### 02 · Entenda o texto
 
@@ -1626,7 +1626,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> O trecho apresenta um elogio em forma de poema, com várias imagens reunidas num mesmo retrato. Compare o destaque dado nos versículos 30–31 com as ações descritas antes. Pense no que essa forma de escrever muda quando tentamos aplicar cada imagem a vidas diferentes.
+> Esse trecho é um poema de elogio, não uma lista de tarefas para cumprir. Compare os versículos 30–31 com o restante para perceber o que recebe destaque e como isso orienta a leitura.
 
 **Nota editorial**
 
@@ -1644,7 +1644,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Considere sua realidade, seus limites e suas responsabilidades. Escolha uma ideia que você queira compreender ou cultivar, sem tentar reproduzir todas as atividades do poema. O retrato não precisa servir de medida do seu valor, do seu estado civil ou da sua produtividade.
+> A pergunta convida a aprender com o poema sem usá-lo para medir seu valor. Sua vida, seus limites e suas responsabilidades não precisam ser iguais aos da mulher descrita.
 
 **Nota editorial**
 
@@ -1666,7 +1666,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Nos versículos 4–10, observe as frases em que Jesus liga uma atitude à outra. A imagem dos ramos e da videira ajuda a acompanhar essas relações. Procure explicar o que o trecho afirma antes de pensar em suas próprias atividades religiosas.
+> Jesus usa a imagem de uma videira e de seus ramos para falar da relação com Ele. Observe João 15:4–10 para entender como permanecer, obedecer e produzir fruto aparecem juntos.
 
 #### 02 · Entenda o texto
 
@@ -1680,7 +1680,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Compare as palavras de Jesus sobre amor, nos versículos 9–17, com a figura da videira nos versículos 1–8. Observe o que o texto associa ao fruto e o que ele não diz sobre quantidade de atividades religiosas.
+> O ensino sobre a videira continua com palavras sobre amor. A pergunta procura descobrir como essas partes se relacionam, sem confundir fruto espiritual com quantidade de atividades religiosas.
 
 **Nota editorial**
 
@@ -1698,7 +1698,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Considere o tempo e as condições que você tem hoje para continuar aprendendo e vivendo sua fé. Relacione uma prática possível ao que Jesus ensina sobre permanecer nele, sem medir a fé pelo número de atividades. Você pode retomar e ajustar essa escolha ao longo do tempo.
+> Chegar ao fim do plano não significa encerrar o aprendizado. A reflexão ajuda a pensar numa maneira possível de continuar perto da Palavra, respeitando sua rotina e seus limites.
 
 ### Encontro 35 · Revisão — uma fé que amadurece
 
@@ -1716,7 +1716,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Releia as referências da quinta semana e escolha um trecho que fale das relações entre as pessoas. Registre a orientação que você percebe ali, apontando a passagem em que se baseou.
+> Esta semana falou bastante sobre convivência. Escolha uma orientação que chamou sua atenção e lembre de qual passagem ela veio.
 
 **Nota editorial**
 
@@ -1734,7 +1734,7 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Escolha uma das leituras e observe também os versículos que vêm antes e depois dela. Compare sua primeira compreensão com o que percebe agora. Sua leitura pode ser confirmada, ampliada ou corrigida; procure mostrar no texto o motivo.
+> Quando lemos os versículos ao redor de uma frase, podemos compreendê-la melhor. Aqui a ideia é perceber se o contexto confirmou, ampliou ou mudou sua primeira leitura.
 
 **Nota editorial**
 
@@ -1752,4 +1752,4 @@ O comando sem opções regenera os pares de texto e ajuda. Para incluir também 
 
 **Entenda essa pergunta**
 
-> Pense numa dúvida, num tema ou numa passagem que despertou sua curiosidade durante o percurso. Use esse interesse para escolher um livro e entender melhor seu contexto. Você não precisa começar imediatamente nem definir um prazo para terminar.
+> Você não precisa terminar este plano com todas as respostas. Pense no livro bíblico que despertou sua curiosidade e que gostaria de conhecer por inteiro, no seu tempo.
