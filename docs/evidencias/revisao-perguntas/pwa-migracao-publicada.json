@@ -1,0 +1,54 @@
+[
+  {
+    "storageCase": "both",
+    "publishedCommit": "78e663756d4d4ca28fc41920bdcbe7b8e2a41d28",
+    "from": "v1",
+    "to": "v2",
+    "offlineDuringConsent": true,
+    "storageByteExactBeforeNavigation": true,
+    "verifiedQuestionsAndHelps": 105,
+    "oldCompletedEncountersPreserved": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      12,
+      21,
+      34
+    ],
+    "caches": [
+      "outro-projeto:v1",
+      "devotional-days:/plano-de-leitura-biblica-para-mulheres/:v2"
+    ],
+    "onlyLocalResourcesCached": true
+  },
+  {
+    "storageCase": "legacy-only",
+    "publishedCommit": "78e663756d4d4ca28fc41920bdcbe7b8e2a41d28",
+    "from": "v1",
+    "to": "v2",
+    "offlineDuringConsent": true,
+    "storageByteExactBeforeNavigation": true,
+    "verifiedQuestionsAndHelps": 105,
+    "oldCompletedEncountersPreserved": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      12,
+      21,
+      34
+    ],
+    "caches": [
+      "outro-projeto:v1",
+      "devotional-days:/plano-de-leitura-biblica-para-mulheres/:v2"
+    ],
+    "onlyLocalResourcesCached": true
+  }
+]

@@ -51,6 +51,7 @@ test('manifesto mantém identidade e todos os caminhos no subdiretório do GitHu
 });
 test('precache cobre somente os arquivos essenciais existentes, sem dados de terceiros',async()=>{
   const h=harness();await h.dispatch('install');
+  assert.ok([...h.names].every(name=>name.endsWith(':v2')),'a revisão editorial deve usar um cache diferente do v1 já publicado');
   assert.ok(h.stored.length>=16);
   for(const request of h.stored) {
     assert.ok(request.url.startsWith(scope));assert.equal(new URL(request.url).search,'');

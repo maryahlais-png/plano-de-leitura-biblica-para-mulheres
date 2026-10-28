@@ -24,7 +24,7 @@ test('cada leitura possui referência e três questões; revisões não inventam
  for(const entry of encounters){
   assert.ok(entry.title && entry.lead && entry.context);
   assert.equal(entry.questions.length,3);
-  for(const question of entry.questions)assert.ok(question.length>40);
+  for(const question of entry.questions){assert.equal(typeof question.text,'string');assert.equal(typeof question.help,'string');assert.ok(question.text.length>40);assert.ok(question.help.trim().length>0);}
   if(entry.review)assert.ok(!entry.book && !entry.code);
   else{
    assert.ok(entry.book && entry.code);

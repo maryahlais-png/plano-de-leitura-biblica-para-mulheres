@@ -1,5 +1,14 @@
 # Histórico de versões
 
+## Perguntas acessíveis e ajuda para reflexão — proposta para revisão
+
+- Reformulação das 105 perguntas, organizadas por finalidade: observar a passagem, entender o texto e refletir sobre a vida; revisões adaptadas para recordar, comparar/aprofundar e continuar o estudo.
+- 105 ajudas individuais em **Entenda essa pergunta**, opcionais e fechadas inicialmente, usando controles nativos de expansão e linguagem acolhedora sem resposta pronta.
+- Pares `text`/`help` na mesma fonte de conteúdo, com comparativo editorial entre pergunta original, nova redação e explicação para revisão da autora.
+- Referências, títulos, ordem, contextos, progresso, preferências e demais recursos preservados; o estado aberto das ajudas fica somente no DOM.
+- Cache atualizado de `v1` para `v2`, mantendo ativação consentida e compatibilidade com o progresso da versão publicada.
+- Revisão em branch a partir da `main` com o PR #7 integrado, sem merge nem publicação automática.
+
 ## Compartilhar, imprimir e instalar — proposta para revisão
 
 - Ação **Mais opções** reúne Compartilhar, Imprimir roteiro e instalação opcional, preservando o espaço dedicado à leitura e o acabamento visual existente.

@@ -17,6 +17,10 @@ const fs=require('fs');
  await p.locator('#dismiss-guide').click();
  for(const palette of ['lavanda','salvia','areia','azul','rose'])for(const mode of ['light','dark']){
   await p.locator('#theme-toggle').click();await p.locator(`[data-palette-choice="${palette}"]`).click();await p.locator(`[data-mode-choice="${mode}"]`).click();await audit(`aparencia ${palette} ${mode}`);await p.keyboard.press('Escape');await audit(`leitura ${palette} ${mode}`);
+  for(const summary of await p.locator('#questions .question-help summary').all())await summary.click();
+  await p.locator('#questions').evaluate(node=>Promise.all(node.getAnimations({subtree:true}).map(animation=>animation.finished)));
+  await audit(`ajudas perguntas ${palette} ${mode}`);
+  await p.locator('#questions details.question-help').evaluateAll(nodes=>nodes.forEach(node=>{node.open=false;}));
   await p.locator('#tools-toggle').click();await audit(`opcoes ${palette} ${mode}`);
   await p.locator('#share-site').click();await p.locator('#copy-link').click();
   await p.locator('#share-link').waitFor({state:'visible'});await audit(`compartilhar manual ${palette} ${mode}`);
@@ -25,7 +29,11 @@ const fs=require('fs');
  }
  await p.locator('#route-tab').click();await p.waitForTimeout(250);await audit('roteiro móvel');await p.keyboard.press('Escape');
  await p.evaluate(()=>{localStorage.setItem('leitura-biblica-mulheres-v1',JSON.stringify({current:6,read:[0,1,2,3,4,5],acknowledged:true}));});await p.reload();await p.locator('#mark-read').click();await audit('celebração');
- await p.keyboard.press('Escape');await p.setViewportSize({width:1440,height:1000});await audit('desktop');
+ await p.keyboard.press('Escape');
+ for(const summary of await p.locator('#questions .question-help summary').all())await summary.click();
+ await p.locator('#questions').evaluate(node=>Promise.all(node.getAnimations({subtree:true}).map(animation=>animation.finished)));
+ await audit('ajudas revisao semanal');
+ await p.setViewportSize({width:1440,height:1000});await audit('desktop');
  const path=require('node:path');
  const output=process.env.ARTIFACT_DIR || '/tmp/devotional-days-results';
  fs.mkdirSync(output,{recursive:true});

@@ -1,6 +1,6 @@
 /* Somente o guia original e seus recursos locais. Mude VERSION ao publicar alterações no shell. */
 'use strict';
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SCOPE = new URL(self.registration.scope);
 const PREFIX = `devotional-days:${SCOPE.pathname}:`;
 const CACHE = `${PREFIX}${VERSION}`;

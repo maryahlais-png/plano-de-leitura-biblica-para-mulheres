@@ -191,7 +191,7 @@ test('Imprimir roteiro chama o diálogo explicitamente e mostra os mesmos 35 enc
  const boxes=await p.locator('.print-checkbox').evaluateAll(nodes=>nodes.map(node=>{const s=getComputedStyle(node);return {background:s.backgroundColor,width:node.getBoundingClientRect().width,height:node.getBoundingClientRect().height};}));
  assert.ok(boxes.every(box=>box.background==='rgb(255, 255, 255)' && box.width>=14 && box.height>=14));
  const printed=await p.locator('#print-plan-content').textContent();
- for(const entry of plan.encounters) {for(const question of entry.questions)assert.equal(printed.includes(question),false);assert.equal(printed.includes(entry.context),false);}
+ for(const entry of plan.encounters) {for(const question of entry.questions){assert.equal(printed.includes(question.text),false);assert.equal(printed.includes(question.help),false);}assert.equal(printed.includes(entry.context),false);}
  await p.emulateMedia({media:'screen'});assert.equal(await p.locator('#print-plan-content').isVisible(),false);
  assert.deepEqual(await snapshot(p),before);await p.context().close();
 });

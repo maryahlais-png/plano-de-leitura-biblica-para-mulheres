@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-28",
+  "node": 29,
+  "browser": {
+    "existing": 9,
+    "features": 10,
+    "questions": 6,
+    "pwa": 7
+  },
+  "editorial": {
+    "encounters": 35,
+    "questions": 105,
+    "helps": 105,
+    "comparisons": 105
+  },
+  "axe": {
+    "scenarios": 65,
+    "violations": 0,
+    "incomplete": 88,
+    "incompleteByRule": {
+      "aria-valid-attr-value": 23,
+      "color-contrast": 65
+    }
+  },
+  "contrastMinima": {
+    "minimumTextContrast": 4.55,
+    "minimumMaterialTextContrast": 5.02,
+    "minimumPrimaryTextContrast": 5.85
+  }
+}

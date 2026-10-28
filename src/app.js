@@ -92,7 +92,22 @@
     text('week-number',`Semana ${String(d.week+1).padStart(2,'0')}`);
     text('lesson-title',d.title);text('passage-reference',reference(d));text('lesson-lead',d.lead);
     const questions=$('questions');questions.replaceChildren();
-    d.questions.forEach(q=>{const li=document.createElement('li');li.textContent=q;questions.append(li);});
+    const purposes = d.review
+      ? ['Recorde as leituras','Compare e aprofunde','Continue o estudo']
+      : ['Observe a passagem','Entenda o texto','Reflita sobre sua vida'];
+    d.questions.forEach((question,index)=>{
+      const li=document.createElement('li');
+      const purpose=document.createElement('span');purpose.className='question-purpose';
+      purpose.textContent=`${String(index+1).padStart(2,'0')} · ${purposes[index]}`;
+      const prompt=document.createElement('p');prompt.className='question-text';
+      prompt.id=`question-e${state.current+1}-q${index+1}`;prompt.textContent=question.text;
+      const help=document.createElement('details');help.className='question-help';
+      const summary=document.createElement('summary');summary.textContent='Entenda essa pergunta';
+      summary.setAttribute('aria-describedby',prompt.id);
+      const explanation=document.createElement('p');explanation.className='question-help-text';
+      explanation.textContent=question.help;
+      help.append(summary,explanation);li.append(purpose,prompt,help);questions.append(li);
+    });
     text('context-text',d.context);$('context-details').open=false;
     $('reading-box').hidden=Boolean(d.review);
     text('reading-note',d.review?'Releia os trechos que mais fizeram você refletir nesta semana.':'A leitura principal acontece na Bíblia física ou no link digital.');

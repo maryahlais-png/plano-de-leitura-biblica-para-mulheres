@@ -8,7 +8,7 @@ Node.js >=18, na raiz do projeto:
 npm test
 ```
 
-`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `print.test.cjs` verifica a geração do roteiro a partir dos dados existentes e sua independência do progresso; `pwa.test.cjs` verifica manifesto, recursos e regras de escopo/cache do Service Worker. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22. O evento de Pull Request aceita os destinos `main` e `feature/devotional-days`; pushes continuam limitados à `main`. O PR da rodada de compartilhamento, impressão e instalação tem a `main` como destino. O workflow usa apenas `contents: read` e não publica o site.
+`site.test.cjs` verifica conteúdo, identidade, estrutura e segurança. `print.test.cjs` verifica a geração do roteiro a partir dos dados existentes e sua independência do progresso; `pwa.test.cjs` verifica manifesto, recursos e regras de escopo/cache do Service Worker. `state.test.cjs` executa funções reais de validação, leitura/gravação com ambas as chaves, fallback de JSON malformado, falhas de acesso/cota, retomada, marcação e transições de conclusão semanal e integral. O workflow existente executa essa suíte no Node.js 22. O evento de Pull Request aceita os destinos `main` e `feature/devotional-days`; pushes continuam limitados à `main`. O PR da revisão de perguntas tem a `main` como destino. O workflow usa apenas `contents: read` e não publica o site.
 
 ## Integração com navegador real
 
@@ -45,6 +45,26 @@ A suíte falha se houver erro de JavaScript, console, CSP ou recursos HTTP. O c�
 
 O cenário da ação externa testa nome e descrição acessíveis, área de toque, foco por teclado e ativação por Enter e ponteiro, preservando o estado salvo. A nova aba é interceptada pelo teste e recebe uma resposta sintética sem texto bíblico. Assim, valida-se a navegação solicitada pelo guia sem consultar o provedor, copiar passagens ou afirmar disponibilidade e conteúdo no destino real. Isso não é teste de um leitor interno, que não foi implementado.
 
+## Perguntas revisadas e Entenda essa pergunta
+
+`questions.test.cjs` verifica a quantidade de encontros, perguntas e ajudas, três pares por encontro e correspondência de `text`/`help`. Compara a revisão com a identidade e os textos originais da base publicada para conferir metadados preservados e reformulação integral. Esses testes de estrutura não provam clareza, rigor interpretativo ou ausência de indução; a [revisão editorial comparativa](REVISAO-EDITORIAL-PERGUNTAS.md) apoia a avaliação da autora e de pessoa qualificada.
+
+Com o checkout servido, execute a suíte específica de interface, além das regressões existentes:
+
+```bash
+BASE_URL=http://127.0.0.1:8000 ARTIFACT_DIR=/tmp/devotional-days-revisao-perguntas node --test tests/questions-browser.cjs
+```
+
+Os cenários exercitam perguntas e ajudas associadas, abertura inicial fechada, expansão independente, fechamento por teclado, objetivos próprios das revisões, temas, larguras e preservação do progresso. Nenhuma resposta da leitora é coletada ou gravada pelo recurso. Registrar separadamente os resultados automáticos e qualquer revisão com pessoas reais.
+
+Para regenerar o comparativo documental após concluir a redação:
+
+```bash
+node docs/scripts/gerar-revisao-editorial.cjs --notes docs/evidencias/revisao-perguntas/semanas-1-2.json --notes docs/evidencias/revisao-perguntas/semanas-3-4.json --notes docs/evidencias/revisao-perguntas/semana-5.json
+```
+
+O gerador lê a base editorial imutável e o conteúdo final. Notas opcionais de revisão podem ser passadas com `--notes arquivo.json`, repetindo a opção para mais de um arquivo; a pergunta e a ajuda dessas notas precisam coincidir com o runtime final. A geração valida integridade e correspondência, sem substituir revisão editorial.
+
 ## Compartilhamento, impressão e instalação
 
 Com o mesmo Chromium/Playwright, sirva o checkout e execute os cenários de ações auxiliares:
@@ -61,7 +81,9 @@ Os testes reais de Service Worker usam um servidor local isolado no mesmo subcam
 ARTIFACT_DIR=/tmp/devotional-days-compartilhar-imprimir-pwa node --test tests/pwa-browser.cjs
 ```
 
-Eles verificam manifesto/ícones/escopo, recursos offline, preservação das preferências, versão nova em espera, atualização consentida, falhas de instalação/registro e rejeição de uma versão reutilizada sem destruir o cache ativo. A instalação pelo sistema operacional continua sendo uma validação separada; a suíte emula eventos quando precisa exercitar a oferta ou o estado instalado.
+Eles verificam manifesto/ícones/escopo, recursos offline, preservação das preferências, versão nova em espera, atualização consentida, falhas de instalação/registro e rejeição de uma versão reutilizada sem destruir o cache ativo. A revisão de perguntas inclui a migração real do conjunto publicado `v1` para `v2`, mantendo ambas as chaves de armazenamento e verificando perguntas/ajudas novas sem mistura de arquivos. Essa migração requer que o objeto Git `78e663756d4d4ca28fc41920bdcbe7b8e2a41d28` esteja disponível no checkout; a suíte lê os arquivos antigos com `git show`, sem buscar a rede. Em clone raso que não o contenha, execute `git fetch origin 78e663756d4d4ca28fc41920bdcbe7b8e2a41d28`. Os testes Node de `npm test` não dependem desse histórico.
+
+A instalação pelo sistema operacional continua sendo uma validação separada; a suíte emula eventos quando precisa exercitar a oferta ou o estado instalado.
 
 Para a impressão, gerar PDF A4 no Chromium e inspecionar páginas, referências, caixas vazias, legibilidade em preto e branco e ausência de cortes. A composição de referência é de duas páginas (semanas 1–3 e 4–5). Conferir também a prévia no navegador e uma impressora real, pois margens, fontes disponíveis e opções de cabeçalho/rodapé podem alterar o resultado.
 
@@ -107,8 +129,10 @@ As evidências de compartilhamento, impressão e instalação usam diretórios p
 2. Conferir zoom nativo de 200%/400%, ampliação de texto e preferências de contraste; largura CSS de 320 px já é coberta automaticamente.
 3. Usar leitor de tela e Safari/iOS: anúncio dos diálogos, retorno de foco, rolagem e opções de seleção.
 4. Confirmar manualmente no destino externo as seis traduções, capítulos e versículos; os testes locais validam construção dos links, não a disponibilidade do serviço.
-5. Revisar com pessoa qualificada a interpretação bíblica e os direitos autorais antes de ampliar a divulgação. O conteúdo editorial não foi alterado.
+5. Revisar com pessoa qualificada a interpretação bíblica, a distinção entre texto/interpretação/aplicação e os direitos autorais antes de ampliar a divulgação. Nesta rodada, o conteúdo das perguntas e ajudas muda; os demais metadados e contextos são preservados. Conferir também a compreensão com leitoras reais, inclusive quem tem dificuldade de leitura, sem tratar testes de estrutura como avaliação de compreensão.
 6. Conferir instalação em iPhone/Android físicos, opções reais de compartilhamento e impressão física. Não tratar eventos simulados ou PDF do Chromium como esses testes.
 7. Verificar o aviso de progresso separado; não prometer transferência entre Safari, Chrome e aplicativo instalado. Apagar dados do dispositivo pode remover progresso/cache.
+
+A [validação da revisão de perguntas](VALIDACAO-REVISAO-PERGUNTAS.md) reúne as execuções e limitações desta rodada; as contagens históricas acima não substituem os testes das novas perguntas e ajudas.
 
 Resultados da primeira rodada permanecem em `VALIDACAO.md`. Versões, resultados e limitações da segunda rodada estão em `VALIDACAO-POLIMENTO.md`. Não publicar nem fazer merge sem aprovação da autora.

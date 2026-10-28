@@ -1,0 +1,14 @@
+✔ os 35 encontros exibem os 105 pares corretos, fechados inicialmente e associados à sua pergunta (7794.286392ms)
+✔ Enter, Espaço e Tab operam ajudas independentes; navegar ou renderizar novamente fecha todas (2217.568488ms)
+✔ as duas chaves antigas preservam progresso parcial ou completo, tradução, aparência e encontro (4717.158496ms)
+✔ a ajuda permanece utilizável sem armazenamento e respeita movimento reduzido (2024.630765ms)
+✔ perguntas e explicações usam texto seguro mesmo com sinais de marcação no conteúdo (924.418041ms)
+✔ os dez temas mantêm ajudas abertas legíveis e sem cortes nas oito larguras (22723.862887ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 40844.591182
